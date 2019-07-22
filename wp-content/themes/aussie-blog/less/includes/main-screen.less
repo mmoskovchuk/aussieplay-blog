@@ -1,0 +1,107 @@
+//MAIN-SCREEN
+
+.aussie-casino {
+  &__main-screen {
+    background: #000 url(../img/main-screen-bg.jpg) center no-repeat;
+    width: 100%;
+    height: 530px;
+    position: relative;
+  }
+  &__main-screen_wrapper {
+    display: flex;
+    justify-content: space-between;
+    height: 305px;
+    position: relative;
+    top: 76px;
+  }
+  &__main-screen_box-left {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    left: 10%;
+    top: 0;
+    bottom: 0;
+    @media (max-width: @desktop-m) {
+      left: 2%;
+    }
+    @media (max-width: @desktop-s) {
+      left: 0;
+    }
+    p {
+      font-family: @montserrat-b;
+      color: @c4;
+      font-size: 73px;
+      width: 235px;
+    }
+  }
+  &__main-screen_box-right {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    right: 10%;
+    top: 0;
+    bottom: 0;
+    @media (max-width: @desktop-m) {
+      right: 2%;
+    }
+    @media (max-width: @desktop-s) {
+      right: 0;
+    }
+  }
+  &__main-screen_code,
+  &__main-screen_desc {
+    font-family: @montserrat-m;
+    font-size: 16px;
+    color: @c1;
+  }
+  &__main-screen_code {
+    margin-bottom: 12px;
+  }
+  &__promocode_btn {
+    outline: none;
+    border: none;
+    background: transparent;
+    font-family: @montserrat-sb;
+    font-size: 50px;
+    color: #FFC100;
+    margin-bottom: 12px;
+    cursor: pointer;
+  }
+  &__main-screen_desc {
+    margin-bottom: 45px;
+  }
+  &__main-screen_btn {
+    display: flex;
+    align-items: center;
+    width: 270px;
+    height: 60px;
+    justify-content: center;
+    background: linear-gradient(45deg, #E3752C, #F2CC3D);
+    border-radius: 30px;
+    box-shadow: 0 0 24px 0 #ffa60a;
+    transition: .5s;
+    text-decoration: none;
+    &:hover {
+      box-shadow: none;
+    }
+    span {
+      position: relative;
+      font-family: @montserrat-m;
+      color: @c1;
+      font-size: 16px;
+      padding: 12px 75px;
+      text-transform: uppercase;
+      letter-spacing: 0;
+      text-decoration: none;
+      transition: .3s;
+      height: 14px;
+      margin-left: 8px;
+
+      &:hover {
+        color: @c1 !important;
+      }
+    }
+  }
+}

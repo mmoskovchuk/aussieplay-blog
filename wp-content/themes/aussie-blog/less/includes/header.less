@@ -1,0 +1,86 @@
+//HEADER
+
+.aussie-casino {
+  &__btn {
+    display: flex;
+    align-items: center;
+    width: 270px;
+    height: 40px;
+    justify-content: center;
+    background: linear-gradient(45deg, #E3752C, #F2CC3D);
+    border-radius: 30px;
+    box-shadow: 0 0 24px 0 #ffa60a;
+    transition: .5s;
+    &:hover {
+      box-shadow: none;
+    }
+    span {
+      position: relative;
+      font-family: @montserrat-m;
+      color: @c1;
+      font-size: 14px;
+      padding: 12px 75px;
+      text-transform: uppercase;
+      letter-spacing: 0;
+      text-decoration: none;
+      transition: .3s;
+      height: 10px;
+      margin-left: 8px;
+
+      &:hover {
+        color: @c1 !important;
+      }
+      &:after {
+        content: "";
+        position: absolute;
+        width: 11px;
+        height: 12px;
+        background: url("../img/play-icon.svg") no-repeat;
+        background-size: contain;
+        left: 55px;
+        top: 12px;
+        bottom: 0;
+      }
+    }
+  }
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__header {
+    height: 70px;
+    background-color: @c3;
+
+    nav {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      height: 70px;
+    }
+
+    ul {
+      display: flex;
+      list-style-type: none;
+
+      li {
+        margin-right: 60px;
+
+        &:last-child {
+          margin-right: 0;
+        }
+      }
+    }
+    a {
+      color: @c1;
+      text-transform: uppercase;
+      text-decoration: none;
+      transition: .3s;
+      font-family: @montserrat-m;
+
+      &:hover {
+        color: @c4;
+      }
+    }
+  }
+}

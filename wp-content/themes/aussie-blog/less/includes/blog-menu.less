@@ -1,0 +1,98 @@
+//BLOG-MENU
+
+.aussie-casino {
+  &__blog-menu {
+    max-width: 90%;
+    margin: 0 auto;
+    padding: 0 15px;
+    background-color: #fff;
+    position: absolute;
+    height: 113px;
+    left: 0;
+    right: 0;
+    bottom: -53px;
+    box-shadow: 0 3px 24px 0 #00000030;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  &__blog-menu_container {
+    width: 83%;
+    height: 113px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between
+  }
+  &__blog-menu_logo {
+    //background: transparent url(../img/logo.svg) center no-repeat;
+    width: 123px;
+    height: 71.4px;
+  }
+  &__blog-menu_url {
+    font-family: @montserrat-b;
+    font-size: 73px;
+    color: #E5E5E5;
+  }
+  &__blog-menu_ul-block {
+    display: flex;
+    list-style-type: none;
+    li {
+      margin-right: 48.5px;
+      &:last-child {
+        margin-right: 0;
+      }
+      a {
+        text-decoration: none;
+        text-transform: uppercase;
+        font-family: @montserrat-b;
+        font-size: 16px;
+        color: @c2;
+        transition: .3s;
+        &:hover {
+          color: @c4;
+        }
+      }
+    }
+  }
+  &__blog-menu_search {
+
+  }
+  &__blog-menu_search-btn {
+    width: 60px;
+    height: 60px;
+    box-shadow: 0 3px 6px 0 #00000030;
+    border-radius: 30px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    outline: none;
+    border: 0;
+    background: transparent;
+    cursor: pointer;
+  }
+  &__blog-menu_search-wrap {
+    opacity:0;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    height: 100%;
+  }
+
+  &__blog-menu_search-form {
+    input {
+      border-radius: 5px;
+      border: 1px solid;
+    }
+  }
+
+}
+
+.search-displayed + .aussie-casino__blog-menu_search-btn {
+  width: 500px!important;
+  position: absolute;
+  right: 5%;
+}
