@@ -26,13 +26,13 @@ document.addEventListener('DOMContentLoaded', function () {
 
 //ANIMATE SEARCH
 //-------------------------------------------------
+
 var $body = $('body');
-var $background = $('.background-overlay');
 var $menu = $('#blog-menu');
-var $menuItems = $(document).find('.menu-item-object-category');
+var $menuItems = $(document).find('.aussie-casino__blog-menu_ul-block > .menu-item-object-category');
 var $searchWrapper = $('.aussie-casino__blog-menu_search');
-var $searchFormWrapper = $('.aussie-casino__blog-menu_search-wrap');
-var $menuBlogMenuContainer = $('.menu-blog-menu-container');
+var $searchFormWrapper = $('.aussie-casino__blog-menu_search');
+var $searchBtn = $('#blog-search');
 
 function displaySearch() {
     if(! $body.hasClass('search-on')) {
@@ -40,57 +40,51 @@ function displaySearch() {
         // Fade out the menu items
         $menu.velocity({
             opacity: 0,
-            duration:195,
+            duration: 195,
             easing: [20]
         });
         $menuItems.velocity({
             opacity: 0,
             scale: 0.70,
-            duration: 210,
+            duration: 110,
             easing: [20]
-        });
-        // Display background overlay
-        $background.velocity({
-            opacity: 1,
-            duration: 50,
-            easing: "easeInQuad",
-            display: "block"
         });
         // Display the search
         $searchWrapper.addClass('search-displayed');
-        $searchWrapper.velocity({
+        $searchBtn.velocity({
             opacity: 1,
-            duration: 200,
-            display: "block"
-        });
-        $searchFormWrapper.velocity({
-            right: '300px',
-            opacity: 1,
-            position: "absolute",
-            display: "flex",
             duration: 600,
-            easing: 'easeOutSine',
-            delay: 175
+            easing: 'easeOutSine'
         });
         // Change search icon to x
-        $('#blog-search').html('<input class="search-field" placeholder="Search..." type="text"/><img src="./wp-content/themes/aussie-blog/img/close.svg" alt="aussie-casino">');
+        $searchBtn.html('<img src="./wp-content/themes/aussie-blog/img/close.svg" alt="aussie-casino">');
+        $searchFormWrapper.html('<div class="aussie-casino__blog-menu_search-wrap"><form class="aussie-casino__blog-menu_search-form"><input class="aussie-casino__blog-menu_search-field" placeholder="Search..." type="text" /></form></div>');
+        $('.search-displayed .aussie-casino__blog-menu_search-field').velocity({
+            width: '940px',
+            opacity: 1,
+            duration: 600,
+            easing: 'easeOutSine',
+        });
+
     } else {
         $body.removeClass('search-on');
         $searchWrapper.removeClass('search-displayed');
         $menu.velocity('reverse');
-        $menuItems.velocity({opacity: 1, scale: 1,
+        $searchBtn.velocity('reverse');
+        $menuItems.velocity({
+            opacity: 1,
+            scale: 1,
             duration: 200,
             easing: [20],
             stagger: 100
         });
-        $background.velocity('reverse');
-        $searchFormWrapper.velocity('reverse');
-        $('#blog-search').html('<img src="./wp-content/themes/aussie-blog/img/search.svg" alt="aussie-casino">');
+        $searchFormWrapper.html('');
+        $searchBtn.html('<img src="./wp-content/themes/aussie-blog/img/search.svg" alt="aussie-casino">');
     }
 
 }
 
-$("#blog-search").on('click', function(){
+$searchBtn.on('click', function(){
     console.log("clicked search");
     displaySearch();
 });

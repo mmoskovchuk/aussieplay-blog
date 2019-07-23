@@ -18,17 +18,9 @@
         wp_nav_menu($nav_args);
         ?>
 
-        <div class="aussie-casino__blog-menu_search">
-            <div class="aussie-casino__blog-menu_search-wrap">
-                <!--<form class="aussie-casino__blog-menu_search-form">
-                    <input class="search-field" placeholder="Search..." type="text"/>
-                </form>-->
-            </div>
-        </div>
-        <span id="blog-search" class="aussie-casino__blog-menu_search-btn">
+        <div class="aussie-casino__blog-menu_search"></div>
+        <div id="blog-search" class="aussie-casino__blog-menu_search-btn">
             <img src="<?php bloginfo('template_url'); ?>/img/search.svg" alt="<?php bloginfo('name'); ?>"/>
-        </span>
-
+        </div>
     </div>
 </section>
-<div class="background-overlay"></div>
