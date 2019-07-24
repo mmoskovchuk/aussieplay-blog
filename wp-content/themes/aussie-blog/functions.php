@@ -48,10 +48,12 @@ function ox_adding_scripts()
         /*custom js*/
         wp_enqueue_script('custom', get_template_directory_uri() . '/js/scripts.min.js', array('jquery'), null, true);
 
-        /*velocity lib*/
+        /*velocity*/
         wp_enqueue_script('velocity', get_template_directory_uri() . '/js/libs/velocity.min.js', array(), null, true);
-        /*velocity ui lib*/
+        /*velocity ui*/
         wp_enqueue_script('velocity-ui', get_template_directory_uri() . '/js/libs/velocity.ui.min.js', array(), null, true);
+        /*swiper*/
+        wp_enqueue_script('swiper-js', get_template_directory_uri() . '/js/libs/swiper.min.js', array(), null, true);
 
 
         $site_data = array(
@@ -64,6 +66,8 @@ function ox_adding_scripts()
 
             /*custom css*/
             wp_enqueue_style('custom', get_template_directory_uri() . '/css/style.min.css', array(), null);
+            /*swiper css*/
+            wp_enqueue_style('swiper', get_template_directory_uri() . '/css/libs/swiper.min.css', array(), null);
         }
 
     }

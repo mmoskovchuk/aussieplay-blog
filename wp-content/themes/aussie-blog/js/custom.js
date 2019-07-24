@@ -88,3 +88,23 @@ $searchBtn.on('click', function(){
     console.log("clicked search");
     displaySearch();
 });
+
+//SWIPER LATEST ARTICLE
+//-------------------------------------------------
+
+$(document).ready(function () {
+    //initialize swiper when document ready
+    var mySwiper = new Swiper ('.swiper-container', {
+        slidesPerView: 'auto',
+        spaceBetween: 30,
+        pagination: {
+            el: '.swiper-pagination',
+            type: 'fraction',
+            clickable: true,
+        },
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+    })
+});
