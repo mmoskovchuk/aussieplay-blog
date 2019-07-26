@@ -10,7 +10,7 @@ get_template_part('includes/inc', 'main-screen');
 ?>
 
 <script>
-    var $leftBox = $('#block-left');
+    var $leftBox = $('#single-tpl-block-left');
     $leftBox.velocity({
             left: '0',
             duration: 600,
@@ -18,10 +18,10 @@ get_template_part('includes/inc', 'main-screen');
         });
 </script>
 
-<div style="margin-top: 100px; width:100%; display: flex; justify-content: center;">
-    <div style="width:80%;">
+<div class="aussie-casino-single-tpl">
+    <div id="single-tpl-block-left" class="aussie-casino-single-tpl__block-left">
+        <h1><?php echo apply_filters('the_content', $title_post); // выводим контент ?></h1>
         <?php echo apply_filters('the_content', $text); // выводим контент ?>
     </div>
-    <div id="block-left" style="width: 36%; height: 100%; background-color: #2e4453; position: absolute; left: -999px; top: 0; ">left block</div>
 </div>
 

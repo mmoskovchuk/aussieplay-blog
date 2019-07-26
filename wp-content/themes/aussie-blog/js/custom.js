@@ -96,11 +96,73 @@ $(document).ready(function () {
     //initialize swiper when document ready
     var mySwiper = new Swiper ('.swiper-container', {
         slidesPerView: 'auto',
-        spaceBetween: 30,
+        spaceBetween: 150,
+        loop: true,
         pagination: {
             el: '.swiper-pagination',
             type: 'fraction',
             clickable: true,
+            formatFractionCurrent: function (number) {
+                switch(number)
+                {
+                    case 1:
+                        myNum='01';
+                        break;
+                    case 2:
+                        myNum='02';
+                        break;
+                    case 3:
+                        myNum='03';
+                        break;
+                    case 4:
+                        myNum='04';
+                        break;
+                    case 5:
+                        myNum='05';
+                        break;
+                    case 6:
+                        myNum='06';
+                        break;
+                    case 7:
+                        myNum='07';
+                        break;
+                    case 8:
+                        myNum='08';
+                        break;
+                    case 9:
+                        myNum='09';
+                        break;
+                    default:myNum= number
+                }
+                return myNum;
+            },
+            formatFractionTotal: function (number) {
+                switch(number)
+                {
+                    case 5:
+                        myNum='05';
+                        break;
+                    case 6:
+                        myNum='06';
+                        break;
+                    case 7:
+                        myNum='07';
+                        break;
+                    case 8:
+                        myNum='08';
+                        break;
+                    case 9:
+                        myNum='09';
+                        break;
+                    default:myNum= number
+                }
+                return myNum;
+            },
+            renderFraction: function (currentClass, totalClass) {
+                return '<div class="aussie-casino__latest-articles_pag-wrap"><div class="aussie-casino__latest-articles_pag-wrap-el"><span class="' + currentClass + '"></span></div>' + '<div class="aussie-casino__latest-articles_pag-wrap-el"><span class="aussie-casino__latest-articles_fraction-of'
+                    + '">/</span></div>' +
+                    '<div class="aussie-casino__latest-articles_pag-wrap-el"><span class="' + totalClass + '"></span></div></div>';
+            }
         },
         navigation: {
             nextEl: '.swiper-button-next',

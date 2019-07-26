@@ -27,6 +27,7 @@ function ajax_show_posts_in_cat() {
 
     $post_uniq = get_post( $get_post_id->ID );
     $text = $post_uniq->post_content; // контент поста
+    $title_post = $post_uniq->post_title;
 
 	
 	require plugin_dir_path( __FILE__ ) . 'tpl-cat.php';
