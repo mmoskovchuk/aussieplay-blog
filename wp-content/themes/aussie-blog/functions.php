@@ -53,7 +53,7 @@ function ox_adding_scripts()
         /*velocity ui*/
         wp_enqueue_script('velocity-ui', get_template_directory_uri() . '/js/libs/velocity.ui.min.js', array(), null, true);
         /*swiper*/
-        wp_enqueue_script('swiper-js', get_template_directory_uri() . '/js/libs/swiper.min.js', array(), null, true);
+        wp_enqueue_script('swiper', get_template_directory_uri() . '/js/libs/swiper.min.js', array(), null, true);
 
 
         $site_data = array(

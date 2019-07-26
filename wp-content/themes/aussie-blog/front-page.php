@@ -12,6 +12,8 @@
 <?php get_template_part('includes/inc', 'main-screen'); ?>
     <!--LATEST ARTICLES-->
 <?php get_template_part('includes/inc', 'latest-articles'); ?>
+    <!--LATEST NEWS-->
+<?php get_template_part('includes/inc', 'latest-news'); ?>
 
 
 

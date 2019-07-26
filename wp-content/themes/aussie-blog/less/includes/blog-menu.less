@@ -17,11 +17,16 @@
     justify-content: center;
   }
   &__blog-menu_container {
-    width: 83%;
+    width: 84%;
     height: 113px;
     display: flex;
     align-items: center;
     justify-content: space-between
+  }
+  &__blog-menu_wrap-left {
+    width: 400px;
+    display: flex;
+    justify-content: space-between;
   }
   &__blog-menu_logo {
     width: 123px;
@@ -66,7 +71,9 @@
     border: 0;
     background: transparent;
     cursor: pointer;
-    z-index: 2;
+    > img {
+      z-index: 2;
+    }
   }
   &__blog-menu_search-form {
     input {
@@ -90,14 +97,15 @@
   height: 100%;
 }
 
-.search-displayed {
-  display: flex;
-  align-items: center;
+.aussie-casino__blog-menu_search {
+  position: absolute;
+  right: 0;
 }
+
 
 .search-displayed .aussie-casino__blog-menu_search-field {
   position: absolute;
-  right: 161px;
+  right: 152px;
   display: flex;
   align-items: center;
   //width: 940px;
@@ -107,6 +115,10 @@
   border-radius: 30px;
   border: 0;
   height: 20px;
+}
+
+.search-displayed + .aussie-casino__blog-menu_search-btn {
+  box-shadow: none;
 }
 
 .aussie-casino__blog-menu_search-form {

@@ -85,7 +85,6 @@ function displaySearch() {
 }
 
 $searchBtn.on('click', function(){
-    console.log("clicked search");
     displaySearch();
 });
 
