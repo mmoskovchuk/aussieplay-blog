@@ -206,4 +206,29 @@ function kama_pagenavi($before = '', $after = '', $echo = true)
     $out .= "</div>" . $after . "\n";
     if ($echo) echo $out;
     else return $out;
+};
+
+
+//TIME AGO
+//--------------------------------------------------
+
+add_filter('the_time', 'human_time_diff_enhanced');
+
+function human_time_diff_enhanced( $duration = 60 ) {
+
+    $post_time = get_the_time('U');
+    $human_time = '';
+
+    $time_now = date('U');
+
+    // use human time if less that $duration days ago (60 days by default)
+    // 60 seconds * 60 minutes * 24 hours * $duration days
+    if ( $post_time > $time_now - ( 60 * 60 * 24 * $duration ) ) {
+        $human_time = sprintf( __( '0%s ago', 'binarymoon'), human_time_diff( $post_time, current_time( 'timestamp' ) ) );
+    } else {
+        $human_time = get_the_date();
+    }
+
+    return $human_time;
+
 }

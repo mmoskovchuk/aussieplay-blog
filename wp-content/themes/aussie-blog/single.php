@@ -9,14 +9,16 @@
 
 
 <?php if (have_posts()) : ?>
-    <?php while (have_posts()) : the_post(); ?>
+    <?php while (have_posts()) :
+        the_post(); ?>
 
         <div class="aussie-casino-single">
 
             <div id="single-block-left" class="aussie-casino-single__block-left">
 
                 <a class="aussie-casino-single__block-left_close" href="/">
-                    <img src="<?php bloginfo('template_url'); ?>/img/close-single.svg" alt="<?php bloginfo('name'); ?>"/>
+                    <img src="<?php bloginfo('template_url'); ?>/img/close-single.svg"
+                         alt="<?php bloginfo('name'); ?>"/>
                 </a>
 
                 <div class="aussie-casino-single__container">
@@ -26,8 +28,11 @@
                     <h1 class="aussie-casino-single__block-left_title"><?php the_title(); ?></h1>
 
                     <div class="aussie-casino-single__block-left_top-desc-wrap">
-                        <time><?php the_date('Y-m-d'); ?></time>
-                        <span>article rating</span>
+                        <time><?php the_date('d M, Y'); ?></time>
+                        <div class="aussie-casino-single__block-left_top-rating">
+                            <h5>article rating</h5><?php if (function_exists('the_ratings')) {
+                                the_ratings();
+                            } ?></div>
                     </div>
 
                 </div>
@@ -47,18 +52,62 @@
 
                 <div class="aussie-casino-single__container">
                     <div class="aussie-casino-single__block-left_content-wrap">
+
                         <?php the_content(); ?>
-                        <?php if(function_exists('the_ratings')) { the_ratings(); } ?>
+
+                        <div class="aussie-casino-single__block-left_bottom-wrap-all">
+
+                            <div class="aussie-casino-single__block-left_bottom-wrap">
+                                <div class="aussie-casino-single__block-left_bottom-rating">
+                                    <h5>rate this article</h5><?php if (function_exists('the_ratings')) {
+                                        the_ratings();
+                                    } ?>
+                                </div>
+                                <div class="aussie-casino-single__block-left_social">
+                                    <h5>Share article in social</h5>
+                                    <?php echo do_shortcode('[addtoany]'); ?>
+                                </div>
+                            </div>
+
+                            <div class="aussie-casino-single__block-left_tag-wrap">
+                                <?php if (has_tag()) : ?>
+                                    <h5 class="aussie-casino-single__block-left_tag-title">Tag list</h5>
+                                    <?php the_tags('<ul><li>', '</li><li>', '</li></ul>'); ?>
+                                <?php endif; ?>
+                            </div>
+
+                        </div>
+
                     </div>
                 </div>
-
 
 
             </div>
 
             <div class="aussie-casino-single__block-right">
-                <h2>Related posts</h2>
+                <?php $post_id = get_the_ID(); ?>
+                <?php $category_id = get_the_category($post_id); ?>
+                <?php $cat_id = $category_id[0]->cat_ID; ?>
+                <?php $posts = get_posts("orderby=date&numberposts=3&category=" . $cat_id . "&exclude=" . $post_id); ?>
+                <?php if ($posts) : ?>
+                    <h2 class="aussie-casino-single__block-right_rel-title"><b>Related posts</b></h2>
+                    <div class="aussie-casino-single__block-right_rel-posts-wrap">
+                    <?php foreach ($posts as $post) : setup_postdata($post); ?>
+                        <?php $post_id = get_the_ID(); ?>
+                        <?php $imagesurl = get_the_post_thumbnail_url($post_id, 'large'); ?>
+
+                        <div class="aussie-casino-single__block-right_rel-post">
+                            <div class="aussie-casino-single__block-right_rel-post-img" style="background-image: url('<?php echo $imagesurl; ?>'); background-size: cover;">
+                                <time><?php echo get_the_date('d M, Y'); ?></time>
+                            </div>
+                        <a href="<?php the_permalink() ?>"
+                           rel="bookmark"><?php the_title(); ?></a>
+                        </div>
+
+                    <?php endforeach; ?>
+                <?php endif; ?>
             </div>
+        </div>
 
         </div>
 

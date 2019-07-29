@@ -3,9 +3,9 @@
         <div class="aussie-casino__latest-articles_container">
             <h2>Latest Articles</h2>
         </div>
-        <?php function meks_time_ago() {
+        <?php /*function meks_time_ago() {
             return human_time_diff(get_the_time('U'), current_time('timestamp')) . ' ' . __('ago');
-        } ?>
+        } */?>
         <!-- Swiper -->
         <div class="swiper-container">
 
@@ -20,7 +20,7 @@
                              style="background-image: url('<?php echo $imagesurl; ?>'); background-size: cover;">
                             <div class="aussie-casino__latest-articles_title">
                                 <a href="<?php the_permalink() ?>" rel="bookmark"><?php the_title(); ?></a>
-                                <span class="aussie-casino__latest-articles_date"><b><?php echo meks_time_ago(); /* post date in time ago format */ ?></b><span>
+                                <span class="aussie-casino__latest-articles_date"><b><?php the_time(); ?></b><span>
                             </div>
                         </div>
 
