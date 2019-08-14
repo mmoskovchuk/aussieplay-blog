@@ -107,52 +107,53 @@
       left: 150px;
       position: absolute;
     }
+
+    .swiper-container {
+      width: 100%;
+      height: 500px;
+      padding-bottom: 200px !important;
+    }
+    .swiper-wrapper {
+      width: 55% !important;
+    }
+    .swiper-slide {
+      height: 500px;
+      text-align: center;
+      font-size: 18px;
+      background: #cbcbcb;
+      width: 80%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding-left: 23px !important;
+      padding-top: 23px !important;
+      padding-right: 23px !important;
+    }
+    .swiper-slide:nth-child(2n) {
+      width: 100%;
+    }
+    .swiper-slide:nth-child(3n) {
+      width: 100%;
+    }
+
+    .swiper-button-next, .swiper-button-prev {
+      top: 620px !important;
+      z-index: 99 !important;
+      margin-top: -27px !important;
+    }
+    .swiper-button-next {
+      right: 284px !important;
+      background: transparent url(../img/arrow-right.svg) center no-repeat !important;
+      background-position-y: -10px !important;
+      background-position-x: -23px !important;
+    }
+    .swiper-button-prev {
+      left: inherit !important;
+      right: 514px !important;
+      background: transparent url(../img/arrow-left.svg) center no-repeat !important;
+      background-position-y: -10px !important;
+      background-position-x: -34px !important;
+    }
+
   }
-}
-
-.swiper-container {
-  width: 100%;
-  height: 500px;
-  padding-bottom: 200px !important;
-}
-.swiper-wrapper {
-  width: 55% !important;
-}
-.swiper-slide {
-  height: 500px;
-  text-align: center;
-  font-size: 18px;
-  background: #cbcbcb;
-  width: 80%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding-left: 23px !important;
-  padding-top: 23px !important;
-  padding-right: 23px !important;
-}
-.swiper-slide:nth-child(2n) {
-  width: 100%;
-}
-.swiper-slide:nth-child(3n) {
-  width: 100%;
-}
-
-.swiper-button-next, .swiper-button-prev {
-  top: 620px !important;
-  z-index: 99 !important;
-  margin-top: -27px !important;
-}
-.swiper-button-next {
-  right: 284px !important;
-  background: transparent url(../img/arrow-right.svg) center no-repeat !important;
-  background-position-y: -10px !important;
-  background-position-x: -23px !important;
-}
-.swiper-button-prev {
-  left: inherit !important;
-  right: 514px !important;
-  background: transparent url(../img/arrow-left.svg) center no-repeat !important;
-  background-position-y: -10px !important;
-  background-position-x: -34px !important;
 }

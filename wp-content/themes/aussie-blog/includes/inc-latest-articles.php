@@ -7,7 +7,7 @@
             return human_time_diff(get_the_time('U'), current_time('timestamp')) . ' ' . __('ago');
         } */?>
         <!-- Swiper -->
-        <div class="swiper-container">
+        <div class="swiper-container swiper-container-latest-articles">
 
             <div class="swiper-wrapper">
                 <?php $posts = get_posts("orderby=date&numberposts=5"); ?>
@@ -30,7 +30,7 @@
 
             <!-- Pagination -->
             <div class="swiper-button-next aussie-casino__latest-articles_btn-next"></div>
-            <div class="swiper-pagination aussie-casino__latest-articles_pagination"></div>
+            <div class="swiper-pagination-latest aussie-casino__latest-articles_pagination"></div>
             <div class="swiper-button-prev aussie-casino__latest-articles_btn-prev"></div>
         </div>
     </div>

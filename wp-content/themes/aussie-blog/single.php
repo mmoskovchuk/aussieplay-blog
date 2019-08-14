@@ -85,33 +85,71 @@
             </div>
 
             <div class="aussie-casino-single__block-right">
-                <?php $post_id = get_the_ID(); ?>
-                <?php $category_id = get_the_category($post_id); ?>
-                <?php $cat_id = $category_id[0]->cat_ID; ?>
-                <?php $posts = get_posts("orderby=date&numberposts=3&category=" . $cat_id . "&exclude=" . $post_id); ?>
-                <?php if ($posts) : ?>
-                    <h2 class="aussie-casino-single__block-right_rel-title"><b>Related posts</b></h2>
+
+                <div class="aussie-casino-single__block-right_rel-wrap">
+                    <?php $post_id = get_the_ID(); ?>
+                    <?php $category_id = get_the_category($post_id); ?>
+                    <?php $cat_id = $category_id[0]->cat_ID; ?>
+                    <?php $posts = get_posts("orderby=date&numberposts=3&category=" . $cat_id . "&exclude=" . $post_id); ?>
+                    <?php if ($posts) : ?>
                     <div class="aussie-casino-single__block-right_rel-posts-wrap">
-                    <?php foreach ($posts as $post) : setup_postdata($post); ?>
-                        <?php $post_id = get_the_ID(); ?>
-                        <?php $imagesurl = get_the_post_thumbnail_url($post_id, 'large'); ?>
+                        <h2 class="aussie-casino-single__block-right_rel-title"><b>Related posts</b></h2>
+                        <?php foreach ($posts as $post) : setup_postdata($post); ?>
+                            <?php $post_id = get_the_ID(); ?>
+                            <?php $imagesurl = get_the_post_thumbnail_url($post_id, 'large'); ?>
 
-                        <div class="aussie-casino-single__block-right_rel-post">
-                            <div class="aussie-casino-single__block-right_rel-post-img" style="background-image: url('<?php echo $imagesurl; ?>'); background-size: cover;">
-                                <time><?php echo get_the_date('d M, Y'); ?></time>
+                            <div class="aussie-casino-single__block-right_rel-post">
+                                <div class="aussie-casino-single__block-right_rel-post-img"
+                                     style="background-image: url('<?php echo $imagesurl; ?>'); background-size: cover;">
+                                    <time><?php echo get_the_date('d M, Y'); ?></time>
+                                </div>
+                                <a href="<?php the_permalink() ?>"
+                                   rel="bookmark"><?php the_title(); ?></a>
                             </div>
-                        <a href="<?php the_permalink() ?>"
-                           rel="bookmark"><?php the_title(); ?></a>
+
+                        <?php endforeach; ?>
+                        <?php endif; ?>
+                    </div>
+                    <div class="aussie-casino-single__block-right_read-more--wrap">
+                        <h3 class="aussie-casino-single__block-right_read-more--title"><b>Read more</b></h3>
+                        <div class="swiper-container swiper-container-read-more">
+                            <div class="swiper-wrapper">
+
+                                <?php $posts = get_posts("orderby=date&numberposts=5"); ?>
+                                <?php if ($posts) : ?>
+                                    <?php foreach ($posts as $post) : setup_postdata($post); ?>
+                                        <?php $post_id = get_the_ID(); ?>
+                                        <?php $imagesurl = get_the_post_thumbnail_url($post_id, 'full'); ?>
+
+                                        <div class="swiper-slide aussie-casino-single__block-right_read-more--slide"
+                                             style="background-image: url('<?php echo $imagesurl; ?>'); background-size: cover;">
+                                            <time class="aussie-casino-single__block-right_read-more--date"><b><?php echo get_the_date('d M, Y'); ?></b></time>
+                                            <div class="aussie-casino-single__block-right_read-more--title-desc">
+                                                <a href="<?php the_permalink() ?>"
+                                                   rel="bookmark"><?php the_title(); ?></a>
+                                            </div>
+                                        </div>
+
+                                    <?php endforeach; ?>
+                                <?php endif; ?>
+                            </div>
+                            <!-- Pagination -->
+
+                            <div class="swiper-pagination-read-more"></div>
+                            <div class="swiper-button-next aussie-casino-single__block-right_read-more--btn-next"></div>
+                            <div class="swiper-button-prev aussie-casino-single__block-right_read-more--btn-prev"></div>
                         </div>
-
-                    <?php endforeach; ?>
-                <?php endif; ?>
+                    </div>
+                </div>
             </div>
-        </div>
-
         </div>
 
     <?php endwhile; ?>
 <?php endif; ?>
+
+<!--SUBSCRIBE US-->
+<?php get_template_part('includes/inc', 'subscribe-us'); ?>
+<!--ABOUT US-->
+<?php get_template_part('includes/inc', 'about-us'); ?>
 
 <?php get_footer(); ?>

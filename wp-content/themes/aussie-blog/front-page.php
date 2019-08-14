@@ -14,6 +14,10 @@
 <?php get_template_part('includes/inc', 'latest-articles'); ?>
     <!--LATEST NEWS-->
 <?php get_template_part('includes/inc', 'latest-news'); ?>
+    <!--SUBSCRIBE US-->
+<?php get_template_part('includes/inc', 'subscribe-us'); ?>
+    <!--ABOUT US-->
+<?php get_template_part('includes/inc', 'about-us'); ?>
 
 
 

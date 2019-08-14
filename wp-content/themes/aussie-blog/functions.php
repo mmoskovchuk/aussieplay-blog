@@ -63,11 +63,11 @@ function ox_adding_scripts()
         wp_localize_script('custom', 'site_data', $site_data);
 
         if (!is_page(array('', ''))) {
-
-            /*custom css*/
-            wp_enqueue_style('custom', get_template_directory_uri() . '/css/style.min.css', array(), null);
             /*swiper css*/
             wp_enqueue_style('swiper', get_template_directory_uri() . '/css/libs/swiper.min.css', array(), null);
+            /*custom css*/
+            wp_enqueue_style('custom', get_template_directory_uri() . '/css/style.min.css', array(), null);
+
         }
 
     }
