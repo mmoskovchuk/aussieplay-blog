@@ -5,6 +5,68 @@
     width: 100%;
     height: 625px;
     position: relative;
+
+    form {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+    }
+    input[type="email"] {
+      width: 355px;
+      height: 18px;
+      background: #280e016b;
+      border: 1px solid #ffffff40;
+      border-radius: 30px;
+      margin-right: 26px;
+      padding: 20px 30px;
+      color: @c1;
+    }
+    input[type="email"]::placeholder {
+      color: #ffffff40;
+      font-family: @montserrat-r;
+      font-size: 16px;
+    }
+
+    input[type="submit"] {
+      display: flex;
+      align-items: center;
+      width: 270px;
+      height: 60px;
+      justify-content: center;
+      background: linear-gradient(45deg, #E3752C, #F2CC3D);
+      border-radius: 30px;
+      box-shadow: 0 0 24px 0 #ffa60a;
+      transition: .5s;
+      text-decoration: none;
+      font-family: @montserrat-m;
+      color: @c1;
+      font-size: 16px;
+      text-transform: uppercase;
+      letter-spacing: 0;
+      border: none;
+      cursor: pointer;
+      &:hover {
+        box-shadow: none;
+      }
+    }
+    .wpcf7 .ajax-loader {
+      display: none;
+    }
+    .wpcf7-not-valid-tip {
+      color: #940009;
+      margin-top: 10px;
+    }
+    div.wpcf7-validation-errors {
+      color: #940009 !important;
+      border: none;
+    }
+    div.wpcf7-mail-sent-ok {
+      border: none;
+      color: @c1;
+    }
+  }
+  &__subscribe-us_contact-form {
+    display: flex;
   }
   &__subscribe-us_wrap {
     background: transparent url("../img/subscribe-us-bg.png") center no-repeat;
@@ -35,13 +97,14 @@
       font-family: @montserrat-b;
       margin-bottom: 29px;
     }
-    p {
-      width: 25vw;
-      color: @c1;
-      line-height: 32px;
-      font-size: 16px;
-      text-align: center;
-      font-family: @montserrat-r;
-    }
+  }
+  &__subscribe-us_desc {
+    width: 25vw;
+    color: @c1;
+    line-height: 32px;
+    font-size: 16px;
+    text-align: center;
+    font-family: @montserrat-r;
+    margin-bottom: 39px;
   }
 }

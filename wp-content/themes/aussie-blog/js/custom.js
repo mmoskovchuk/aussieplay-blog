@@ -88,6 +88,90 @@ $searchBtn.on('click', function(){
     displaySearch();
 });
 
+
+//SWIPER READ MORE
+//-------------------------------------------------
+
+$(document).ready(function () {
+    //initialize swiper when document ready
+    var mySwiperMoreRead = new Swiper ('.swiper-container-read-more', {
+        slidesPerView: 'auto',
+        spaceBetween: 100,
+        loop: true,
+        pagination: {
+            el: '.swiper-pagination-read-more',
+            type: 'fraction',
+            clickable: true,
+            paginationClickable: true,
+            formatFractionCurrent: function (number) {
+                switch(number)
+                {
+                    case 1:
+                        myNum='01';
+                        break;
+                    case 2:
+                        myNum='02';
+                        break;
+                    case 3:
+                        myNum='03';
+                        break;
+                    case 4:
+                        myNum='04';
+                        break;
+                    case 5:
+                        myNum='05';
+                        break;
+                    case 6:
+                        myNum='06';
+                        break;
+                    case 7:
+                        myNum='07';
+                        break;
+                    case 8:
+                        myNum='08';
+                        break;
+                    case 9:
+                        myNum='09';
+                        break;
+                    default:myNum= number
+                }
+                return myNum;
+            },
+            formatFractionTotal: function (number) {
+                switch(number)
+                {
+                    case 5:
+                        myNum='05';
+                        break;
+                    case 6:
+                        myNum='06';
+                        break;
+                    case 7:
+                        myNum='07';
+                        break;
+                    case 8:
+                        myNum='08';
+                        break;
+                    case 9:
+                        myNum='09';
+                        break;
+                    default:myNum= number
+                }
+                return myNum;
+            },
+            renderFraction: function (currentClass1, totalClass1) {
+                return '<div class="aussie-casino-single__block-right_read-more--pag-wrap"><div class="aussie-casino-single__block-right_read-more--pag-wrap-el"><p class="' + currentClass1 + '"></p></div>' + '<div class="aussie-casino-single__block-right_read-more--pag-wrap-el"><p class="aussie-casino-single__block-right_read-more--fraction-of'
+                    + '">/</p></div>' +
+                    '<div class="aussie-casino-single__block-right_read-more--pag-wrap-el"><p class="' + totalClass1 + '"></p></div></div>';
+            }
+        },
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+    })
+});
+
 //SWIPER LATEST ARTICLE
 //-------------------------------------------------
 
@@ -171,82 +255,6 @@ $(document).ready(function () {
 });
 
 
-//SWIPER READ MORE
-//-------------------------------------------------
 
-$(document).ready(function () {
-    //initialize swiper when document ready
-    var mySwiperMoreRead = new Swiper ('.swiper-container-read-more', {
-        slidesPerView: 'auto',
-        spaceBetween: 100,
-        loop: true,
-        pagination: {
-            el: '.swiper-pagination-read-more',
-            clickable: true,
-            type: 'fraction',
-            formatFractionCurrent: function (number) {
-                switch(number)
-                {
-                    case 1:
-                        myNum='01';
-                        break;
-                    case 2:
-                        myNum='02';
-                        break;
-                    case 3:
-                        myNum='03';
-                        break;
-                    case 4:
-                        myNum='04';
-                        break;
-                    case 5:
-                        myNum='05';
-                        break;
-                    case 6:
-                        myNum='06';
-                        break;
-                    case 7:
-                        myNum='07';
-                        break;
-                    case 8:
-                        myNum='08';
-                        break;
-                    case 9:
-                        myNum='09';
-                        break;
-                    default:myNum= number
-                }
-                return myNum;
-            },
-            formatFractionTotal: function (number) {
-                switch(number)
-                {
-                    case 5:
-                        myNum='05';
-                        break;
-                    case 6:
-                        myNum='06';
-                        break;
-                    case 7:
-                        myNum='07';
-                        break;
-                    case 8:
-                        myNum='08';
-                        break;
-                    case 9:
-                        myNum='09';
-                        break;
-                    default:myNum= number
-                }
-                return myNum;
-            },
-            renderFraction: function (currentClass1, totalClass1) {
-                return '<div class="aussie-casino-single__block-right_read-more--pag-wrap"><div class="aussie-casino-single__block-right_read-more--pag-wrap-el"><p class="' + currentClass1 + '"></p></div>' + '<div class="aussie-casino-single__block-right_read-more--pag-wrap-el"><p class="aussie-casino-single__block-right_read-more--fraction-of'
-                    + '">/</p></div>' +
-                    '<div class="aussie-casino-single__block-right_read-more--pag-wrap-el"><p class="' + totalClass1 + '"></p></div></div>';
-            }
-        },
-    })
-});
 
 

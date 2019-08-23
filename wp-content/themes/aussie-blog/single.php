@@ -30,9 +30,12 @@
                     <div class="aussie-casino-single__block-left_top-desc-wrap">
                         <time><?php the_date('d M, Y'); ?></time>
                         <div class="aussie-casino-single__block-left_top-rating">
-                            <h5>article rating</h5><?php if (function_exists('the_ratings')) {
-                                the_ratings();
-                            } ?></div>
+                            <h5>article rating</h5><?php
+/*                            if (function_exists('the_ratings')) {
+                                echo expand_ratings_template('<span class="rating">%RATINGS_IMAGES%</span>', get_the_ID());
+                                }
+                            */?>
+                        </div>
                     </div>
 
                 </div>
@@ -60,7 +63,7 @@
                             <div class="aussie-casino-single__block-left_bottom-wrap">
                                 <div class="aussie-casino-single__block-left_bottom-rating">
                                     <h5>rate this article</h5><?php if (function_exists('the_ratings')) {
-                                        the_ratings();
+                                        echo expand_ratings_template('<span class="rating">%RATINGS_IMAGES_VOTE%</span>',get_the_ID());
                                     } ?>
                                 </div>
                                 <div class="aussie-casino-single__block-left_social">
