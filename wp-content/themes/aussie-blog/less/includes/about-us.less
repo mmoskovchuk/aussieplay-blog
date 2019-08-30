@@ -9,31 +9,52 @@
     @media only screen and (max-width: @desktop-m) {
       height: 401px;
     }
+    @media only screen and (max-width: @desktop-xs) {
+      height: 276px;
+    }
+    @media only screen and (max-width: @tablet-xl) {
+      height: 460px;
+    }
+    @media only screen and (max-width: @tablet-l) {
+      height: 500px;
+    }
+    @media only screen and (max-width: @mobile-xl) {
+      height: 615px;
+      margin-top: 70px;
+    }
 
     &:after {
       content: '';
       background-color: #ffbe1d;
-      width: 507px;
+      width: 27%;
       height: 456px;
       position: absolute;
       bottom: 0;
       left: 0;
+
       @media only screen and (max-width: @desktop-l) {
-        width: 440px;
+        width: 27%;
         height: 430px;
       }
       @media only screen and (max-width: @desktop-m) {
-        width: 420px;
         height: 401px;
       }
       @media only screen and (max-width: @desktop-s) {
-        width: 327px;
         height: 401px;
       }
       @media only screen and (max-width: @desktop-xs) {
-        width: 54%;
+        height: 276px;
+      }
+      @media only screen and (max-width: @tablet-xl) {
+        width: 52%;
         height: 101px;
-        bottom: 87%;
+        bottom: 80%;
+      }
+      @media only screen and (max-width: @tablet-l) {
+        bottom: 82%;
+      }
+      @media only screen and (max-width: @mobile-xl) {
+        bottom: 85%;
       }
     }
   }
@@ -49,13 +70,16 @@
     position: relative;
     flex-direction: column;
     justify-content: center;
+    @media only screen and (max-width: @tablet-xl) {
+      margin-right: auto;
+    }
   }
 
   &__about-us_wrap {
     display: flex;
     width: 100%;
     justify-content: space-between;
-    @media only screen and (max-width: @desktop-xs) {
+    @media only screen and (max-width: @tablet-xl) {
       flex-direction: column;
     }
   }
@@ -93,12 +117,39 @@
     flex-direction: column;
     align-items: flex-start;
     padding-left: 20%;
-
+    @media only screen and (max-width: @tablet-xl) {
+      padding-left: 0;
+      align-items: center;
+    }
     .aussie-casino__about-us_col {
       width: 33.2vw;
       margin-bottom: 146px;
+      @media only screen and (max-width: @desktop-l) {
+        margin-bottom: 74px;
+      }
       @media only screen and (max-width: @desktop-s) {
         width: 100%;
+      }
+      @media only screen and (max-width: @desktop-xs) {
+        margin-bottom: 40px;
+      }
+      @media only screen and (max-width: @tablet-xl) {
+        margin-bottom: 50px;
+        height: 60px;
+      }
+      @media only screen and (max-width: @tablet-l) {
+        height: 100px;
+      }
+      @media only screen and (max-width: @mobile-xl) {
+        overflow-y: scroll;
+        direction: rtl;
+        text-align: left;
+        padding-left: 50px;
+        height: 80px;
+      }
+      @media only screen and (max-width: @mobile-xl) {
+        width: 180px;
+        height: 218px;
       }
 
       p {
@@ -109,6 +160,12 @@
         @media only screen and (max-width: @desktop-l) {
           font-size: 13px;
         }
+        @media only screen and (max-width: @desktop-xs) {
+          font-size: 11px;
+        }
+        @media only screen and (max-width: @mobile-xl) {
+          font-size: 12px;
+        }
       }
     }
   }
@@ -118,6 +175,12 @@
     justify-content: space-between;
     align-items: center;
     width: 36.2vw;
+    @media only screen and (max-width: @tablet-xl) {
+      flex-direction: column;
+    }
+    @media only screen and (max-width: @mobile-xl) {
+      width: 100%;
+    }
   }
 
   &__about-us_social {
@@ -163,6 +226,21 @@
             line-height: 40px;
             height: 40px;
           }
+          @media only screen and (max-width: @desktop-s) {
+            width: 30px;
+            line-height: 30px;
+            height: 30px;
+          }
+          @media only screen and (max-width: @desktop-xs) {
+            width: 20px;
+            line-height: 20px;
+            height: 20px;
+          }
+          @media only screen and (max-width: @tablet-xl) {
+            width: 51px;
+            line-height: 50px;
+            height: 52px;
+          }
 
           svg {
             @media only screen and (max-width: @desktop-l) {
@@ -170,6 +248,12 @@
             }
             @media only screen and (max-width: @desktop-m) {
               width: 7px;
+            }
+            @media only screen and (max-width: @desktop-xs) {
+              width: 5px;
+            }
+            @media only screen and (max-width: @tablet-xl) {
+              width: 11px;
             }
           }
         }
@@ -185,9 +269,20 @@
             @media only screen and (max-width: @desktop-m) {
               width: 12px;
             }
+            @media only screen and (max-width: @desktop-xs) {
+              width: 8px;
+            }
+            @media only screen and (max-width: @tablet-xl) {
+              width: 19px;
+            }
           }
         }
       }
+    }
+  }
+  &__about-us_social--wrap {
+    @media only screen and (max-width: @tablet-xl) {
+      margin-bottom: 48px;
     }
   }
   &__about-us_col-copyright {
@@ -197,5 +292,44 @@
     @media only screen and (max-width: @desktop-l) {
       font-size: 13px;
     }
+    @media only screen and (max-width: @desktop-xs) {
+      font-size: 11px;
+    }
+    @media only screen and (max-width: @tablet-xl) {
+      margin-bottom: 38px;
+    }
+  }
+  &__about-us_btn-top {
+    width: 244px;
+    height: 42px;
+    border: 1px solid @c4;
+    cursor: pointer;
+    text-transform: uppercase;
+    color: @c2;
+    font-family: @montserrat-m;
+    font-size: 14px;
+    font-weight: 600;
+    background-color: @c1;
+    border-radius: 25px;
+    @media only screen and (min-width: @tablet-xl) {
+      display: none;
+    }
+    @media only screen and (max-width: @tablet-xl) {
+      display: block;
+    }
+  }
+}
+
+@media only screen and (max-width: @tablet-xl) {
+  .aussie-casino__about-us_col::-webkit-scrollbar-thumb {
+    background-color: #ffc100;
+    width: 2px;
+  }
+  .aussie-casino__about-us_col::-webkit-scrollbar-track {
+    background-color: #DEDEDE;
+    width: 1px;
+  }
+  .aussie-casino__about-us_col::-webkit-scrollbar {
+    width: 1px;
   }
 }

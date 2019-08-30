@@ -29,6 +29,7 @@
                         </div>
                     </div>
                     <div class="aussie-casino__about-us_col-copyright">&copy;  Aussie Play Casino, <?php echo date("Y"); ?>. All Rights Reserved</div>
+                    <button class="aussie-casino__about-us_btn-top" id="btn-top" title="Go to top">Go Top</button>
                 </div>
             </div>
         </div>

@@ -20,6 +20,10 @@
       margin-right: 26px;
       padding: 20px 30px;
       color: @c1;
+      @media only screen and (max-width: @tablet-xl) {
+        margin-right: 0;
+        width: 100%;
+      }
     }
     input[type="email"]::placeholder {
       color: #ffffff40;
@@ -48,6 +52,9 @@
       &:hover {
         box-shadow: none;
       }
+      @media only screen and (max-width: @tablet-xl) {
+        width: 100%;
+      }
     }
     .wpcf7 .ajax-loader {
       display: none;
@@ -67,6 +74,30 @@
   }
   &__subscribe-us_contact-form {
     display: flex;
+    @media only screen and (max-width: @tablet-xl) {
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+    }
+    label {
+      @media only screen and (max-width: @tablet-xl) {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        margin-bottom: 18px;
+      }
+      span {
+        @media only screen and (max-width: @tablet-xl) {
+          width: 100%;
+          display: flex;
+        }
+        input {
+          @media only screen and (max-width: @tablet-xl) {
+            text-align: center;
+          }
+        }
+      }
+    }
   }
   &__subscribe-us_wrap {
     background: transparent url("../img/subscribe-us-bg.png") center no-repeat;
@@ -77,6 +108,11 @@
     bottom: 0;
     display: flex;
     align-items: center;
+    @media only screen and (max-width: @tablet-xl) {
+      background: transparent url("../img/subscribe-us-bg-mobile.jpg") center no-repeat;
+      background-size: cover;
+      height: 626px;
+    }
   }
 
   &__subscribe-us_content {
@@ -86,16 +122,43 @@
     align-items: center;
     width: 78%;
     justify-content: flex-end;
+    @media only screen and (max-width: @desktop-l) {
+      width: 86%;
+    }
+    @media only screen and (max-width: @tablet-xl) {
+      width: 100%;
+      justify-content: center;
+    }
   }
   &__subscribe-us_content--wrap {
     display: flex;
     flex-direction: column;
     align-items: center;
+    @media only screen and (max-width: @tablet-xl) {
+      width: 50%;
+    }
+    @media only screen and (max-width: @mobile-l) {
+      width: 65%;
+    }
     h3 {
       color: #FFC100;
       font-size: 73px;
       font-family: @montserrat-b;
       margin-bottom: 29px;
+      @media only screen and (max-width: @desktop-l) {
+        font-size: 60px;
+      }
+      @media only screen and (max-width: @desktop-xs) {
+        font-size: 50px;
+      }
+      @media only screen and (max-width: @tablet-xl) {
+        font-size: 43px;
+      }
+    }
+    div[role="form"] {
+      @media only screen and (max-width: @tablet-xl) {
+        width: 100%;
+      }
     }
   }
   &__subscribe-us_desc {
@@ -106,5 +169,9 @@
     text-align: center;
     font-family: @montserrat-r;
     margin-bottom: 39px;
+    @media only screen and (max-width: @tablet-xl) {
+      width: 100%;
+      text-align: left;
+    }
   }
 }
