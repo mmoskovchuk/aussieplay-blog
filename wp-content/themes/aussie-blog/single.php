@@ -62,23 +62,27 @@
                         <div class="aussie-casino-single__block-left_bottom-wrap-all">
 
                             <div class="aussie-casino-single__block-left_bottom-wrap">
-                                <div class="aussie-casino-single__block-left_bottom-rating">
-                                    <h5>rate this article</h5><?php if (function_exists('the_ratings')) {
-                                        echo expand_ratings_template('<span class="rating">%RATINGS_IMAGES_VOTE%</span>', get_the_ID());
-                                        //the_ratings();
-                                    } ?>
-                                </div>
-                                <div class="aussie-casino-single__block-left_social">
-                                    <h5>Share article in social</h5>
-                                    <?php echo do_shortcode('[addtoany]'); ?>
+                                <div class="aussie-casino-single__block-left_bottom-wrap--rating">
+                                    <div class="aussie-casino-single__block-left_bottom-rating">
+                                        <h5>rate this article</h5><?php if (function_exists('the_ratings')) {
+                                            echo expand_ratings_template('<span class="rating">%RATINGS_IMAGES_VOTE%</span>', get_the_ID());
+                                            //the_ratings();
+                                        } ?>
+                                    </div>
+                                    <div class="aussie-casino-single__block-left_social">
+                                        <h5>Share article in social</h5>
+                                        <?php echo do_shortcode('[addtoany]'); ?>
+                                    </div>
                                 </div>
                             </div>
 
                             <div class="aussie-casino-single__block-left_tag-wrap">
-                                <?php if (has_tag()) : ?>
-                                    <h5 class="aussie-casino-single__block-left_tag-title">Tag list</h5>
-                                    <?php the_tags('<ul><li>', '</li><li>', '</li></ul>'); ?>
-                                <?php endif; ?>
+                                <div class="aussie-casino-single__block-left_tag-wrap--tags">
+                                    <?php if (has_tag()) : ?>
+                                        <h5 class="aussie-casino-single__block-left_tag-title">Tag list</h5>
+                                        <?php the_tags('<ul><li>', '</li><li>', '</li></ul>'); ?>
+                                    <?php endif; ?>
+                                </div>
                             </div>
 
                         </div>

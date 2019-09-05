@@ -165,6 +165,12 @@ $(document).ready(function () {
                     '<div class="aussie-casino-single__block-right_read-more--pag-wrap-el"><p class="' + totalClass1 + '"></p></div></div>';
             }
         },
+        breakpoints: {
+            1024: {
+                slidesPerView: 1,
+                spaceBetween: 10,
+            }
+        },
         navigation: {
             nextEl: '.swiper-button-next',
             prevEl: '.swiper-button-prev',
