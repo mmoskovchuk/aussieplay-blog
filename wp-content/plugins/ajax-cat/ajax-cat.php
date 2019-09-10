@@ -28,9 +28,12 @@ function ajax_show_posts_in_cat() {
     $post_uniq = get_post( $get_post_id->ID );
     $text = $post_uniq->post_content; // контент поста
     $title_post = $post_uniq->post_title;
+    $post_date = $post_uniq->post_date;
 
-	
-	require plugin_dir_path( __FILE__ ) . 'tpl-cat.php';
+
+
+
+    require plugin_dir_path( __FILE__ ) . 'tpl-cat.php';
 	
 	wp_die();
 }

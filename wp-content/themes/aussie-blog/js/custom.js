@@ -163,12 +163,13 @@ $(document).ready(function () {
                 return '<div class="aussie-casino-single__block-right_read-more--pag-wrap"><div class="aussie-casino-single__block-right_read-more--pag-wrap-el"><p class="' + currentClass1 + '"></p></div>' + '<div class="aussie-casino-single__block-right_read-more--pag-wrap-el"><p class="aussie-casino-single__block-right_read-more--fraction-of'
                     + '">/</p></div>' +
                     '<div class="aussie-casino-single__block-right_read-more--pag-wrap-el"><p class="' + totalClass1 + '"></p></div></div>';
-            }
+            },
         },
         breakpoints: {
             1024: {
-                slidesPerView: 1,
-                spaceBetween: 10,
+                slidesPerView: 'auto',
+                spaceBetween: 20,
+                loop: true,
             }
         },
         navigation: {
