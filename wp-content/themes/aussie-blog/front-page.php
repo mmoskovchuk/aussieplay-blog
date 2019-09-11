@@ -12,8 +12,8 @@
 <?php get_template_part('includes/inc', 'main-screen'); ?>
     <!--LATEST ARTICLES-->
 <?php get_template_part('includes/inc', 'latest-articles'); ?>
-    <!--LATEST NEWS-->
-<?php get_template_part('includes/inc', 'latest-news'); ?>
+    <!--WINNING GUIDES-->
+<?php get_template_part('includes/inc', 'winning-guides'); ?>
     <!--SUBSCRIBE US-->
 <?php get_template_part('includes/inc', 'subscribe-us'); ?>
     <!--ABOUT US-->

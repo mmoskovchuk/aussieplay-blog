@@ -54,6 +54,11 @@ function ox_adding_scripts()
         wp_enqueue_script('velocity-ui', get_template_directory_uri() . '/js/libs/velocity.ui.min.js', array(), null, true);
         /*swiper*/
         wp_enqueue_script('swiper', get_template_directory_uri() . '/js/libs/swiper.min.js', array(), null, true);
+        /*mixitup*/
+        wp_enqueue_script('mixitup', get_template_directory_uri() . '/js/libs/jquery.mixitup.min.js', array(), null, true);
+        /*ajax wp*/
+        wp_localize_script('custom', 'my_ajax_object',
+            array('ajax_url' => admin_url('admin-ajax.php')));
 
 
         $site_data = array(
@@ -141,12 +146,12 @@ function pagination()
 
     if ($paged1 != 1) {
 
-            echo '<a class="link-with-animated-border pagination__btn" href="' . rtrim(get_pagenum_link(($paged1 - 1)), '/') . '">Prev page</a>';
+        echo '<a class="link-with-animated-border pagination__btn" href="' . rtrim(get_pagenum_link(($paged1 - 1)), '/') . '">Prev page</a>';
 
     }
     if ($paged1 < $page_number_max1) {
 
-            echo '<a class="link-with-animated-border pagination__btn" href="' . get_pagenum_link($paged1 + 1) . '">Next page</a>';
+        echo '<a class="link-with-animated-border pagination__btn" href="' . get_pagenum_link($paged1 + 1) . '">Next page</a>';
 
 
     }
@@ -162,8 +167,8 @@ function kama_pagenavi($before = '', $after = '', $echo = true)
 
     $num_pages = ''; // сколько ссылок показывать
 
-        $backtext = 'Prev page';
-        $nexttext = 'Next page';
+    $backtext = 'Prev page';
+    $nexttext = 'Next page';
 
 
     /* ================ Конец Настроек ================ */
@@ -206,7 +211,9 @@ function kama_pagenavi($before = '', $after = '', $echo = true)
     $out .= "</div>" . $after . "\n";
     if ($echo) echo $out;
     else return $out;
-};
+}
+
+;
 
 
 //TIME AGO
@@ -214,7 +221,8 @@ function kama_pagenavi($before = '', $after = '', $echo = true)
 
 add_filter('the_time', 'human_time_diff_enhanced');
 
-function human_time_diff_enhanced( $duration = 60 ) {
+function human_time_diff_enhanced($duration = 60)
+{
 
     $post_time = get_the_time('U');
     $human_time = '';
@@ -223,8 +231,8 @@ function human_time_diff_enhanced( $duration = 60 ) {
 
     // use human time if less that $duration days ago (60 days by default)
     // 60 seconds * 60 minutes * 24 hours * $duration days
-    if ( $post_time > $time_now - ( 60 * 60 * 24 * $duration ) ) {
-        $human_time = sprintf( __( '0%s ago', 'binarymoon'), human_time_diff( $post_time, current_time( 'timestamp' ) ) );
+    if ($post_time > $time_now - (60 * 60 * 24 * $duration)) {
+        $human_time = sprintf(__('0%s ago', 'binarymoon'), human_time_diff($post_time, current_time('timestamp')));
     } else {
         $human_time = get_the_date();
     }
@@ -232,3 +240,44 @@ function human_time_diff_enhanced( $duration = 60 ) {
     return $human_time;
 
 }
+
+
+//FILTER WINNING GUIDES
+//--------------------------------------------------
+
+function true_filter_function() {
+    $args = array(
+        'orderby' => 'date', // сортировка по дате у нас будет в любом случае (но вы можете изменить/доработать это)
+        'order'	=> $_POST['date'], // ASC или DESC
+        'posts_per_page' => 3
+    );
+
+    // для таксономий
+    if( isset( $_POST['categoryfilter'] ))
+    $args['tax_query'] = array(
+        array(
+            'taxonomy' => 'category',
+            'field' => 'id',
+            'terms' => $_POST['categoryfilter'],
+            'posts_per_page' => 3,
+        )
+    );
+    $the_query = new WP_Query($args);
+    // The Loop
+    if ( $the_query->have_posts() ) {
+        while ( $the_query->have_posts() ) {
+            $the_query->the_post();
+            echo '<div data-filter="app card icon logo web" id="filters"><img src="'. get_the_post_thumbnail_url() .'" alt="' . get_the_title() . '">'.'<a href=" ' . get_post_permalink() . ' ">' . get_the_title() . '</a></div>';
+        }
+    } else {
+        echo 'Posts not found';
+    }
+    /* Restore original Post Data */
+    wp_reset_postdata();
+    die();
+
+}
+
+
+add_action('wp_ajax_myfilter', 'true_filter_function');
+add_action('wp_ajax_nopriv_myfilter', 'true_filter_function');
