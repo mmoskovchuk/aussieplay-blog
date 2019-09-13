@@ -247,12 +247,11 @@ function human_time_diff_enhanced($duration = 60)
 
 function true_filter_function() {
     $args = array(
-        'orderby' => 'date', // сортировка по дате у нас будет в любом случае (но вы можете изменить/доработать это)
-        'order'	=> $_POST['date'], // ASC или DESC
+        'orderby' => 'date',
+        'order'	=> $_POST['date'], // ASC or DESC
         'posts_per_page' => 3
     );
 
-    // для таксономий
     if( isset( $_POST['categoryfilter'] ))
     $args['tax_query'] = array(
         array(
@@ -267,13 +266,14 @@ function true_filter_function() {
     if ( $the_query->have_posts() ) {
         while ( $the_query->have_posts() ) {
             $the_query->the_post();
-            echo '<div data-filter="app card icon logo web" id="filters"><img src="'. get_the_post_thumbnail_url() .'" alt="' . get_the_title() . '">'.'<a href=" ' . get_post_permalink() . ' ">' . get_the_title() . '</a></div>';
+            echo '<div class="aussie-casino__winning-guides_post--item" data-filter="app card icon logo web" id="filters"><div class="aussie-casino__winning-guides_wrap--img"><img src="'. get_the_post_thumbnail_url($the_query->ID, 'full') .'" alt="' . get_the_title() . '"><span class="aussie-casino__winning-guides_date"><b>'. human_time_diff_enhanced().'</b></span></div><a href=" ' . get_post_permalink() . ' ">' . get_the_title() . '</a></div>';
         }
     } else {
         echo 'Posts not found';
     }
     /* Restore original Post Data */
     wp_reset_postdata();
+
     die();
 
 }

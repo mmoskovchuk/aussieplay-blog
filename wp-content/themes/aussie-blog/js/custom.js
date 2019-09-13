@@ -18,6 +18,7 @@ document.addEventListener('DOMContentLoaded', function () {
             selection.addRange(range);
         }
     }
+
     $(".copy").click(function () {
         selectText(this.id);
         document.execCommand("copy");
@@ -35,7 +36,7 @@ var $searchFormWrapper = $('.aussie-casino__blog-menu_search');
 var $searchBtn = $('#blog-search');
 
 function displaySearch() {
-    if(! $body.hasClass('search-on')) {
+    if (!$body.hasClass('search-on')) {
         $body.addClass('search-on');
         // Fade out the menu items
         $menu.velocity({
@@ -84,7 +85,7 @@ function displaySearch() {
 
 }
 
-$searchBtn.on('click', function(){
+$searchBtn.on('click', function () {
     displaySearch();
 });
 
@@ -94,7 +95,7 @@ $searchBtn.on('click', function(){
 
 $(document).ready(function () {
     //initialize swiper when document ready
-    var mySwiperMoreRead = new Swiper ('.swiper-container-read-more', {
+    var mySwiperMoreRead = new Swiper('.swiper-container-read-more', {
         slidesPerView: 'auto',
         spaceBetween: 100,
         loop: true,
@@ -104,58 +105,58 @@ $(document).ready(function () {
             clickable: true,
             paginationClickable: true,
             formatFractionCurrent: function (number) {
-                switch(number)
-                {
+                switch (number) {
                     case 1:
-                        myNum='01';
+                        myNum = '01';
                         break;
                     case 2:
-                        myNum='02';
+                        myNum = '02';
                         break;
                     case 3:
-                        myNum='03';
+                        myNum = '03';
                         break;
                     case 4:
-                        myNum='04';
+                        myNum = '04';
                         break;
                     case 5:
-                        myNum='05';
+                        myNum = '05';
                         break;
                     case 6:
-                        myNum='06';
+                        myNum = '06';
                         break;
                     case 7:
-                        myNum='07';
+                        myNum = '07';
                         break;
                     case 8:
-                        myNum='08';
+                        myNum = '08';
                         break;
                     case 9:
-                        myNum='09';
+                        myNum = '09';
                         break;
-                    default:myNum= number
+                    default:
+                        myNum = number
                 }
                 return myNum;
             },
             formatFractionTotal: function (number) {
-                switch(number)
-                {
+                switch (number) {
                     case 5:
-                        myNum='05';
+                        myNum = '05';
                         break;
                     case 6:
-                        myNum='06';
+                        myNum = '06';
                         break;
                     case 7:
-                        myNum='07';
+                        myNum = '07';
                         break;
                     case 8:
-                        myNum='08';
+                        myNum = '08';
                         break;
                     case 9:
-                        myNum='09';
+                        myNum = '09';
                         break;
-                    default:myNum= number
+                    default:
+                        myNum = number
                 }
                 return myNum;
             },
@@ -184,7 +185,7 @@ $(document).ready(function () {
 
 $(document).ready(function () {
     //initialize swiper when document ready
-    var mySwiper = new Swiper ('.swiper-container-latest-articles', {
+    var mySwiper = new Swiper('.swiper-container-latest-articles', {
         slidesPerView: 'auto',
         spaceBetween: 150,
         loop: true,
@@ -193,58 +194,58 @@ $(document).ready(function () {
             type: 'fraction',
             clickable: true,
             formatFractionCurrent: function (number) {
-                switch(number)
-                {
+                switch (number) {
                     case 1:
-                        myNum='01';
+                        myNum = '01';
                         break;
                     case 2:
-                        myNum='02';
+                        myNum = '02';
                         break;
                     case 3:
-                        myNum='03';
+                        myNum = '03';
                         break;
                     case 4:
-                        myNum='04';
+                        myNum = '04';
                         break;
                     case 5:
-                        myNum='05';
+                        myNum = '05';
                         break;
                     case 6:
-                        myNum='06';
+                        myNum = '06';
                         break;
                     case 7:
-                        myNum='07';
+                        myNum = '07';
                         break;
                     case 8:
-                        myNum='08';
+                        myNum = '08';
                         break;
                     case 9:
-                        myNum='09';
+                        myNum = '09';
                         break;
-                    default:myNum= number
+                    default:
+                        myNum = number
                 }
                 return myNum;
             },
             formatFractionTotal: function (number) {
-                switch(number)
-                {
+                switch (number) {
                     case 5:
-                        myNum='05';
+                        myNum = '05';
                         break;
                     case 6:
-                        myNum='06';
+                        myNum = '06';
                         break;
                     case 7:
-                        myNum='07';
+                        myNum = '07';
                         break;
                     case 8:
-                        myNum='08';
+                        myNum = '08';
                         break;
                     case 9:
-                        myNum='09';
+                        myNum = '09';
                         break;
-                    default:myNum= number
+                    default:
+                        myNum = number
                 }
                 return myNum;
             },
@@ -261,27 +262,31 @@ $(document).ready(function () {
     })
 });
 
+//FILTER WINNING GUIDES
+//-------------------------------------------------
 
-
-
-jQuery(function($){
-    $('#filter').change(function(){
+jQuery(function ($) {
+    $('#filter').change(function () {
         var filter = $(this);
         $.ajax({
-            url:my_ajax_object.ajax_url, // обработчик
-            data:filter.serialize(), // данные
-            type:filter.attr('method'), // тип запроса
-            beforeSend:function(xhr){
-                filter.find('button').text('Загружаю...'); // изменяем текст кнопки
+            url: my_ajax_object.ajax_url, // обработчик
+            data: filter.serialize(),
+            type: filter.attr('method'),
+            beforeSend: function (xhr) {
+                /*filter.find('button').text('Загружаю...');*/ // изменяем текст кнопки
 
             },
-            success:function(data){
+            success: function (data) {
                 filter.find('button').text('Применить фильтр'); // возвращаеи текст кнопки
                 $('#response').html(data);
             }
         });
         return false;
     });
+});
+
+$(document).ready(function () {
+    $(".aussie-casino__winning-guides select[name=categoryfilter]").val("16").change();
 });
 
 

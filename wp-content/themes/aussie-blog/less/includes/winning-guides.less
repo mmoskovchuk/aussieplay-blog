@@ -4,22 +4,105 @@
   &__winning-guides {
     max-width: 92%;
     margin: 0 auto;
-    height: 700px;
+
     h2 {
       font-family: @montserrat-b;
       font-size: 73px;
       color: @c2;
       z-index: 2;
-      margin-bottom: 80px;
     }
   }
+
   &__winning-guides_wrap {
-    max-width: 87%;
-    margin: 0 auto;
+    max-width: 91%;
     margin-left: 0;
     margin-right: auto;
+    margin-bottom: 200px;
   }
+
   &__winning-guides_sort-post--wrap {
     display: flex;
+  }
+
+  &__winning-guides_top--wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 70px;
+
+    select[name="categoryfilter"] {
+      border: 1px solid #FFAC1A;
+      border-radius: 30px;
+      width: 270px;
+      height: 60px;
+      font-family: @montserrat-b;
+      font-size: 16px;
+      color: @c2;
+      text-transform: uppercase;
+      letter-spacing: -1px;
+      padding: 0 30px;
+      background: transparent url(../img/arrow-bottom.svg) center no-repeat;
+      background-position-x: 189px;
+      background-position-y: 4px;
+      appearance:none;
+      opacity: 1;
+      cursor: pointer;
+      transition: .5s;
+    }
+  }
+
+  &__winning-guides_top--desc {
+    font-family: @montserrat-r;
+    font-size: 16px;
+    color: #B9B9B9;
+    margin-right: 19px;
+    letter-spacing: 0;
+  }
+
+  &__winning-guides_post--item {
+    width: 417px;
+    display: flex;
+    flex-direction: column;
+    margin-right: 171px;
+
+    img {
+      width: 417px;
+      height: 500px;
+      object-fit: cover;
+      box-shadow: 0 4px 24px 0 #0000007a;
+      margin-bottom: 30px;
+      border-radius: 4px;
+      border: 1px solid @c1;
+    }
+
+    a {
+      font-family: @montserrat-sb;
+      font-size: 24px;
+      color: @c2;
+      text-decoration: underline;
+      text-decoration-color: transparent;
+      transition: .5s;
+
+      &:hover {
+        text-decoration-color: #000;
+      }
+    }
+  }
+
+  &__winning-guides_wrap--img {
+    position: relative;
+  }
+
+  &__winning-guides_date {
+    position: absolute;
+    right: -75px;
+    bottom: 60px;
+    transform: rotate(-91deg);
+    font-family: @montserrat-r;
+    font-size: 12px;
+  }
+
+  &__winning-guides_post--item:last-child {
+    margin-right: 0;
   }
 }
