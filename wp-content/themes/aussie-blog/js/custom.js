@@ -289,6 +289,32 @@ $(document).ready(function () {
     $(".aussie-casino__winning-guides select[name=categoryfilter]").val("16").change();
 });
 
+//FILTER GAMES REVIEWS
+//-------------------------------------------------
+
+jQuery(function ($) {
+    $('#filtergames').change(function () {
+        var filter = $(this);
+        $.ajax({
+            url: my_ajax_object_2.ajax_url, // обработчик
+            data: filter.serialize(),
+            type: filter.attr('method'),
+            beforeSend: function (xhr) {
+                /*filter.find('button').text('Загружаю...');*/ // изменяем текст кнопки
+            },
+            success: function (data) {
+                filter.find('button').text('Применить фильтр'); // возвращаеи текст кнопки
+                $('#responsegames').html(data);
+            }
+        });
+        return false;
+    });
+});
+
+$(document).ready(function () {
+    $(".aussie-casino__games-reviews select[name=categoryfiltergames]").val("16").change();
+});
+
 
 
 

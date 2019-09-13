@@ -1,0 +1,39 @@
+//GAMES REVIEWS
+
+.aussie-casino {
+  &__games-reviews {
+    height: 1200px;
+    position: relative;
+    &::after {
+      content: '';
+      background: #FFBE1D;
+      width: 100%;
+      height: 575px;
+      position: absolute;
+      top: 0;
+    }
+    h2 {
+      font-family: @montserrat-b;
+      font-size: 73px;
+      color: @c2;
+      z-index: 2;
+    }
+  }
+
+  &__games-reviews_wrap {
+    max-width: 91%;
+    margin-left: 0;
+    margin-right: auto;
+  }
+
+  &__games-reviews_top--wrap {
+    max-width: 92%;
+    margin: 0 auto;
+    z-index: 2;
+    position: relative;
+    padding-top: 97px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
