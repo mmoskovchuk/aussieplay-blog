@@ -59,9 +59,6 @@ function ox_adding_scripts()
         /*ajax wp*/
         wp_localize_script('custom', 'my_ajax_object',
             array('ajax_url' => admin_url('admin-ajax.php')));
-        /*ajax wp 2*/
-        wp_localize_script('custom', 'my_ajax_object_2',
-            array('ajax_url_2' => admin_url('admin-ajax.php')));
 
         $site_data = array(
             'template_url' => get_template_directory_uri()
@@ -133,7 +130,7 @@ set_post_thumbnail_size(400, 260, true);
 //--------------------------------------------------
 function the_truncated_post($symbol_amount)
 {
-    $filtered = strip_tags(preg_replace('@<style[^>]*?>.*?</style>@si', '', preg_replace('@<script[^>]*?>.*?</script>@si', '', apply_filters('the_content', get_the_content()))));
+    $filtered = strip_tags(preg_replace('@<style[^>]*?>.*?</style>', '', preg_replace('@<script[^>]*?>.*?</script>', '', apply_filters('the_content', get_the_content()))));
     echo substr($filtered, 0, strrpos(substr($filtered, 0, $symbol_amount), ' ')) . '...';
 }
 
@@ -243,51 +240,100 @@ function human_time_diff_enhanced($duration = 60)
 
 }
 
-
-//FILTER WINNING GUIDES
+//FILTER WINNING GUIDES AND GAMES REVIEWS
 //--------------------------------------------------
 
-
-/*add_action('wp_ajax_myfilter', 'true_filter_function');
-add_action('wp_ajax_nopriv_myfilter', 'true_filter_function');*/
-
+add_action('wp_ajax_myfilter', 'filter_function_show_category');
+add_action('wp_ajax_nopriv_myfilter', 'filter_function_show_category');
 
 
-//FILTER GAMES REVIEWS
-//--------------------------------------------------
-
-add_action('wp_ajax_myfilter', 'filter_function_games_reviews');
-add_action('wp_ajax_nopriv_myfilter', 'filter_function_games_reviews');
-
-function filter_function_games_reviews() {
-    $args = array(
+function filter_function_show_category()
+{
+    $args_winning_guides = array(
         'orderby' => 'date',
-        'order'	=> $_POST['date'], // ASC or DESC
+        'order' => $_POST['date'], // ASC or DESC
         'posts_per_page' => 3
     );
+    $args_games_reviews = array(
+        'orderby' => 'date',
+        'order' => $_POST['date'], // ASC or DESC
+        'posts_per_page' => 8
+    );
 
-    if( isset( $_POST['categoryfiltergames'] ))
-        $args['tax_query'] = array(
-            array(
-                'taxonomy' => 'category',
-                'field' => 3,
-                'terms' => $_POST['categoryfiltergames'],
-                'posts_per_page' => 3,
-            )
-        );
-    $the_query = new WP_Query($args);
-    // The Loop
-    if ( $the_query->have_posts() ) {
-        while ( $the_query->have_posts() ) {
-            $the_query->the_post();
-            echo '<div class="aussie-casino__games-reviews_post--item" data-filter="app card icon logo web" id="filter-games"><div class="aussie-casino__games-reviews_wrap--img"><img src="'. get_the_post_thumbnail_url($the_query->ID, 'full') .'" alt="' . get_the_title() . '"><span class="aussie-casino__games-reviews_date"><b>'. human_time_diff_enhanced().'</b></span></div><a href=" ' . get_post_permalink() . ' ">' . get_the_title() . '</a></div>';
-        }
-    } else {
-        echo 'Posts not found';
+    $args_winning_guides['tax_query'] = array(
+        array(
+            'taxonomy' => 'category',
+            'field' => '',
+            'terms' => $_POST['categoryfilter'],
+            'posts_per_page' => 3,
+        )
+    );
+
+    $args_games_reviews['tax_query'] = array(
+        array(
+            'taxonomy' => 'category',
+            'field' => '',
+            'terms' => $_POST['categoryfiltergames'],
+            'posts_per_page' => 3,
+        )
+    );
+
+    $the_query_winning_guides = new WP_Query($args_winning_guides);
+
+    while ($the_query_winning_guides->have_posts()) {
+        $the_query_winning_guides->the_post();
+        echo '<div class="aussie-casino__winning-guides_post--item" data-filter="app card icon logo web" id="filter-games"><div class="aussie-casino__winning-guides_wrap--img"><img src="' . get_the_post_thumbnail_url($the_query_winning_guides->ID, 'full') . '" alt="' . get_the_title() . '"><span class="aussie-casino__winning-guides_date"><b>' . human_time_diff_enhanced() . '</b></span></div><a href=" ' . get_post_permalink() . ' ">' . get_the_title() . '</a></div>';
     }
-    /* Restore original Post Data */
+
     wp_reset_postdata();
 
-    die();
+
+    $the_query_games_reviews = new WP_Query($args_games_reviews);
+    /*while ($the_query_games_reviews->have_posts()) {
+        $the_query_games_reviews->the_post();
+        echo '<div class="aussie-casino__games-reviews_post--item" data-filter="app card icon logo web" id="filter-games2"><div class="aussie-casino__games-reviews_wrap--img"><img src="' . get_the_post_thumbnail_url($the_query_games_reviews->ID, 'full') . '" alt="' . get_the_title() . '"><span class="aussie-casino__games-reviews_date"><b>' . human_time_diff_enhanced() . '</b></span></div><a href=" ' . get_post_permalink() . ' ">' . get_the_title() . '</a></div>';
+    }*/
+
+    $i = 0;
+    if ($the_query_games_reviews->have_posts()) {
+
+        echo '<div class="aussie-casino__games-reviews_post--item-wrap1">';
+
+        while ($the_query_games_reviews->have_posts()) {
+            $the_query_games_reviews->the_post();
+
+
+            if ($i < 2) {
+
+                echo '<div class="aussie-casino__games-reviews_post--item" data-filter="app card icon logo web" id="filter-games2"><div class="aussie-casino__games-reviews_wrap--img"><img src="' . get_the_post_thumbnail_url($the_query_games_reviews->ID, 'full') . '" alt="' . get_the_title() . '"><span class="aussie-casino__games-reviews_date"><b>' . human_time_diff_enhanced() . '</b></span></div><a href=" ' . get_post_permalink() . ' ">' . get_the_title() . '</a></div>';
+
+            } else {
+
+                echo '<div class="aussie-casino__games-reviews_post--item" data-filter="app card icon logo web" id="filter-games2"><div class="aussie-casino__games-reviews_wrap--img"><img src="' . get_the_post_thumbnail_url($the_query_games_reviews->ID, 'full') . '" alt="' . get_the_title() . '"><span class="aussie-casino__games-reviews_date"><b>' . human_time_diff_enhanced() . '</b></span></div><a href=" ' . get_post_permalink() . ' ">' . get_the_title() . '</a></div>';
+
+            }
+
+            $i++;
+        }
+
+        /*echo '</div><div class="aussie-casino__games-reviews_post--item-wrap2">';
+
+        while ($the_query_games_reviews->have_posts()) {
+            $the_query_games_reviews->the_post();
+            if ($i > 2) {
+
+                echo '<div class="aussie-casino__games-reviews_post--item" data-filter="app card icon logo web" id="filter-games2"><div class="aussie-casino__games-reviews_wrap--img"><img src="' . get_the_post_thumbnail_url($the_query_games_reviews->ID, 'full') . '" alt="' . get_the_title() . '"><span class="aussie-casino__games-reviews_date"><b>' . human_time_diff_enhanced() . '</b></span></div><a href=" ' . get_post_permalink() . ' ">' . get_the_title() . '</a></div>';
+
+            }
+
+            $i++;
+        }
+
+        echo '</div>';*/
+
+    }
+
+
+    wp_reset_postdata();
 
 }
