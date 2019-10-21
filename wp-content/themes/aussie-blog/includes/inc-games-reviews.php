@@ -9,15 +9,17 @@
 
                 <?php
 
-                if ($terms = get_terms('category', 'orderby=name')) :
-                    echo '<span class="aussie-casino__games-reviews_top--desc">Show: </span><select name="categoryfiltergames">';
-                    foreach ($terms as $term) {
-                        echo '<option value="' . $term->term_id . '">' . $term->name . '</option>';
-                    }
-                    echo '</select>';
-                endif;
+                $termID = 4; // get_queried_object()->term_id; - динамическое получение ID текущей рубрики
+                $taxonomyName = "category";
+                $termchildren = get_term_children( $termID, $taxonomyName );
 
-                ?>
+                echo '<span class="aussie-casino__games-reviews_top--desc">Show: </span><select name="categoryfiltergames">';
+                foreach ($termchildren as $child) {
+                    $term = get_term_by( 'id', $child, $taxonomyName );
+                    echo '<option value="' . $term->term_id . '">' . $term->name . '</option>';
+                }
+                echo '</select>'; ?>
+
                 <input type="hidden" name="action" value="myfilter">
             </form>
 

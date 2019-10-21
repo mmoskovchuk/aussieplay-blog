@@ -265,7 +265,7 @@ $(document).ready(function () {
 //FILTER WINNING GUIDES
 //-------------------------------------------------
 
-jQuery(function ($) {
+$(function ($) {
     $('#filter').change(function () {
         var filter = $(this);
         $.ajax({
@@ -292,11 +292,11 @@ $(document).ready(function () {
 //FILTER GAMES REVIEWS
 //-------------------------------------------------
 
-jQuery(function ($) {
+$(function ($) {
     $('#filtergames').change(function () {
         var filter = $(this);
         $.ajax({
-            url: my_ajax_object_2.ajax_url, // обработчик
+            url: my_ajax_object_2.ajax_url_2, // обработчик
             data: filter.serialize(),
             type: filter.attr('method'),
             beforeSend: function (xhr) {
@@ -305,6 +305,7 @@ jQuery(function ($) {
             success: function (data) {
                 filter.find('button').text('Применить фильтр'); // возвращаеи текст кнопки
                 $('#responsegames').html(data);
+                console.log('go1');
             }
         });
         return false;
@@ -312,7 +313,7 @@ jQuery(function ($) {
 });
 
 $(document).ready(function () {
-    $(".aussie-casino__games-reviews select[name=categoryfiltergames]").val("16").change();
+    $(".aussie-casino__games-reviews select[name=categoryfiltergames]").val("23").change();
 });
 
 

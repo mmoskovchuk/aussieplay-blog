@@ -61,7 +61,7 @@ function ox_adding_scripts()
             array('ajax_url' => admin_url('admin-ajax.php')));
         /*ajax wp 2*/
         wp_localize_script('custom', 'my_ajax_object_2',
-            array('ajax_url' => admin_url('admin-ajax.php')));
+            array('ajax_url_2' => admin_url('admin-ajax.php')));
 
         $site_data = array(
             'template_url' => get_template_directory_uri()
@@ -248,41 +248,10 @@ function human_time_diff_enhanced($duration = 60)
 //--------------------------------------------------
 
 
-add_action('wp_ajax_myfilter', 'true_filter_function');
-add_action('wp_ajax_nopriv_myfilter', 'true_filter_function');
+/*add_action('wp_ajax_myfilter', 'true_filter_function');
+add_action('wp_ajax_nopriv_myfilter', 'true_filter_function');*/
 
-function true_filter_function() {
-    $args = array(
-        'orderby' => 'date',
-        'order'	=> $_POST['date'], // ASC or DESC
-        'posts_per_page' => 3
-    );
 
-    if( isset( $_POST['categoryfilter'] ))
-    $args['tax_query'] = array(
-        array(
-            'taxonomy' => 'category',
-            'field' => 'id',
-            'terms' => $_POST['categoryfilter'],
-            'posts_per_page' => 3,
-        )
-    );
-    $the_query = new WP_Query($args);
-    // The Loop
-    if ( $the_query->have_posts() ) {
-        while ( $the_query->have_posts() ) {
-            $the_query->the_post();
-            echo '<div class="aussie-casino__winning-guides_post--item" data-filter="app card icon logo web" id="filters"><div class="aussie-casino__winning-guides_wrap--img"><img src="'. get_the_post_thumbnail_url($the_query->ID, 'full') .'" alt="' . get_the_title() . '"><span class="aussie-casino__winning-guides_date"><b>'. human_time_diff_enhanced().'</b></span></div><a href=" ' . get_post_permalink() . ' ">' . get_the_title() . '</a></div>';
-        }
-    } else {
-        echo 'Posts not found';
-    }
-    /* Restore original Post Data */
-    wp_reset_postdata();
-
-    die();
-
-}
 
 //FILTER GAMES REVIEWS
 //--------------------------------------------------
@@ -291,27 +260,27 @@ add_action('wp_ajax_myfilter', 'filter_function_games_reviews');
 add_action('wp_ajax_nopriv_myfilter', 'filter_function_games_reviews');
 
 function filter_function_games_reviews() {
-    $args1 = array(
+    $args = array(
         'orderby' => 'date',
         'order'	=> $_POST['date'], // ASC or DESC
         'posts_per_page' => 3
     );
 
     if( isset( $_POST['categoryfiltergames'] ))
-        $args1['tax_query'] = array(
+        $args['tax_query'] = array(
             array(
                 'taxonomy' => 'category',
-                'field' => 'id',
+                'field' => 3,
                 'terms' => $_POST['categoryfiltergames'],
                 'posts_per_page' => 3,
             )
         );
-    $the_query1 = new WP_Query($args1);
+    $the_query = new WP_Query($args);
     // The Loop
-    if ( $the_query1->have_posts() ) {
-        while ( $the_query1->have_posts() ) {
-            $the_query1->the_post();
-            echo '<div class="aussie-casino__games-reviews_post--item" data-filter="app card icon logo web" id="filter-games"><div class="aussie-casino__games-reviews_wrap--img"><img src="'. get_the_post_thumbnail_url($the_query1->ID, 'full') .'" alt="' . get_the_title() . '"><span class="aussie-casino__games-reviews_date"><b>'. human_time_diff_enhanced().'</b></span></div><a href=" ' . get_post_permalink() . ' ">' . get_the_title() . '</a></div>';
+    if ( $the_query->have_posts() ) {
+        while ( $the_query->have_posts() ) {
+            $the_query->the_post();
+            echo '<div class="aussie-casino__games-reviews_post--item" data-filter="app card icon logo web" id="filter-games"><div class="aussie-casino__games-reviews_wrap--img"><img src="'. get_the_post_thumbnail_url($the_query->ID, 'full') .'" alt="' . get_the_title() . '"><span class="aussie-casino__games-reviews_date"><b>'. human_time_diff_enhanced().'</b></span></div><a href=" ' . get_post_permalink() . ' ">' . get_the_title() . '</a></div>';
         }
     } else {
         echo 'Posts not found';
