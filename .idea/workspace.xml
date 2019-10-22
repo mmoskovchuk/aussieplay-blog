@@ -2,76 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="af5e2553-90ce-4594-b8ac-e2645883f7c6" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/wp-content/themes/aussie-blog/includes/inc-news.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wp-content/themes/aussie-blog/less/includes/news.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/wp-content/themes/aussie-blog/css/maps/style.min.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/aussie-blog/css/maps/style.min.css.map" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/wp-content/themes/aussie-blog/css/style.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/aussie-blog/css/style.min.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/themes/aussie-blog/front-page.php" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/aussie-blog/front-page.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/wp-content/themes/aussie-blog/functions.php" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/aussie-blog/functions.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wp-content/themes/aussie-blog/img/subscribe-us-bg-mobile.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/aussie-blog/img/subscribe-us-bg-mobile.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wp-content/themes/aussie-blog/js/custom.js" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/aussie-blog/js/custom.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wp-content/themes/aussie-blog/js/scripts.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/aussie-blog/js/scripts.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/themes/aussie-blog/includes/inc-latest-articles.php" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/aussie-blog/includes/inc-latest-articles.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/wp-content/themes/aussie-blog/less/includes/games-reviews.less" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/aussie-blog/less/includes/games-reviews.less" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/wp-content/themes/aussie-blog/less/includes/winning-guides.less" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/aussie-blog/less/includes/winning-guides.less" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wp-content/uploads/2019/07/city-street-view-2-min-1024x576.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/uploads/2019/07/city-street-view-2-min-1024x576.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wp-content/uploads/2019/07/city-street-view-2-min-150x150.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/uploads/2019/07/city-street-view-2-min-150x150.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wp-content/uploads/2019/07/city-street-view-2-min-300x169.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/uploads/2019/07/city-street-view-2-min-300x169.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wp-content/uploads/2019/07/city-street-view-2-min-400x260.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/uploads/2019/07/city-street-view-2-min-400x260.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wp-content/uploads/2019/07/city-street-view-2-min-768x432.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/uploads/2019/07/city-street-view-2-min-768x432.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wp-content/uploads/2019/07/day-light-summer-new-york-manhattan-times-square-street-life-4k-usa_nkzuimaql__F0000-1024x576.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/uploads/2019/07/day-light-summer-new-york-manhattan-times-square-street-life-4k-usa_nkzuimaql__F0000-1024x576.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wp-content/uploads/2019/07/day-light-summer-new-york-manhattan-times-square-street-life-4k-usa_nkzuimaql__F0000-300x169.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/uploads/2019/07/day-light-summer-new-york-manhattan-times-square-street-life-4k-usa_nkzuimaql__F0000-300x169.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wp-content/uploads/2019/07/day-light-summer-new-york-manhattan-times-square-street-life-4k-usa_nkzuimaql__F0000-400x260.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/uploads/2019/07/day-light-summer-new-york-manhattan-times-square-street-life-4k-usa_nkzuimaql__F0000-400x260.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wp-content/uploads/2019/07/day-light-summer-new-york-manhattan-times-square-street-life-4k-usa_nkzuimaql__F0000-768x432.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/uploads/2019/07/day-light-summer-new-york-manhattan-times-square-street-life-4k-usa_nkzuimaql__F0000-768x432.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wp-content/uploads/2019/07/day-light-summer-new-york-manhattan-times-square-street-life-4k-usa_nkzuimaql__F0000.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/uploads/2019/07/day-light-summer-new-york-manhattan-times-square-street-life-4k-usa_nkzuimaql__F0000.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wp-content/uploads/2019/07/new-york-brooklyn-dumbo-famous-manhattan-bridge-street-view-4k-usa_rs41_mmu__F0000-min-1024x576.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/uploads/2019/07/new-york-brooklyn-dumbo-famous-manhattan-bridge-street-view-4k-usa_rs41_mmu__F0000-min-1024x576.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wp-content/uploads/2019/07/new-york-brooklyn-dumbo-famous-manhattan-bridge-street-view-4k-usa_rs41_mmu__F0000-min-150x150.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/uploads/2019/07/new-york-brooklyn-dumbo-famous-manhattan-bridge-street-view-4k-usa_rs41_mmu__F0000-min-150x150.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wp-content/uploads/2019/07/new-york-brooklyn-dumbo-famous-manhattan-bridge-street-view-4k-usa_rs41_mmu__F0000-min-300x169.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/uploads/2019/07/new-york-brooklyn-dumbo-famous-manhattan-bridge-street-view-4k-usa_rs41_mmu__F0000-min-300x169.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wp-content/uploads/2019/07/new-york-brooklyn-dumbo-famous-manhattan-bridge-street-view-4k-usa_rs41_mmu__F0000-min-400x260.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/uploads/2019/07/new-york-brooklyn-dumbo-famous-manhattan-bridge-street-view-4k-usa_rs41_mmu__F0000-min-400x260.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wp-content/uploads/2019/07/new-york-brooklyn-dumbo-famous-manhattan-bridge-street-view-4k-usa_rs41_mmu__F0000-min-768x432.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/uploads/2019/07/new-york-brooklyn-dumbo-famous-manhattan-bridge-street-view-4k-usa_rs41_mmu__F0000-min-768x432.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wp-content/uploads/2019/07/new-york-brooklyn-dumbo-famous-manhattan-bridge-street-view-4k-usa_rs41_mmu__F0000-min.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/uploads/2019/07/new-york-brooklyn-dumbo-famous-manhattan-bridge-street-view-4k-usa_rs41_mmu__F0000-min.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wp-content/uploads/2019/07/new-york-city-street-view-footage-088914530_prevstill-min-1024x576.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/uploads/2019/07/new-york-city-street-view-footage-088914530_prevstill-min-1024x576.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wp-content/uploads/2019/07/new-york-city-street-view-footage-088914530_prevstill-min-150x150.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/uploads/2019/07/new-york-city-street-view-footage-088914530_prevstill-min-150x150.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wp-content/uploads/2019/07/new-york-city-street-view-footage-088914530_prevstill-min-300x169.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/uploads/2019/07/new-york-city-street-view-footage-088914530_prevstill-min-300x169.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wp-content/uploads/2019/07/new-york-city-street-view-footage-088914530_prevstill-min-400x260.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/uploads/2019/07/new-york-city-street-view-footage-088914530_prevstill-min-400x260.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wp-content/uploads/2019/07/new-york-city-street-view-footage-088914530_prevstill-min-768x432.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/uploads/2019/07/new-york-city-street-view-footage-088914530_prevstill-min-768x432.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wp-content/uploads/2019/07/new-york-city-street-view-footage-088914530_prevstill-min.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/uploads/2019/07/new-york-city-street-view-footage-088914530_prevstill-min.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wp-content/uploads/2019/07/summer-day-manhattan-traffic-crowded-street-view-panorama-4k-new-york-usa_sfpfhnnn_thumbnail-full01-min-1024x576.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/uploads/2019/07/summer-day-manhattan-traffic-crowded-street-view-panorama-4k-new-york-usa_sfpfhnnn_thumbnail-full01-min-1024x576.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wp-content/uploads/2019/07/summer-day-manhattan-traffic-crowded-street-view-panorama-4k-new-york-usa_sfpfhnnn_thumbnail-full01-min-150x150.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/uploads/2019/07/summer-day-manhattan-traffic-crowded-street-view-panorama-4k-new-york-usa_sfpfhnnn_thumbnail-full01-min-150x150.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wp-content/uploads/2019/07/summer-day-manhattan-traffic-crowded-street-view-panorama-4k-new-york-usa_sfpfhnnn_thumbnail-full01-min-300x169.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/uploads/2019/07/summer-day-manhattan-traffic-crowded-street-view-panorama-4k-new-york-usa_sfpfhnnn_thumbnail-full01-min-300x169.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wp-content/uploads/2019/07/summer-day-manhattan-traffic-crowded-street-view-panorama-4k-new-york-usa_sfpfhnnn_thumbnail-full01-min-400x260.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/uploads/2019/07/summer-day-manhattan-traffic-crowded-street-view-panorama-4k-new-york-usa_sfpfhnnn_thumbnail-full01-min-400x260.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wp-content/uploads/2019/07/summer-day-manhattan-traffic-crowded-street-view-panorama-4k-new-york-usa_sfpfhnnn_thumbnail-full01-min-768x432.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/uploads/2019/07/summer-day-manhattan-traffic-crowded-street-view-panorama-4k-new-york-usa_sfpfhnnn_thumbnail-full01-min-768x432.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wp-content/uploads/2019/07/sunset-manhattan-street-view-walking-panorama-4k-new-york-usa_stgyet2n3_thumbnail-full01-min-1024x576.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/uploads/2019/07/sunset-manhattan-street-view-walking-panorama-4k-new-york-usa_stgyet2n3_thumbnail-full01-min-1024x576.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wp-content/uploads/2019/07/sunset-manhattan-street-view-walking-panorama-4k-new-york-usa_stgyet2n3_thumbnail-full01-min-150x150.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/uploads/2019/07/sunset-manhattan-street-view-walking-panorama-4k-new-york-usa_stgyet2n3_thumbnail-full01-min-150x150.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wp-content/uploads/2019/07/sunset-manhattan-street-view-walking-panorama-4k-new-york-usa_stgyet2n3_thumbnail-full01-min-300x169.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/uploads/2019/07/sunset-manhattan-street-view-walking-panorama-4k-new-york-usa_stgyet2n3_thumbnail-full01-min-300x169.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wp-content/uploads/2019/07/sunset-manhattan-street-view-walking-panorama-4k-new-york-usa_stgyet2n3_thumbnail-full01-min-400x260.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/uploads/2019/07/sunset-manhattan-street-view-walking-panorama-4k-new-york-usa_stgyet2n3_thumbnail-full01-min-400x260.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wp-content/uploads/2019/07/sunset-manhattan-street-view-walking-panorama-4k-new-york-usa_stgyet2n3_thumbnail-full01-min-768x432.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/uploads/2019/07/sunset-manhattan-street-view-walking-panorama-4k-new-york-usa_stgyet2n3_thumbnail-full01-min-768x432.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wp-content/uploads/2019/09/2860477-times-square-new-york-city-taxi-car-traffic-street___cars-wallpapers-1024x640.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/uploads/2019/09/2860477-times-square-new-york-city-taxi-car-traffic-street___cars-wallpapers-1024x640.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wp-content/uploads/2019/09/2860477-times-square-new-york-city-taxi-car-traffic-street___cars-wallpapers-150x150.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/uploads/2019/09/2860477-times-square-new-york-city-taxi-car-traffic-street___cars-wallpapers-150x150.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wp-content/uploads/2019/09/2860477-times-square-new-york-city-taxi-car-traffic-street___cars-wallpapers-300x188.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/uploads/2019/09/2860477-times-square-new-york-city-taxi-car-traffic-street___cars-wallpapers-300x188.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wp-content/uploads/2019/09/2860477-times-square-new-york-city-taxi-car-traffic-street___cars-wallpapers-400x260.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/uploads/2019/09/2860477-times-square-new-york-city-taxi-car-traffic-street___cars-wallpapers-400x260.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wp-content/uploads/2019/09/2860477-times-square-new-york-city-taxi-car-traffic-street___cars-wallpapers-768x480.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/uploads/2019/09/2860477-times-square-new-york-city-taxi-car-traffic-street___cars-wallpapers-768x480.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wp-content/uploads/2019/09/697031_street-wallpaper-hd-1024x640.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/uploads/2019/09/697031_street-wallpaper-hd-1024x640.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wp-content/uploads/2019/09/697031_street-wallpaper-hd-150x150.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/uploads/2019/09/697031_street-wallpaper-hd-150x150.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wp-content/uploads/2019/09/697031_street-wallpaper-hd-300x188.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/uploads/2019/09/697031_street-wallpaper-hd-300x188.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wp-content/uploads/2019/09/697031_street-wallpaper-hd-400x260.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/uploads/2019/09/697031_street-wallpaper-hd-400x260.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wp-content/uploads/2019/09/697031_street-wallpaper-hd-768x480.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/uploads/2019/09/697031_street-wallpaper-hd-768x480.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wp-content/uploads/2019/09/8pMAUN-1024x576.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/uploads/2019/09/8pMAUN-1024x576.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wp-content/uploads/2019/09/8pMAUN-150x150.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/uploads/2019/09/8pMAUN-150x150.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wp-content/uploads/2019/09/8pMAUN-300x169.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/uploads/2019/09/8pMAUN-300x169.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wp-content/uploads/2019/09/8pMAUN-400x260.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/uploads/2019/09/8pMAUN-400x260.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wp-content/uploads/2019/09/8pMAUN-768x432.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/uploads/2019/09/8pMAUN-768x432.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wp-content/uploads/2019/09/Big_city_street_wallpaper_1920x1200-1024x640.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/uploads/2019/09/Big_city_street_wallpaper_1920x1200-1024x640.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wp-content/uploads/2019/09/Big_city_street_wallpaper_1920x1200-150x150.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/uploads/2019/09/Big_city_street_wallpaper_1920x1200-150x150.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wp-content/uploads/2019/09/Big_city_street_wallpaper_1920x1200-300x188.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/uploads/2019/09/Big_city_street_wallpaper_1920x1200-300x188.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wp-content/uploads/2019/09/Big_city_street_wallpaper_1920x1200-400x260.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/uploads/2019/09/Big_city_street_wallpaper_1920x1200-400x260.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wp-content/uploads/2019/09/Big_city_street_wallpaper_1920x1200-768x480.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/uploads/2019/09/Big_city_street_wallpaper_1920x1200-768x480.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wp-content/uploads/2019/09/Los-Angeles-City-Street-Wallpaper-1024x576.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/uploads/2019/09/Los-Angeles-City-Street-Wallpaper-1024x576.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wp-content/uploads/2019/09/Los-Angeles-City-Street-Wallpaper-150x150.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/uploads/2019/09/Los-Angeles-City-Street-Wallpaper-150x150.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wp-content/uploads/2019/09/Los-Angeles-City-Street-Wallpaper-300x169.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/uploads/2019/09/Los-Angeles-City-Street-Wallpaper-300x169.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wp-content/uploads/2019/09/Los-Angeles-City-Street-Wallpaper-400x260.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/uploads/2019/09/Los-Angeles-City-Street-Wallpaper-400x260.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wp-content/uploads/2019/09/Los-Angeles-City-Street-Wallpaper-768x432.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/uploads/2019/09/Los-Angeles-City-Street-Wallpaper-768x432.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wp-content/uploads/2019/09/New-York-Wallpaper-Background-24-1024x576.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/uploads/2019/09/New-York-Wallpaper-Background-24-1024x576.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wp-content/uploads/2019/09/New-York-Wallpaper-Background-24-150x150.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/uploads/2019/09/New-York-Wallpaper-Background-24-150x150.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wp-content/uploads/2019/09/New-York-Wallpaper-Background-24-300x169.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/uploads/2019/09/New-York-Wallpaper-Background-24-300x169.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wp-content/uploads/2019/09/New-York-Wallpaper-Background-24-400x260.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/uploads/2019/09/New-York-Wallpaper-Background-24-400x260.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wp-content/uploads/2019/09/New-York-Wallpaper-Background-24-768x432.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/uploads/2019/09/New-York-Wallpaper-Background-24-768x432.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/themes/aussie-blog/less/style.less" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/aussie-blog/less/style.less" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -93,7 +34,7 @@
         <entry file="file://$PROJECT_DIR$/wp-content/themes/aussie-blog/includes/inc-winning-guides.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="68">
-              <caret line="4" column="49" lean-forward="true" selection-start-line="4" selection-start-column="35" selection-end-line="4" selection-end-column="49" />
+              <caret line="4" column="49" selection-start-line="4" selection-start-column="35" selection-end-line="4" selection-end-column="49" />
             </state>
           </provider>
         </entry>
@@ -101,8 +42,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/wp-content/themes/aussie-blog/includes/inc-games-reviews.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
-              <caret line="17" column="71" selection-start-line="17" selection-start-column="71" selection-end-line="17" selection-end-column="71" />
+            <state relative-caret-position="51">
+              <caret line="3" selection-start-line="3" selection-end-line="3" />
             </state>
           </provider>
         </entry>
@@ -110,8 +51,59 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/wp-content/themes/aussie-blog/less/includes/games-reviews.less">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="203">
-              <caret line="31" column="18" selection-start-line="31" selection-start-column="18" selection-end-line="31" selection-end-column="18" />
+            <state relative-caret-position="187">
+              <caret line="50" column="39" selection-start-line="50" selection-start-column="24" selection-end-line="50" selection-end-column="39" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/wp-content/themes/aussie-blog/includes/inc-latest-articles.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="272">
+              <caret line="16" column="91" lean-forward="true" selection-start-line="16" selection-start-column="91" selection-end-line="16" selection-end-column="91" />
+              <folding>
+                <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#div#0;n#section#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/wp-content/themes/aussie-blog/front-page.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="391">
+              <caret line="23" column="50" lean-forward="true" selection-start-line="23" selection-start-column="50" selection-end-line="23" selection-end-column="50" />
+              <folding>
+                <element signature="e#6#42#0#PHP" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/wp-content/themes/aussie-blog/includes/inc-news.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="340">
+              <caret line="20" column="71" lean-forward="true" selection-start-line="20" selection-start-column="71" selection-end-line="20" selection-end-column="71" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/wp-content/themes/aussie-blog/less/includes/news.less">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="386">
+              <caret line="50" column="25" selection-start-line="50" selection-start-column="25" selection-end-line="50" selection-end-column="25" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/wp-content/themes/aussie-blog/less/style.less">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="386">
+              <caret line="79" column="51" selection-start-line="79" selection-start-column="51" selection-end-line="79" selection-end-column="51" />
             </state>
           </provider>
         </entry>
@@ -119,56 +111,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/wp-content/themes/aussie-blog/less/includes/winning-guides.less">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="220">
-              <caret line="27" column="17" selection-start-line="27" selection-start-column="17" selection-end-line="27" selection-end-column="17" />
+            <state relative-caret-position="488">
+              <caret line="50" column="5" selection-start-line="32" selection-start-column="4" selection-end-line="50" selection-end-column="5" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/wp-content/themes/aussie-blog/less/includes/subscribe-us.less">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="425">
-              <caret line="124" column="52" selection-start-line="124" selection-start-column="52" selection-end-line="124" selection-end-column="52" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/wp-content/themes/aussie-blog/functions.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="304">
-              <caret line="309" column="18" selection-start-line="309" selection-start-column="18" selection-end-line="309" selection-end-column="18" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/wp-admin/admin-ajax.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2635">
-              <caret line="162" column="5" selection-start-line="162" selection-start-column="5" selection-end-line="162" selection-end-column="5" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/wp-content/themes/aussie-blog/js/custom.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="341">
-              <caret line="306" column="47" selection-start-line="306" selection-start-column="47" selection-end-line="306" selection-end-column="47" />
-              <folding>
-                <element signature="n#!!doc" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/wp-content/themes/aussie-blog/less/variables.less">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="527">
-              <caret line="31" column="18" selection-start-line="16" selection-end-line="31" selection-end-column="18" />
+            <state relative-caret-position="386">
+              <caret line="302" lean-forward="true" selection-start-line="302" selection-end-line="302" />
             </state>
           </provider>
         </entry>
@@ -185,14 +138,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>__block-left</find>
-      <find>aussie-casino-single__block-left</find>
-      <find>title_post</find>
-      <find>__latest-articles</find>
-      <find>_pag-wrap</find>
-      <find>admin-ajax</find>
-      <find>__winning-guides_wrap</find>
-      <find>__winning-guides_top--wrap</find>
       <find>the_time</find>
       <find>__winning-guides_date</find>
       <find>__winning-guides_wrap--img</find>
@@ -214,7 +159,15 @@
       <find>ajax_url_2</find>
       <find>__winning-guides_sort-post--wrap</find>
       <find>_2</find>
+      <find>__games-reviews_post--item-wrap1</find>
       <find>__games-reviews_sort-post--wrap</find>
+      <find>__games-reviews</find>
+      <find>$i</find>
+      <find>__games-reviews_post--item-wrap2</find>
+      <find>#0000007a</find>
+      <find>__games-reviews_wrap--img</find>
+      <find>aussie-casino__latest-articles_slide</find>
+      <find>__games-reviews_top--wrap</find>
     </findStrings>
     <replaceStrings>
       <replace>aussie-casino</replace>
@@ -227,8 +180,8 @@
       <dir>C:\OpenServer\OSPanel\domains\aussie-casino.local\wp-content\themes\aussie-blog\less</dir>
       <dir>C:\OpenServer\OSPanel\domains\aussie-casino.local\wp-content\themes\aussie-blog\less\includes</dir>
       <dir>C:\OpenServer\OSPanel\domains\aussie-casino.local\wp-content\themes\aussie-blog\includes</dir>
-      <dir>C:\OpenServer\OSPanel\domains\aussie-casino.local\wp-content\themes\aussie-blog</dir>
       <dir>C:\OpenServer\OSPanel\domains\aussie-casino.local</dir>
+      <dir>C:\OpenServer\OSPanel\domains\aussie-casino.local\wp-content\themes\aussie-blog</dir>
     </dirStrings>
   </component>
   <component name="Git.Settings">
@@ -237,8 +190,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/wp-content/themes/aussie-blog/loop.php" />
-        <option value="$PROJECT_DIR$/wp-content/themes/aussie-blog/page.php" />
         <option value="$PROJECT_DIR$/wp-content/themes/aussie-blog/style.css" />
         <option value="$PROJECT_DIR$/wp-content/themes/aussie-blog/package.json" />
         <option value="$PROJECT_DIR$/wp-content/themes/aussie-blog/includes/inc-menu.php" />
@@ -265,7 +216,6 @@
         <option value="$PROJECT_DIR$/wp-content/themes/aussie-blog/includes/inc-latest-news.php" />
         <option value="$PROJECT_DIR$/wp-content/themes/aussie-blog/includes/inc-breadcrumbs.php" />
         <option value="$PROJECT_DIR$/wp-config.php" />
-        <option value="$PROJECT_DIR$/wp-content/themes/aussie-blog/includes/inc-latest-articles.php" />
         <option value="$PROJECT_DIR$/wp-content/themes/aussie-blog/less/includes/common.less" />
         <option value="$PROJECT_DIR$/wp-content/themes/aussie-blog/gulpfile.js" />
         <option value="$PROJECT_DIR$/wp-content/themes/aussie-blog/includes/inc-subscribe-us.php" />
@@ -280,14 +230,17 @@
         <option value="$PROJECT_DIR$/wp-content/plugins/ajax-cat/tpl-cat.php" />
         <option value="$PROJECT_DIR$/wp-content/themes/aussie-blog/admin-winning-guides-ajax.php" />
         <option value="$PROJECT_DIR$/wp-content/themes/aussie-blog/less/includes/latest-articles.less" />
-        <option value="$PROJECT_DIR$/wp-content/themes/aussie-blog/less/style.less" />
-        <option value="$PROJECT_DIR$/wp-content/themes/aussie-blog/front-page.php" />
         <option value="$PROJECT_DIR$/wp-content/themes/aussie-blog/includes/inc-games-reviews.php" />
         <option value="$PROJECT_DIR$/wp-content/themes/aussie-blog/includes/inc-winning-guides.php" />
-        <option value="$PROJECT_DIR$/wp-content/themes/aussie-blog/less/includes/winning-guides.less" />
         <option value="$PROJECT_DIR$/wp-content/themes/aussie-blog/js/custom.js" />
-        <option value="$PROJECT_DIR$/wp-content/themes/aussie-blog/less/includes/games-reviews.less" />
+        <option value="$PROJECT_DIR$/wp-content/themes/aussie-blog/less/includes/winning-guides.less" />
         <option value="$PROJECT_DIR$/wp-content/themes/aussie-blog/functions.php" />
+        <option value="$PROJECT_DIR$/wp-content/themes/aussie-blog/less/includes/games-reviews.less" />
+        <option value="$PROJECT_DIR$/wp-content/themes/aussie-blog/includes/inc-latest-articles.php" />
+        <option value="$PROJECT_DIR$/wp-content/themes/aussie-blog/front-page.php" />
+        <option value="$PROJECT_DIR$/wp-content/themes/aussie-blog/less/style.less" />
+        <option value="$PROJECT_DIR$/wp-content/themes/aussie-blog/includes/inc-news.php" />
+        <option value="$PROJECT_DIR$/wp-content/themes/aussie-blog/less/includes/news.less" />
       </list>
     </option>
   </component>
@@ -303,17 +256,13 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
               <item name="aussie-casino.local" type="b2602c69:ProjectViewProjectNode" />
               <item name="aussie-casino.local" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="aussie-casino.local" type="b2602c69:ProjectViewProjectNode" />
-              <item name="aussie-casino.local" type="462c0819:PsiDirectoryNode" />
-              <item name="wp-admin" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="aussie-casino.local" type="b2602c69:ProjectViewProjectNode" />
@@ -352,6 +301,14 @@
               <item name="wp-content" type="462c0819:PsiDirectoryNode" />
               <item name="themes" type="462c0819:PsiDirectoryNode" />
               <item name="aussie-blog" type="462c0819:PsiDirectoryNode" />
+              <item name="css" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="aussie-casino.local" type="b2602c69:ProjectViewProjectNode" />
+              <item name="aussie-casino.local" type="462c0819:PsiDirectoryNode" />
+              <item name="wp-content" type="462c0819:PsiDirectoryNode" />
+              <item name="themes" type="462c0819:PsiDirectoryNode" />
+              <item name="aussie-blog" type="462c0819:PsiDirectoryNode" />
               <item name="includes" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -383,13 +340,12 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="C:/domains_assets/greataussiepokies.com.local" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/wp-content/themes/aussie-blog/less/includes" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -499,17 +455,18 @@
       <workItem from="1569824181050" duration="1274000" />
       <workItem from="1569838240175" duration="1236000" />
       <workItem from="1571640483840" duration="22689000" />
+      <workItem from="1571728162202" duration="22531000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="461966000" />
+    <option name="totallyTimeSpent" value="484497000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1912" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4984326" visible="true" weight="0.32995737" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4984326" visible="true" weight="0.3336887" />
       <window_info id="Structure" order="1" sideWeight="0.5015674" side_tool="true" weight="0.30277187" />
       <window_info id="Favorites" order="2" sideWeight="0.5015674" side_tool="true" weight="0.19989339" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -522,7 +479,7 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="8" />
       <window_info anchor="bottom" id="Version Control" order="9" weight="0.32936078" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="10" sideWeight="0.6119403" visible="true" weight="0.30877572" />
+      <window_info anchor="bottom" id="Terminal" order="10" sideWeight="0.6119403" visible="true" weight="0.30877572" />
       <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.3880597" side_tool="true" weight="0.30877572" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -595,20 +552,6 @@
     </option>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/twentysixteen/template-parts/content.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="21" column="44" lean-forward="true" selection-start-line="21" selection-start-column="44" selection-end-line="21" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/aussie-blog/search.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="35" selection-start-line="9" selection-start-column="35" selection-end-line="9" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/wp-content/themes/aussie-blog/js/libs/swiper.min.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
@@ -710,20 +653,13 @@
     <entry file="file://$PROJECT_DIR$/wp-content/themes/aussie-blog/footer.php">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/aussie-blog/css/style.min.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="46" selection-start-line="1" selection-start-column="46" selection-end-line="1" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/wp-content/themes/aussie-blog/css/maps/style.min.css.map">
+      <provider editor-type-id="sourcemapFileViewerProvider" />
       <provider selected="true" editor-type-id="text-editor">
         <state>
           <caret column="2258" selection-start-column="2258" selection-end-column="2258" />
         </state>
       </provider>
-      <provider editor-type-id="sourcemapFileViewerProvider" />
     </entry>
     <entry file="file://$PROJECT_DIR$/wp-content/themes/aussie-blog/less/includes/main-screen.less">
       <provider selected="true" editor-type-id="text-editor">
@@ -836,27 +772,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/aussie-blog/includes/inc-latest-articles.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="22" column="115" selection-start-line="22" selection-start-column="32" selection-end-line="22" selection-end-column="115" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/wp-content/themes/aussie-blog/less/includes/latest-articles.less">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2482">
           <caret line="146" column="86" selection-start-line="146" selection-start-column="86" selection-end-line="146" selection-end-column="86" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/aussie-blog/front-page.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="17" column="60" selection-start-line="17" selection-start-column="60" selection-end-line="17" selection-end-column="60" />
-          <folding>
-            <element signature="e#6#42#0#PHP" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -867,38 +786,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/aussie-blog/less/style.less">
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/aussie-blog/!admin-winning-guides-ajax.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="12" selection-start-column="12" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/aussie-blog/less/variables.less">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="527">
-          <caret line="31" column="18" selection-start-line="16" selection-end-line="31" selection-end-column="18" />
+        <state relative-caret-position="471">
+          <caret line="51" column="12" selection-start-line="51" selection-start-column="12" selection-end-line="51" selection-end-column="12" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/wp-content/themes/aussie-blog/less/includes/subscribe-us.less">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
+        <state relative-caret-position="2108">
           <caret line="124" column="52" selection-start-line="124" selection-start-column="52" selection-end-line="124" selection-end-column="52" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/aussie-blog/includes/inc-games-reviews.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="17" column="71" selection-start-line="17" selection-start-column="71" selection-end-line="17" selection-end-column="71" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/aussie-blog/!admin-winning-guides-ajax.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="471">
-          <caret line="51" column="12" selection-start-line="51" selection-start-column="12" selection-end-line="51" selection-end-column="12" />
         </state>
       </provider>
     </entry>
@@ -909,23 +807,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/aussie-blog/includes/inc-winning-guides.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="49" lean-forward="true" selection-start-line="4" selection-start-column="35" selection-end-line="4" selection-end-column="49" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/aussie-blog/less/includes/winning-guides.less">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="27" column="17" selection-start-line="27" selection-start-column="17" selection-end-line="27" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/wp-content/themes/aussie-blog/js/custom.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="341">
+        <state relative-caret-position="5185">
           <caret line="306" column="47" selection-start-line="306" selection-start-column="47" selection-end-line="306" selection-end-column="47" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
@@ -933,17 +817,93 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/aussie-blog/less/variables.less">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="527">
+          <caret line="31" column="18" selection-start-line="16" selection-end-line="31" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/aussie-blog/css/style.min.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="186">
+          <caret column="21815" selection-start-column="21815" selection-end-column="21815" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/aussie-blog/less/includes/winning-guides.less">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="488">
+          <caret line="50" column="5" selection-start-line="32" selection-start-column="4" selection-end-line="50" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/aussie-blog/includes/inc-winning-guides.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="49" selection-start-line="4" selection-start-column="35" selection-end-line="4" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/aussie-blog/less/style.less">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="386">
+          <caret line="79" column="51" selection-start-line="79" selection-start-column="51" selection-end-line="79" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/wp-content/themes/aussie-blog/less/includes/games-reviews.less">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="203">
-          <caret line="31" column="18" selection-start-line="31" selection-start-column="18" selection-end-line="31" selection-end-column="18" />
+        <state relative-caret-position="187">
+          <caret line="50" column="39" selection-start-line="50" selection-start-column="24" selection-end-line="50" selection-end-column="39" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/wp-content/themes/aussie-blog/functions.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="304">
-          <caret line="309" column="18" selection-start-line="309" selection-start-column="18" selection-end-line="309" selection-end-column="18" />
+        <state relative-caret-position="386">
+          <caret line="302" lean-forward="true" selection-start-line="302" selection-end-line="302" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/aussie-blog/front-page.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="23" column="50" lean-forward="true" selection-start-line="23" selection-start-column="50" selection-end-line="23" selection-end-column="50" />
+          <folding>
+            <element signature="e#6#42#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/aussie-blog/includes/inc-games-reviews.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" selection-start-line="3" selection-end-line="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/aussie-blog/includes/inc-latest-articles.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="16" column="91" lean-forward="true" selection-start-line="16" selection-start-column="91" selection-end-line="16" selection-end-column="91" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#div#0;n#section#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/aussie-blog/less/includes/news.less">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="386">
+          <caret line="50" column="25" selection-start-line="50" selection-start-column="25" selection-end-line="50" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/aussie-blog/includes/inc-news.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="20" column="71" lean-forward="true" selection-start-line="20" selection-start-column="71" selection-end-line="20" selection-end-column="71" />
         </state>
       </provider>
     </entry>

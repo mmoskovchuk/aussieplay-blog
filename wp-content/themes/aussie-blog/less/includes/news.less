@@ -1,0 +1,58 @@
+//NEWS
+
+.aussie-casino {
+  &__news {
+    height: 100%;
+    padding-bottom: 200px;
+  }
+  &__news_top--wrap {
+    h2 {
+      font-family: @montserrat-b;
+      font-size: 73px;
+      color: #000;
+      z-index: 2;
+    }
+  }
+  &__news_wrap {
+    max-width: 91%;
+    margin-left: 0;
+    margin-right: auto;
+    z-index: 1;
+    position: relative;
+  }
+  &__news_top--wrap {
+    max-width: 92%;
+    margin-left: auto;
+    margin-right: auto;
+    z-index: 2;
+    position: relative;
+    padding-top: 97px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 65px;
+  }
+  &__news_post--wrap {
+    max-width: 92%;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    /*flex-direction: column;*/
+  }
+  &__news_count {
+    font-family: @montserrat-b;
+    font-size: 73px;
+    color: rgba(0, 0, 0, 0.1);
+    letter-spacing: 0;
+  }
+  &__news_post--item {
+    width: 270px;
+    height: 300px;
+    margin-bottom: 237px;
+    img {
+      width: 270px;
+      height: 300px;
+      object-fit: cover;
+    }
+  }
+}

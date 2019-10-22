@@ -16,6 +16,8 @@
 <?php get_template_part('includes/inc', 'winning-guides'); ?>
     <!--GAMES REVIEWS-->
 <?php get_template_part('includes/inc', 'games-reviews'); ?>
+    <!--NEWS-->
+<?php get_template_part('includes/inc', 'news'); ?>
     <!--SUBSCRIBE US-->
 <?php get_template_part('includes/inc', 'subscribe-us'); ?>
     <!--ABOUT US-->

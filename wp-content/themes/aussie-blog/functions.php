@@ -287,53 +287,43 @@ function filter_function_show_category()
 
     wp_reset_postdata();
 
-
     $the_query_games_reviews = new WP_Query($args_games_reviews);
-    /*while ($the_query_games_reviews->have_posts()) {
-        $the_query_games_reviews->the_post();
-        echo '<div class="aussie-casino__games-reviews_post--item" data-filter="app card icon logo web" id="filter-games2"><div class="aussie-casino__games-reviews_wrap--img"><img src="' . get_the_post_thumbnail_url($the_query_games_reviews->ID, 'full') . '" alt="' . get_the_title() . '"><span class="aussie-casino__games-reviews_date"><b>' . human_time_diff_enhanced() . '</b></span></div><a href=" ' . get_post_permalink() . ' ">' . get_the_title() . '</a></div>';
-    }*/
-
-    $i = 0;
+    $i = 1;
     if ($the_query_games_reviews->have_posts()) {
-
-        echo '<div class="aussie-casino__games-reviews_post--item-wrap1">';
-
         while ($the_query_games_reviews->have_posts()) {
             $the_query_games_reviews->the_post();
 
+            if ($i == 1) {
+                echo '<div class="aussie-casino__games-reviews_post--item-wrap1">';
+            }
 
-            if ($i < 2) {
+            if ($i < 3) {
 
-                echo '<div class="aussie-casino__games-reviews_post--item" data-filter="app card icon logo web" id="filter-games2"><div class="aussie-casino__games-reviews_wrap--img"><img src="' . get_the_post_thumbnail_url($the_query_games_reviews->ID, 'full') . '" alt="' . get_the_title() . '"><span class="aussie-casino__games-reviews_date"><b>' . human_time_diff_enhanced() . '</b></span></div><a href=" ' . get_post_permalink() . ' ">' . get_the_title() . '</a></div>';
-
-            } else {
-
-                echo '<div class="aussie-casino__games-reviews_post--item" data-filter="app card icon logo web" id="filter-games2"><div class="aussie-casino__games-reviews_wrap--img"><img src="' . get_the_post_thumbnail_url($the_query_games_reviews->ID, 'full') . '" alt="' . get_the_title() . '"><span class="aussie-casino__games-reviews_date"><b>' . human_time_diff_enhanced() . '</b></span></div><a href=" ' . get_post_permalink() . ' ">' . get_the_title() . '</a></div>';
+                echo '<div class="aussie-casino__games-reviews_post--item aussie-casino__games-reviews_post--item-' . $i . '" data-filter="app card icon logo web" id="filter-games2"><div class="aussie-casino__games-reviews_wrap--img"><img src="' . get_the_post_thumbnail_url($the_query_games_reviews->ID, 'full') . '" alt="' . get_the_title() . '"><span class="aussie-casino__games-reviews_date"><b>' . human_time_diff_enhanced() . '</b></span></div><a href=" ' . get_post_permalink() . ' " class="aussie-casino__games-reviews_link">' . get_the_title() . '</a></div>';
 
             }
 
-            $i++;
-        }
+            if ($i == 3) {
+                echo '</div><div class="aussie-casino__games-reviews_post--item-wrap2">';
+            }
 
-        /*echo '</div><div class="aussie-casino__games-reviews_post--item-wrap2">';
+            if ($i >= 3) {
 
-        while ($the_query_games_reviews->have_posts()) {
-            $the_query_games_reviews->the_post();
-            if ($i > 2) {
-
-                echo '<div class="aussie-casino__games-reviews_post--item" data-filter="app card icon logo web" id="filter-games2"><div class="aussie-casino__games-reviews_wrap--img"><img src="' . get_the_post_thumbnail_url($the_query_games_reviews->ID, 'full') . '" alt="' . get_the_title() . '"><span class="aussie-casino__games-reviews_date"><b>' . human_time_diff_enhanced() . '</b></span></div><a href=" ' . get_post_permalink() . ' ">' . get_the_title() . '</a></div>';
+                echo '<div class="aussie-casino__games-reviews_post--item aussie-casino__games-reviews_post--item-' . $i . '" data-filter="app card icon logo web" id="filter-games2"><div class="aussie-casino__games-reviews_wrap--img"><img src="' . get_the_post_thumbnail_url($the_query_games_reviews->ID, 'full') . '" alt="' . get_the_title() . '"><span class="aussie-casino__games-reviews_date"><b>' . human_time_diff_enhanced() . '</b></span></div><a href=" ' . get_post_permalink() . ' " class="aussie-casino__games-reviews_link">' . get_the_title() . '</a></div>';
 
             }
 
-            $i++;
-        }
+            if (end($i)) {
+                echo '</div>';
+            }
 
-        echo '</div>';*/
+            $i++;
+
+        }
 
     }
 
-
     wp_reset_postdata();
+    die();
 
 }
