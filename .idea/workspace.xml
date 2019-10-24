@@ -454,18 +454,17 @@
       <workItem from="1571640483840" duration="22689000" />
       <workItem from="1571728162202" duration="23249000" />
       <workItem from="1571812949434" duration="16166000" />
-      <workItem from="1571899221577" duration="20709000" />
+      <workItem from="1571899221577" duration="21389000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="522090000" />
+    <option name="totallyTimeSpent" value="522770000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1912" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4984326" visible="true" weight="0.3411514" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4984326" visible="true" weight="0.3411514" />
       <window_info id="Structure" order="1" sideWeight="0.5015674" side_tool="true" weight="0.30277187" />
       <window_info id="Favorites" order="2" sideWeight="0.5015674" side_tool="true" weight="0.19989339" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -478,7 +477,7 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="8" />
       <window_info anchor="bottom" id="Version Control" order="9" weight="0.32936078" />
-      <window_info anchor="bottom" id="Terminal" order="10" sideWeight="0.6119403" visible="true" weight="0.30877572" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="10" sideWeight="0.6119403" visible="true" weight="0.30877572" />
       <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.3880597" side_tool="true" weight="0.30877572" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
