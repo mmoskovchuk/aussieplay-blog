@@ -3,9 +3,13 @@
 .aussie-casino {
   &__main-screen {
     background: #000 url(../img/main-screen-bg.jpg) center no-repeat;
+    background-size: cover;
     width: 100%;
     height: 530px;
     position: relative;
+    @media only screen and (max-width: @desktop-l) {
+      background: #000 url(../img/main-screen-mobile-bg-1.svg) center no-repeat;
+    }
   }
   &__main-screen_wrapper {
     display: flex;
@@ -13,6 +17,51 @@
     height: 305px;
     position: relative;
     top: 76px;
+    &:before {
+      @media only screen and (max-width: @desktop-l) {
+        content: '';
+        background: url(../img/main-screen-aussie.svg) center no-repeat;
+        position: absolute;
+        width: 356px;
+        height: 629px;
+        top: -58px;
+        left: 50%;
+        margin-left: -214px;
+      }
+      @media only screen and (max-width: @desktop-xxs) {
+        left: 17%;
+      }
+    }
+    &:after {
+      @media only screen and (max-width: @desktop-l) {
+        content: '';
+        background: url(../img/main-screen-little-animal.svg) center no-repeat;
+        position: absolute;
+        width: 108px;
+        height: 133px;
+        top: -58px;
+        left: 65%;
+        margin-left: -108px;
+      }
+      @media only screen and (max-width: @desktop-xxs) {
+        left: 32%;
+      }
+    }
+    @media only screen and (max-width: @desktop-l) {
+      background-color: #1c0d06;
+      opacity: .94;
+      border-radius: 15px;
+    }
+    @media only screen and (max-width: @desktop-xxs) {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      height: 100%;
+      top: 0;
+      max-width: 100%;
+      width: 100%;
+      border-radius: 0;
+    }
   }
   &__main-screen_box-left {
     position: absolute;
@@ -22,10 +71,13 @@
     top: 0;
     bottom: 0;
     @media (max-width: @desktop-m) {
-      left: 2%;
+      left: 5%;
     }
     @media (max-width: @desktop-s) {
-      left: 0;
+      left: 3%;
+    }
+    @media only screen and (max-width: @desktop-xxs) {
+      position: static;
     }
     p {
       font-family: @montserrat-b;
@@ -44,11 +96,22 @@
     top: 0;
     bottom: 0;
     @media (max-width: @desktop-m) {
-      right: 2%;
+      right: 5%;
     }
     @media (max-width: @desktop-s) {
-      right: 0;
+      right: 3%;
     }
+    @media only screen and (max-width: @desktop-xxs) {
+      position: static;
+    }
+  }
+  &__main-screen_wrap-box {
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-right: 10%;
   }
   &__main-screen_code,
   &__main-screen_desc {

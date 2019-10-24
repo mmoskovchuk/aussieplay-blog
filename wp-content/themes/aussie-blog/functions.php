@@ -231,7 +231,7 @@ function human_time_diff_enhanced($duration = 60)
     // use human time if less that $duration days ago (60 days by default)
     // 60 seconds * 60 minutes * 24 hours * $duration days
     if ($post_time > $time_now - (60 * 60 * 24 * $duration)) {
-        $human_time = sprintf(__('0%s ago', 'binarymoon'), human_time_diff($post_time, current_time('timestamp')));
+        $human_time = sprintf(__('%s ago', 'binarymoon'), human_time_diff($post_time, current_time('timestamp')));
     } else {
         $human_time = get_the_date();
     }
@@ -299,7 +299,7 @@ function filter_function_show_category()
 
             if ($i < 3) {
 
-                echo '<div class="aussie-casino__games-reviews_post--item aussie-casino__games-reviews_post--item-' . $i . '" data-filter="app card icon logo web" id="filter-games2"><div class="aussie-casino__games-reviews_wrap--img"><img src="' . get_the_post_thumbnail_url($the_query_games_reviews->ID, 'full') . '" alt="' . get_the_title() . '"><span class="aussie-casino__games-reviews_date"><b>' . human_time_diff_enhanced() . '</b></span></div><a href=" ' . get_post_permalink() . ' " class="aussie-casino__games-reviews_link">' . get_the_title() . '</a></div>';
+                echo '<div class="aussie-casino__games-reviews_post--item aussie-casino__games-reviews_post--item-' . $i . '" data-filter="game-reviews" id="filter-games-' . $i . '"><div class="aussie-casino__games-reviews_wrap--img"><img src="' . get_the_post_thumbnail_url($the_query_games_reviews->ID, 'full') . '" alt="' . get_the_title() . '"><span class="aussie-casino__games-reviews_date"><b>' . human_time_diff_enhanced() . '</b></span></div><a href=" ' . get_post_permalink() . ' " class="aussie-casino__games-reviews_link">' . get_the_title() . '</a></div>';
 
             }
 
@@ -309,7 +309,7 @@ function filter_function_show_category()
 
             if ($i >= 3) {
 
-                echo '<div class="aussie-casino__games-reviews_post--item aussie-casino__games-reviews_post--item-' . $i . '" data-filter="app card icon logo web" id="filter-games2"><div class="aussie-casino__games-reviews_wrap--img"><img src="' . get_the_post_thumbnail_url($the_query_games_reviews->ID, 'full') . '" alt="' . get_the_title() . '"><span class="aussie-casino__games-reviews_date"><b>' . human_time_diff_enhanced() . '</b></span></div><a href=" ' . get_post_permalink() . ' " class="aussie-casino__games-reviews_link">' . get_the_title() . '</a></div>';
+                echo '<div class="aussie-casino__games-reviews_post--item aussie-casino__games-reviews_post--item-' . $i . '" data-filter="game-reviews" id="filter-games-' . $i . '"><div class="aussie-casino__games-reviews_wrap--img"><img src="' . get_the_post_thumbnail_url($the_query_games_reviews->ID, 'full') . '" alt="' . get_the_title() . '"><span class="aussie-casino__games-reviews_date"><b>' . human_time_diff_enhanced() . '</b></span></div><a href=" ' . get_post_permalink() . ' " class="aussie-casino__games-reviews_link">' . get_the_title() . '</a></div>';
 
             }
 
