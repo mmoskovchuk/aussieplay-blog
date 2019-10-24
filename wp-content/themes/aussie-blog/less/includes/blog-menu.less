@@ -15,6 +15,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    z-index: 2;
   }
   &__blog-menu_container {
     width: 84%;
@@ -27,6 +28,9 @@
     width: 400px;
     display: flex;
     justify-content: space-between;
+    @media only screen and (max-width: @desktop-xs) {
+      width: 38%;
+    }
   }
   &__blog-menu_logo {
     width: 123px;
@@ -98,14 +102,14 @@
 }
 
 .aussie-casino__blog-menu_search {
-  position: absolute;
-  right: 0;
+  //position: absolute;
+  //right: 0;
 }
 
 
 .search-displayed .aussie-casino__blog-menu_search-field {
   position: absolute;
-  right: 152px;
+  right: 8.5%;
   display: flex;
   align-items: center;
   //width: 940px;

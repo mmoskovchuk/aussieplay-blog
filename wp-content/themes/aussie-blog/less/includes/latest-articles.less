@@ -2,18 +2,20 @@
 
 .aussie-casino {
   &__latest-articles {
-    margin-top: 120px;
+    padding-top: 120px;
     padding-bottom: 25px;
     margin-bottom: 181px;
     width: 100%;
     position: relative;
+    z-index: 1;
+    background-color: @c1;
     &:after {
       content: '';
       background-color: #FFBE1D;
       position: absolute;
       width: 30%;
-      height: 100%;
-      top: 0;
+      height: 90%;
+      top: 120px;
       z-index: -1;
     }
     h2 {
@@ -39,12 +41,12 @@
     }
     &_title {
       position: absolute;
-      bottom: -147px;
+      bottom: -195px;
       width: 60%;
       display: flex;
       justify-content: center;
-      align-items: baseline;
-      height: 115px;
+      align-items: center;
+      height: 150px;
       text-align: left;
       a {
         font-family: @montserrat-sb;
@@ -59,26 +61,40 @@
         }
       }
     }
-    &_pagination {
+    &_pagination--wrap {
+      position: relative;
       height: 150px;
       z-index: 2;
-      background: @c1;
-      width: 38% !important;
-      position: absolute !important;
-      right: 0 !important;
-      left: inherit !important;
-      top: 551px;
+      background: #fff;
+      width: 40%!important;
       display: flex;
-      justify-content: flex-start;
+      margin-left: auto;
+    }
+    &_pagination--wrap-box {
+      display: flex;
+      padding-left: 12%;
+      position: relative;
+      width: 100%;
       align-items: center;
+    }
+    &_pagination--wrap-content {
+      width: 275px;
+      height: 80px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    &_pagination {
       font-family: @montserrat-b;
       font-size: 73px;
-      color: @c4;
+      color: #ffbe1d;
+      width: auto;
+      position: relative;
       .swiper-pagination-current {
         margin-right: 8px;
         display: flex;
         align-items: flex-end;
-        height: 85px;
+        height: auto;
       }
       .swiper-pagination-total {
         margin-left: 8px;
@@ -89,8 +105,8 @@
     }
     &_date {
       position: absolute;
-      top: -119px;
-      right: -256px;
+      bottom: 34px;
+      right: -72px;
       transform: rotate(-90deg);
       font-family: @montserrat-r;
       font-size: 12px;
@@ -103,21 +119,18 @@
     }
     &_pag-wrap {
       display: flex;
-      align-items: center;
-      top: 18px;
-      left: 210px;
-      position: absolute;
     }
 
     .swiper-container {
       width: 100%;
-      height: 500px;
-      padding-bottom: 200px !important;
+      height: 560px;
+      padding-bottom: 160px !important;
     }
     .swiper-wrapper {
       width: 55% !important;
     }
     .swiper-slide {
+      position: relative;
       height: 500px;
       text-align: center;
       font-size: 18px;
@@ -138,19 +151,16 @@
     }
 
     .swiper-button-next, .swiper-button-prev {
-      top: 620px !important;
-      z-index: 99 !important;
-      margin-top: -27px !important;
+      position: static;
     }
     .swiper-button-next {
-      right: 284px !important;
+      margin-left: 30px;
       background: transparent url(../img/arrow-right.svg) center no-repeat !important;
       background-position-y: -10px !important;
       background-position-x: -23px !important;
     }
     .swiper-button-prev {
-      left: inherit !important;
-      right: 514px !important;
+      margin-right: 30px;
       background: transparent url(../img/arrow-left.svg) center no-repeat !important;
       background-position-y: -10px !important;
       background-position-x: -34px !important;

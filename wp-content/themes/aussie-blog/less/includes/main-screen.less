@@ -2,13 +2,13 @@
 
 .aussie-casino {
   &__main-screen {
-    background: #000 url(../img/main-screen-bg.jpg) center no-repeat;
+    background: #000 url(../img/main-screen-mobile-bg-1.svg) center no-repeat;
     background-size: cover;
     width: 100%;
     height: 530px;
     position: relative;
-    @media only screen and (max-width: @desktop-l) {
-      background: #000 url(../img/main-screen-mobile-bg-1.svg) center no-repeat;
+    @media only screen and (max-width: @desktop-xxl) {
+      height: 560px;
     }
   }
   &__main-screen_wrapper {
@@ -17,8 +17,10 @@
     height: 305px;
     position: relative;
     top: 76px;
+    background-color: #1c0d06;
+    opacity: .94;
+    border-radius: 15px;
     &:before {
-      @media only screen and (max-width: @desktop-l) {
         content: '';
         background: url(../img/main-screen-aussie.svg) center no-repeat;
         position: absolute;
@@ -27,13 +29,11 @@
         top: -58px;
         left: 50%;
         margin-left: -214px;
-      }
       @media only screen and (max-width: @desktop-xxs) {
         left: 17%;
       }
     }
     &:after {
-      @media only screen and (max-width: @desktop-l) {
         content: '';
         background: url(../img/main-screen-little-animal.svg) center no-repeat;
         position: absolute;
@@ -42,15 +42,12 @@
         top: -58px;
         left: 65%;
         margin-left: -108px;
-      }
       @media only screen and (max-width: @desktop-xxs) {
         left: 32%;
       }
     }
-    @media only screen and (max-width: @desktop-l) {
-      background-color: #1c0d06;
-      opacity: .94;
-      border-radius: 15px;
+    @media only screen and (max-width: @desktop-xxl) {
+      top: 20%;
     }
     @media only screen and (max-width: @desktop-xxs) {
       display: flex;

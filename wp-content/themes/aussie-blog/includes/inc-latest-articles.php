@@ -18,9 +18,9 @@
 
                         <div class="swiper-slide aussie-casino__latest-articles_slide"
                              style="background-image: url('<?php echo $imagesurl; ?>'); background-size: cover; background-position-y: center;">
+                            <span class="aussie-casino__latest-articles_date"><b><?php the_time(); ?></b></span>
                             <div class="aussie-casino__latest-articles_title">
                                 <a href="<?php the_permalink() ?>" rel="bookmark"><?php the_title(); ?></a>
-                                <span class="aussie-casino__latest-articles_date"><b><?php the_time(); ?></b><span>
                             </div>
                         </div>
 
@@ -29,9 +29,17 @@
             </div>
 
             <!-- Pagination -->
-            <div class="swiper-button-next aussie-casino__latest-articles_btn-next"></div>
-            <div class="swiper-pagination-latest aussie-casino__latest-articles_pagination"></div>
-            <div class="swiper-button-prev aussie-casino__latest-articles_btn-prev"></div>
+            <div class="aussie-casino__latest-articles_pagination--wrap">
+                <div class="aussie-casino__latest-articles_pagination--wrap-box">
+                    <div class="aussie-casino__latest-articles_pagination--wrap-content">
+                        <div class="swiper-button-prev aussie-casino__latest-articles_btn-prev"></div>
+                        <div class="swiper-pagination-latest aussie-casino__latest-articles_pagination"></div>
+                        <div class="swiper-button-next aussie-casino__latest-articles_btn-next"></div>
+                    </div>
+                </div>
+            </div>
+
+
         </div>
     </div>
 </section>
