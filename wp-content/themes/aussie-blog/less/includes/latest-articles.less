@@ -90,6 +90,9 @@
       color: #ffbe1d;
       width: auto;
       position: relative;
+      @media only screen and (max-width: @desktop-m) {
+        font-size: 45px;
+      }
       .swiper-pagination-current {
         margin-right: 8px;
         display: flex;
@@ -101,6 +104,9 @@
         font-size: 30px;
         color: #B9B9B9;
         font-family: @montserrat-r;
+        @media only screen and (max-width: @desktop-m) {
+          font-size: 25px;
+        }
       }
     }
     &_date {
@@ -125,6 +131,9 @@
       width: 100%;
       height: 560px;
       padding-bottom: 160px !important;
+      @media only screen and (max-width: @desktop-m) {
+        height: 400px;
+      }
     }
     .swiper-wrapper {
       width: 55% !important;
@@ -142,6 +151,9 @@
       padding-left: 23px !important;
       padding-top: 23px !important;
       padding-right: 23px !important;
+      @media only screen and (max-width: @desktop-m) {
+        height: 330px;
+      }
     }
     .swiper-slide:nth-child(2n) {
       width: 100%;
@@ -158,12 +170,18 @@
       background: transparent url(../img/arrow-right.svg) center no-repeat !important;
       background-position-y: -10px !important;
       background-position-x: -23px !important;
+      @media only screen and (max-width: @desktop-m) {
+        margin-left: 5px;
+      }
     }
     .swiper-button-prev {
       margin-right: 30px;
       background: transparent url(../img/arrow-left.svg) center no-repeat !important;
       background-position-y: -10px !important;
       background-position-x: -34px !important;
+      @media only screen and (max-width: @desktop-m) {
+        margin-right: 5px;
+      }
     }
 
   }
