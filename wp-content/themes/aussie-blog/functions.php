@@ -313,6 +313,10 @@ function filter_function_show_category()
 
             }
 
+            if ($i == 5) {
+                echo '</div><div class="aussie-casino__games-reviews_post--item-wrap3">';
+            }
+
             if (end($i)) {
                 echo '</div>';
             }

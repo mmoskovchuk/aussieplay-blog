@@ -3,7 +3,7 @@
 .aussie-casino {
   &__news {
     height: 100%;
-    padding-bottom: 200px;
+    /*padding-bottom: 200px;*/
   }
   &__news_top--wrap {
     h2 {
@@ -48,6 +48,10 @@
   &__news_post--item {
     width: 270px;
     height: 300px;
+    @media only screen and (max-width: @desktop-xxs) {
+      width: 190px;
+      height: 215px;
+    }
     img {
       width: 270px;
       height: 300px;
@@ -55,6 +59,10 @@
       border-radius: 4px;
       border: 1px solid @c1;
       box-shadow: 0 3px 24px 0 #00000029;
+      @media only screen and (max-width: @desktop-xxs) {
+        width: 190px;
+        height: 215px;
+      }
     }
     a {
       font-family: @montserrat-sb;

@@ -5,6 +5,12 @@
     height: 100%;
     position: relative;
     padding-bottom: 178px;
+    @media only screen and (max-width: @desktop-m) {
+      padding-bottom: 95px;
+    }
+    @media only screen and (max-width: @desktop-xxs) {
+      padding-bottom: 110px;
+    }
     &::after {
       content: '';
       background: #FFBE1D;
@@ -72,14 +78,22 @@
     width: 100%;
     justify-content: space-between;
     .aussie-casino__games-reviews_post--item {
-      width: 711px;
+      width: 100%;
+      max-width: 711px;
+      min-width: 246px;
       height: 500px;
+      max-height: 500px;
+      min-height: 294px;
       @media only screen and (max-width: @desktop-l) {
         margin-right: 10%;
       }
       img {
-        width: 711px;
+        width: 100%;
+        max-width: 711px;
+        min-width: 246px;
         height: 500px;
+        max-height: 500px;
+        min-height: 294px;
         border-radius: 4px;
         border: 1px solid @c1;
         box-shadow: 0 3px 24px 0 #00000029;
@@ -88,40 +102,74 @@
           width: 100%;
           height: 500px;
         }
-      }
-      &:last-child {
-        @media only screen and (max-width: @desktop-l) {
-          margin-right: 0;
+        @media only screen and (max-width: @desktop-xxs) {
+          height: 360px;
         }
       }
+    }
+    .aussie-casino__games-reviews_post--item:last-child {
+      margin-right: 0;
     }
   }
 
   &__games-reviews_post--item {
-    width: 417px;
+    width: 100%;
+    max-width: 417px;
+    min-width: 245px;
     height: 500px;
+    max-height: 500px;
+    margin-right: 55px;
+    @media only screen and (max-width: @desktop-xxs) {
+      height: 360px;
+    }
     img {
-      width: 417px;
+      width: 100%;
+      max-width: 417px;
+      min-width: 245px;
       height: 500px;
+      max-height: 500px;
       border: 1px solid @c1;
       box-shadow: 0 3px 24px 0 #00000029;
       border-radius: 4px;
       object-fit: cover;
+      @media only screen and (max-width: @desktop-m) {
+        height: 400px;
+      }
+      @media only screen and (max-width: @desktop-xxs) {
+        height: 360px;
+      }
     }
   }
 
-  &__games-reviews_post--item-wrap2 {
+  &__games-reviews_post--item-wrap2,
+  &__games-reviews_post--item-wrap3 {
     display: flex;
     width: 100%;
     justify-content: space-between;
     margin-top: 248px;
-    flex-wrap: wrap;
+    .aussie-casino__games-reviews_post--item:last-child {
+      margin-right: 0;
+    }
   }
-  &__games-reviews_post--item-6,
-  &__games-reviews_post--item-7,
-  &__games-reviews_post--item-8 {
-    margin-top: 251px;
+
+  &__games-reviews_post--item-wrap2 {
+    @media only screen and (max-width: @desktop-m) {
+      margin-top: 200px;
+    }
+    @media only screen and (max-width: @desktop-xxs) {
+      margin-top: 30px;
+    }
   }
+
+  &__games-reviews_post--item-wrap3 {
+    @media only screen and (max-width: @desktop-m) {
+      margin-top: 60px;
+    }
+    @media only screen and (max-width: @desktop-xxs) {
+      margin-top: 190px;
+    }
+  }
+
   &__games-reviews_link {
     font-family: @montserrat-sb;
     font-size: 24px;

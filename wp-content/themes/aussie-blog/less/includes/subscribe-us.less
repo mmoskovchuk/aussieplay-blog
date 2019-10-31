@@ -5,7 +5,12 @@
     width: 100%;
     height: 625px;
     position: relative;
-
+    @media only screen and (max-width: @desktop-xxl) {
+      height: 895px;
+    }
+    @media only screen and (max-width: @desktop-xl) {
+      height: 674px;
+    }
     form {
       display: flex;
       align-items: center;
@@ -108,6 +113,12 @@
     bottom: 0;
     display: flex;
     align-items: center;
+    @media only screen and (max-width: @desktop-xxl) {
+      height: 895px;
+    }
+    @media only screen and (max-width: @desktop-xl) {
+      height: 674px;
+    }
     @media only screen and (max-width: @tablet-xl) {
       background: transparent url("../img/subscribe-us-bg-mobile.jpg") center no-repeat;
       background-size: cover;

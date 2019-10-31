@@ -16,13 +16,16 @@
     align-items: center;
     justify-content: center;
     z-index: 2;
+    @media only screen and (max-width: @desktop-xxs) {
+      display: none;
+    }
   }
   &__blog-menu_container {
     width: 84%;
     height: 113px;
     display: flex;
     align-items: center;
-    justify-content: space-between
+    justify-content: space-between;
   }
   &__blog-menu_wrap-left {
     width: 400px;

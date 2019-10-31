@@ -51,6 +51,9 @@
   &__header {
     height: 70px;
     background-color: @c3;
+    @media only screen and (max-width: @desktop-xxs) {
+      display: none;
+    }
 
     nav {
       display: flex;
