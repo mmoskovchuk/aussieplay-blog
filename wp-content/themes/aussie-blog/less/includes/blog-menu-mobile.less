@@ -1,50 +1,45 @@
-//BLOG-MENU
+//BLOG-MENU-MOBILE
 
 .aussie-casino {
-  &__blog-menu {
+  &__blog-menu-mobile {
     max-width: 90%;
     margin: 0 auto;
     padding: 0 15px;
     background-color: #fff;
     position: absolute;
-    height: 113px;
+    height: 120px;
     left: 0;
     right: 0;
-    bottom: -53px;
-    box-shadow: 0 3px 24px 0 #00000030;
     display: flex;
     align-items: center;
     justify-content: center;
     z-index: 2;
-    @media only screen and (max-width: @desktop-xxs) {
+    @media only screen and (min-width: @desktop-xxs) {
       display: none;
     }
   }
-  &__blog-menu_container {
+  &__blog-menu-mobile_container {
     width: 84%;
-    height: 113px;
+    height: 120px;
     display: flex;
     align-items: center;
     justify-content: space-between;
   }
-  &__blog-menu_wrap-left {
-    width: 400px;
+  &__blog-menu-mobile_wrap-left {
+    width: auto;
     display: flex;
     justify-content: space-between;
-    @media only screen and (max-width: @desktop-xs) {
-      width: 38%;
-    }
   }
-  &__blog-menu_logo {
-    width: 123px;
-    height: 71.4px;
+  &__blog-menu-mobile_logo {
+    width: 48px;
+    height: 54px;
   }
-  &__blog-menu_url {
+  &__blog-menu-mobile_url {
     font-family: @montserrat-b;
     font-size: 73px;
     color: #E5E5E5;
   }
-  &__blog-menu_ul-block {
+  &__blog-menu-mobile_ul-block {
     display: flex;
     list-style-type: none;
     li {
@@ -65,7 +60,7 @@
       }
     }
   }
-  &__blog-menu_search-btn {
+  &__blog-menu-mobile_search-btn {
     width: 60px;
     height: 60px;
     box-shadow: 0 3px 6px 0 #00000030;
@@ -82,19 +77,19 @@
       z-index: 2;
     }
   }
-  &__blog-menu_search-form {
+  &__blog-menu-mobile_search-form {
     input {
       border-radius: 5px;
       border: 1px solid;
     }
   }
-  &__blog-menu_search-field {
+  &__blog-menu-mobile_search-field {
     position: absolute;
     z-index: 2;
   }
 }
 
-.search-on > .aussie-casino__blog-menu_search-wrap {
+.search-on > .aussie-casino__blog-menu-mobile_search-wrap {
   position: absolute;
   top: 0;
   bottom: 0;
@@ -104,13 +99,13 @@
   height: 100%;
 }
 
-.aussie-casino__blog-menu_search {
+.aussie-casino__blog-menu-mobile_search {
   //position: absolute;
   //right: 0;
 }
 
 
-.search-displayed .aussie-casino__blog-menu_search-field {
+.search-displayed .aussie-casino__blog-menu-mobile_search-field {
   position: absolute;
   right: 8.5%;
   display: flex;
@@ -124,11 +119,96 @@
   height: 20px;
 }
 
-.search-displayed + .aussie-casino__blog-menu_search-btn {
+.search-displayed + .aussie-casino__blog-menu-mobile_search-btn {
   box-shadow: none;
 }
 
-.aussie-casino__blog-menu_search-form {
+.aussie-casino__blog-menu-mobile_search-form {
   display: flex;
   align-items: center;
+}
+
+
+
+.menu-mobile, .menu-bg, .menu-burger {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  font-size: 30px;
+  text-align: center;
+  border-radius: 10px;
+  right: 25px;
+  top: 25px;
+}
+.menu-bg {
+  background: #280E01;
+  pointer-events: none;
+  transition: 0.3s;
+  right: 50px;
+  top: 50px;
+  transform: translate3d(50%, -50%, 0);
+  transform-origin: center center;
+}
+.menu-bg.fs {
+  transform: translate3d(50%, -50%, 0);
+  width: 300vw;
+  height: 300vw;
+  background: #280E01;
+}
+.menu-burger {
+  background: #42281B !important;
+  color: white;
+  padding-top: 11px;
+  -webkit-user-select: none;
+  cursor: pointer;
+  transition: 0.4s;
+  transform-origin: center;
+  height: 39px;
+}
+.menu-burger.fs {
+  background: #42281B;
+}
+.menu-burger.fs .menu-burger-icon {
+  transform: rotate(-180deg) translateY(2px);
+  cursor: pointer;
+  transition: 0.4s;
+  transform-origin: center;
+}
+.menu-items {
+  position: absolute;
+  font-weight: bold;
+  font-size: 40px;
+  letter-spacing: 10px;
+  color: white;
+  width: 100%;
+  text-align: center;
+  opacity: 0;
+  transition: 0.4s;
+  margin-top: 100px;
+  transform: translateY(-200%);
+  pointer-events: none;
+}
+.menu-items div {
+  transition: 1s;
+  opacity: 0;
+  margin-top: 0px;
+}
+.menu-items.fs {
+  transform: translateY(0);
+  pointer-events: auto;
+  opacity: 1;
+}
+.menu-items.fs div {
+  opacity: 1;
+  margin-top: 75px;
+}
+.content {
+  padding: 100px 50px;
+  line-height: 1.62em;
+  color: #444;
+}
+.content h1 {
+  font-weight: bold;
+  font-size: 2em;
+  margin-bottom: 1em;
 }

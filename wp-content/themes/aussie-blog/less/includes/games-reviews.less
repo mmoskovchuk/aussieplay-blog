@@ -18,6 +18,9 @@
       height: 575px;
       position: absolute;
       top: 0;
+      @media only screen and (max-width: @desktop-xxs) {
+        height: 438px;
+      }
     }
     h2 {
       font-family: @montserrat-b;
@@ -53,6 +56,16 @@
     justify-content: space-between;
     align-items: center;
     margin-bottom: 65px;
+    @media only screen and (max-width: @desktop-xxs) {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    h2 {
+      @media only screen and (max-width: @desktop-xxs) {
+        margin-bottom: 30px;
+      }
+    }
     select[name="categoryfiltergames"] {
       border: 1px solid rgba(0,0,0,.25);
       border-radius: 30px;
@@ -87,6 +100,9 @@
       @media only screen and (max-width: @desktop-l) {
         margin-right: 10%;
       }
+      @media only screen and (max-width: @desktop-xxs) {
+        height: 430px;
+      }
       img {
         width: 100%;
         max-width: 711px;
@@ -103,7 +119,7 @@
           height: 500px;
         }
         @media only screen and (max-width: @desktop-xxs) {
-          height: 360px;
+          height: 295px;
         }
       }
     }
@@ -120,7 +136,8 @@
     max-height: 500px;
     margin-right: 55px;
     @media only screen and (max-width: @desktop-xxs) {
-      height: 360px;
+      width: 245px;
+      height: 300px;
     }
     img {
       width: 100%;
@@ -136,7 +153,8 @@
         height: 400px;
       }
       @media only screen and (max-width: @desktop-xxs) {
-        height: 360px;
+        height: 300px;
+        width: 245px;
       }
     }
   }
@@ -166,7 +184,7 @@
       margin-top: 60px;
     }
     @media only screen and (max-width: @desktop-xxs) {
-      margin-top: 190px;
+      margin-top: 160px;
     }
   }
 

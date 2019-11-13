@@ -333,6 +333,14 @@ $(document).ready(function () {
     $(".aussie-casino__games-reviews select[name=categoryfiltergames]").val("23").change();
 });
 
+//MOBILE MENU
+//-------------------------------------------------
+
+$('.menu-burger, .menu-items').on('click', function() {
+    $('.menu-bg, .menu-items, .menu-burger, .menu-burger-icon').toggleClass('fs');
+    $('.menu-burger .menu-burger-icon').text() == "☰" ? $('.menu-burger .menu-burger-icon').text('✕') : $('.menu-burger .menu-burger-icon').text('☰');
+});
+
 
 
 

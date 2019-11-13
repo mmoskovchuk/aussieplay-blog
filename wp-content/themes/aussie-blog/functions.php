@@ -233,7 +233,7 @@ function human_time_diff_enhanced($duration = 60)
     if ($post_time > $time_now - (60 * 60 * 24 * $duration)) {
         $human_time = sprintf(__('%s ago', 'binarymoon'), human_time_diff($post_time, current_time('timestamp')));
     } else {
-        $human_time = get_the_date();
+        $human_time = get_the_date('d M, Y');
     }
 
     return $human_time;
@@ -331,3 +331,10 @@ function filter_function_show_category()
     die();
 
 }
+
+
+
+
+
+
+

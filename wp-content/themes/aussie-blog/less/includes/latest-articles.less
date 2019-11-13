@@ -30,6 +30,11 @@
       width: 65%;
       margin-left: auto;
       margin-right: auto;
+      @media only screen and (max-width: @desktop-xxs) {
+        display: flex;
+        justify-content: flex-start;
+        width: auto;
+      }
     }
     &_wrap {
       margin-left: 4%;
@@ -69,6 +74,10 @@
       width: 40%!important;
       display: flex;
       margin-left: auto;
+      @media only screen and (max-width: @desktop-xxs) {
+        top: -13px;
+        height: 213px;
+      }
     }
     &_pagination--wrap-box {
       display: flex;
@@ -112,7 +121,7 @@
     &_date {
       position: absolute;
       bottom: 34px;
-      right: -72px;
+      right: -75px;
       transform: rotate(-90deg);
       font-family: @montserrat-r;
       font-size: 12px;

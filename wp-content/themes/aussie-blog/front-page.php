@@ -10,6 +10,8 @@
 <?php get_template_part('includes/inc', 'header'); ?>
     <!--MAIN SCREEN-->
 <?php get_template_part('includes/inc', 'main-screen'); ?>
+    <!--BLOG MENU-MOBILE-->
+<?php get_template_part('includes/inc', 'blog-menu-mobile'); ?>
     <!--LATEST ARTICLES-->
 <?php get_template_part('includes/inc', 'latest-articles'); ?>
     <!--WINNING GUIDES-->
