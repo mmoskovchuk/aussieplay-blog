@@ -5,21 +5,31 @@
     height: 100%;
     /*padding-bottom: 200px;*/
   }
+
   &__news_top--wrap {
     h2 {
       font-family: @montserrat-b;
       font-size: 73px;
       color: #000;
       z-index: 2;
+      @media only screen and (max-width: @tablet-l) {
+        font-size: 44px;
+      }
     }
   }
+
   &__news_wrap {
     max-width: 91%;
     margin-left: 0;
     margin-right: auto;
     z-index: 1;
     position: relative;
+    @media only screen and (max-width: @tablet-l) {
+      margin-right: auto;
+      margin-left: auto;
+    }
   }
+
   &__news_top--wrap {
     max-width: 92%;
     margin-left: auto;
@@ -32,6 +42,7 @@
     align-items: center;
     margin-bottom: 65px;
   }
+
   &__news_post--wrap {
     max-width: 92%;
     margin: 0 auto;
@@ -39,25 +50,40 @@
     flex-wrap: wrap;
     /*flex-direction: column;*/
   }
+
   &__news_count {
     font-family: @montserrat-b;
     font-size: 73px;
     color: rgba(0, 0, 0, 0.1);
     letter-spacing: 0;
+    @media only screen and (max-width: @tablet-l) {
+      font-size: 44px;
+    }
   }
+
   &__news_post--item {
     width: 270px;
     height: 300px;
     @media only screen and (max-width: @desktop-s) {
       margin-right: 10px;
-      &:last-child {
+    }
+
+    &:last-child {
+      @media only screen and (max-width: @desktop-s) {
         margin-right: 0;
       }
     }
+
     @media only screen and (max-width: @desktop-xxs) {
       width: 190px;
       height: 215px;
     }
+    @media only screen and (max-width: @tablet-l) {
+      height: 390px;
+      min-width: 300px;
+      margin-bottom: 165px;
+    }
+
     img {
       width: 270px;
       height: 300px;
@@ -69,7 +95,12 @@
         width: 190px;
         height: 215px;
       }
+      @media only screen and (max-width: @tablet-l) {
+        height: 390px;
+        min-width: 300px;
+      }
     }
+
     a {
       font-family: @montserrat-sb;
       font-size: 24px;
@@ -87,6 +118,24 @@
       }
     }
   }
+
+  &__news_post--item-wrap:first-child {
+    .aussie-casino__news_post--item {
+      &:last-child {
+        @media only screen and (max-width: @tablet-l) {
+          display: none;
+        }
+      }
+    }
+  }
+
+  &__news_post--item-wrap:nth-child(2) {
+      @media only screen and (max-width: @tablet-l) {
+        display: none;
+    }
+  }
+
+
   &__news_post_date {
     font-family: @montserrat-r;
     font-size: 12px;
@@ -95,16 +144,24 @@
     display: inline-block;
     text-transform: uppercase;
   }
+
   &__news_post--item-wrap {
     display: flex;
     margin-bottom: 237px;
     justify-content: space-between;
     width: 100%;
+    @media only screen and (max-width: @tablet-l) {
+      flex-direction: column;
+      align-items: center;
+      margin-bottom: 0;
+    }
   }
+
   &__news_btn {
     display: flex;
     justify-content: center;
     width: 100%;
+
     a {
       color: @c2;
       text-decoration: none;
@@ -122,6 +179,7 @@
       font-weight: 600;
       letter-spacing: 0;
       transition: .3s;
+
       &:hover {
         color: @c1;
         background: linear-gradient(45deg, #E3752C, #F2CC3D);

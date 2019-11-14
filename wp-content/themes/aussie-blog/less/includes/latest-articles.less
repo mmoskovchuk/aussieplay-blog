@@ -9,6 +9,9 @@
     position: relative;
     z-index: 1;
     background-color: @c1;
+    @media only screen and (max-width: @tablet-l) {
+      margin-bottom: 70px;
+    }
     &:after {
       content: '';
       background-color: #FFBE1D;
@@ -17,6 +20,9 @@
       height: 90%;
       top: 120px;
       z-index: -1;
+      @media only screen and (max-width: @tablet-l) {
+        height: 84%;
+      }
     }
     h2 {
       font-family: @montserrat-b;
@@ -25,6 +31,9 @@
       z-index: 2;
       padding-top: 60px;
       margin-bottom: 80px;
+      @media only screen and (max-width: @tablet-l) {
+        font-size: 44px;
+      }
     }
     &_container {
       width: 65%;
@@ -38,6 +47,9 @@
     }
     &_wrap {
       margin-left: 4%;
+      @media only screen and (max-width: @tablet-l) {
+        margin-left: 10%;
+      }
     }
     &_slide {
       position: relative;
@@ -53,6 +65,10 @@
       align-items: center;
       height: 150px;
       text-align: left;
+      @media only screen and (max-width: @tablet-l) {
+        bottom: -151px;
+        height: auto;
+      }
       a {
         font-family: @montserrat-sb;
         font-size: 36px;
@@ -61,6 +77,10 @@
         text-decoration: underline;
         text-decoration-color: transparent;
         transition: .5s;
+        @media only screen and (max-width: @tablet-l) {
+          font-size: 25px !important;
+          line-height: 26px;
+        }
         &:hover {
           text-decoration-color: @c2;
         }
@@ -78,6 +98,9 @@
         top: -13px;
         height: 213px;
       }
+      @media only screen and (max-width: @tablet-l) {
+        top: -95px;
+      }
     }
     &_pagination--wrap-box {
       display: flex;
@@ -85,6 +108,21 @@
       position: relative;
       width: 100%;
       align-items: center;
+      @media only screen and (max-width: @desktop-xxl) {
+        padding-left: 7%;
+      }
+      @media only screen and (max-width: @desktop-xl) {
+        padding-left: 15%;
+      }
+      @media only screen and (max-width: @desktop-m) {
+        padding-left: 13%;
+      }
+      @media only screen and (max-width: @desktop-xxs) {
+        padding-left: 20%;
+      }
+      @media only screen and (max-width: @tablet-l) {
+        padding-left: 0;
+      }
     }
     &_pagination--wrap-content {
       width: 275px;
@@ -126,6 +164,12 @@
       font-family: @montserrat-r;
       font-size: 12px;
       text-transform: uppercase;
+      @media only screen and (max-width: @tablet-l) {
+        transform: none;
+        width: max-content;
+        bottom: -44px;
+        left: 36%;
+      }
     }
     &_fraction-of {
       font-size: 30px;
@@ -162,6 +206,10 @@
       padding-right: 23px !important;
       @media only screen and (max-width: @desktop-m) {
         height: 330px;
+      }
+      @media only screen and (max-width: @tablet-l) {
+        width: 86%;
+        height: 255px;
       }
     }
     .swiper-slide:nth-child(2n) {

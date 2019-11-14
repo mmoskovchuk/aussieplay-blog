@@ -18,11 +18,20 @@
     margin-left: 0;
     margin-right: auto;
     margin-bottom: 118px;
+    @media only screen and (max-width: @tablet-l) {
+      margin-left: auto;
+      margin-right: auto;
+      margin-bottom: 0;
+    }
   }
 
   &__winning-guides_sort-post--wrap {
     display: flex;
     justify-content: space-between;
+    @media only screen and (max-width: @tablet-l) {
+      align-items: center;
+      flex-direction: column;
+    }
   }
 
   &__winning-guides_top--wrap {
@@ -38,6 +47,9 @@
     h2 {
       @media only screen and (max-width: @desktop-xxs) {
         margin-bottom: 30px;
+      }
+      @media only screen and (max-width: @tablet-l) {
+        font-size: 44px;
       }
     }
 
@@ -75,9 +87,18 @@
     display: flex;
     flex-direction: column;
     margin-right: 171px;
+    @media only screen and (max-width: @desktop-l) {
+      margin-right: 80px;
+    }
     @media only screen and (max-width: @desktop-xxs) {
       max-width: 245px;
       width: 100%;
+    }
+    @media only screen and (max-width: @tablet-l) {
+      max-width: 300px;
+      height: 390px;
+      margin-right: 0;
+      margin-bottom: 165px;
     }
     img {
       width: 417px;
@@ -99,6 +120,10 @@
         max-width: 245px;
         width: 100%;
         height: 300px;
+      }
+      @media only screen and (max-width: @tablet-l) {
+        max-width: 300px;
+        height: 390px;
       }
     }
 

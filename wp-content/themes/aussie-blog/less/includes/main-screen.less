@@ -13,6 +13,9 @@
     @media only screen and (max-width: @desktop-xxs) {
       height: 475px;
     }
+    @media only screen and (max-width: @tablet-l) {
+      height: 368px;
+    }
   }
   &__main-screen_wrapper {
     display: flex;
@@ -36,6 +39,12 @@
         left: 17%;
         top: 0;
       }
+      @media only screen and (max-width: @tablet-l) {
+        left: 23%;
+        top: 17px;
+        height: 456px;
+        background-size: contain;
+      }
     }
     &:after {
         content: '';
@@ -49,6 +58,11 @@
       @media only screen and (max-width: @desktop-xxs) {
         top: 0;
         left: 32%;
+      }
+      @media only screen and (max-width: @tablet-l) {
+        left: 44%;
+        width: 74px;
+        height: 94px;
       }
     }
     @media only screen and (max-width: @desktop-xxl) {
@@ -93,6 +107,9 @@
         display: flex;
         flex-direction: column;
         align-items: center;
+      }
+      @media only screen and (max-width: @tablet-l) {
+        font-size: 46px;
       }
     }
     span {
@@ -167,6 +184,9 @@
     @media only screen and (max-width: @desktop-xxs) {
       font-size: 37px;
     }
+    @media only screen and (max-width: @tablet-l) {
+      font-size: 28px;
+    }
   }
   &__main-screen_desc {
     margin-bottom: 45px;
@@ -186,6 +206,9 @@
     box-shadow: 0 0 24px 0 #ffa60a;
     transition: .5s;
     text-decoration: none;
+    @media only screen and (max-width: @tablet-l) {
+      width: 220px;
+    }
     &:hover {
       box-shadow: none;
     }
@@ -201,7 +224,9 @@
       transition: .3s;
       height: 14px;
       margin-left: 8px;
-
+      @media only screen and (max-width: @tablet-l) {
+        padding: 12px 49px;
+      }
       &:hover {
         color: @c1 !important;
       }
