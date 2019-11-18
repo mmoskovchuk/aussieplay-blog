@@ -23,6 +23,10 @@
       @media only screen and (max-width: @tablet-l) {
         height: 84%;
       }
+      @media only screen and (max-width: @mobile-xl) {
+        height: 76%;
+        width: 37%;
+      }
     }
     h2 {
       font-family: @montserrat-b;
@@ -33,6 +37,10 @@
       margin-bottom: 80px;
       @media only screen and (max-width: @tablet-l) {
         font-size: 44px;
+      }
+      @media only screen and (max-width: @mobile-xl) {
+        font-size: 36px;
+        margin-bottom: 40px;
       }
     }
     &_container {
@@ -69,6 +77,14 @@
         bottom: -151px;
         height: auto;
       }
+      @media only screen and (max-width: @mobile-xl) {
+        bottom: -178px;
+        height: 120px;
+        width: 100%;
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+      }
       a {
         font-family: @montserrat-sb;
         font-size: 36px;
@@ -80,6 +96,9 @@
         @media only screen and (max-width: @tablet-l) {
           font-size: 25px !important;
           line-height: 26px;
+        }
+        @media only screen and (max-width: @mobile-xl) {
+          font-size: 16px !important;
         }
         &:hover {
           text-decoration-color: @c2;
@@ -100,6 +119,12 @@
       }
       @media only screen and (max-width: @tablet-l) {
         top: -95px;
+      }
+      @media only screen and (max-width: @mobile-xl) {
+        height: 37px;
+        width: 30% !important;
+        padding-right: 48px;
+        top: -46px;
       }
     }
     &_pagination--wrap-box {
@@ -140,6 +165,9 @@
       @media only screen and (max-width: @desktop-m) {
         font-size: 45px;
       }
+      @media only screen and (max-width: @mobile-xl) {
+        font-size: 31px;
+      }
       .swiper-pagination-current {
         margin-right: 8px;
         display: flex;
@@ -153,6 +181,9 @@
         font-family: @montserrat-r;
         @media only screen and (max-width: @desktop-m) {
           font-size: 25px;
+        }
+        @media only screen and (max-width: @mobile-xl) {
+          font-size: 11px;
         }
       }
     }
@@ -170,11 +201,18 @@
         bottom: -44px;
         left: 36%;
       }
+      @media only screen and (max-width: @mobile-xl) {
+        bottom: -40px;
+        left: 28%;
+      }
     }
     &_fraction-of {
       font-size: 30px;
       color: #b9b9b9;
       font-family: @montserrat-r;
+      @media only screen and (max-width: @mobile-xl) {
+        font-size: 11px;
+      }
     }
     &_pag-wrap {
       display: flex;
@@ -186,6 +224,9 @@
       padding-bottom: 160px !important;
       @media only screen and (max-width: @desktop-m) {
         height: 400px;
+      }
+      @media only screen and (max-width: @mobile-xl) {
+        padding-bottom: 0 !important;
       }
     }
     .swiper-wrapper {
@@ -201,6 +242,7 @@
       display: flex;
       justify-content: center;
       align-items: center;
+      border: 1px solid @c1;
       padding-left: 23px !important;
       padding-top: 23px !important;
       padding-right: 23px !important;
@@ -211,12 +253,25 @@
         width: 86%;
         height: 255px;
       }
+      @media only screen and (max-width: @mobile-xl) {
+        width: 100% !important;
+        height: 172px;
+      }
     }
     .swiper-slide:nth-child(2n) {
       width: 100%;
     }
     .swiper-slide:nth-child(3n) {
       width: 100%;
+    }
+
+    .swiper-slide-next {
+      .aussie-casino__latest-articles_date {
+        display: none;
+      }
+      .aussie-casino__latest-articles_title {
+        display: none;
+      }
     }
 
     .swiper-button-next, .swiper-button-prev {
@@ -230,6 +285,10 @@
       @media only screen and (max-width: @desktop-m) {
         margin-left: 5px;
       }
+      @media only screen and (max-width: @mobile-xl) {
+        background-size: 79px 68px!important;
+        margin-top: -2px;
+      }
     }
     .swiper-button-prev {
       margin-right: 30px;
@@ -238,6 +297,10 @@
       background-position-x: -34px !important;
       @media only screen and (max-width: @desktop-m) {
         margin-right: 5px;
+      }
+      @media only screen and (max-width: @mobile-xl) {
+        background-size: 83px 64px!important;
+        margin-top: -2px;
       }
     }
 

@@ -55,6 +55,7 @@
       }
       @media only screen and (max-width: @mobile-xl) {
         bottom: 85%;
+        width: 47%;
       }
     }
   }
@@ -82,6 +83,9 @@
     @media only screen and (max-width: @tablet-xl) {
       flex-direction: column;
     }
+    @media only screen and (max-width: @mobile-xl) {
+      width: 260px;
+    }
   }
 
   &__about-us_col--left {
@@ -107,6 +111,13 @@
       }
       @media only screen and (max-width: @desktop-xs) {
         margin-bottom: 75px;
+      }
+      @media only screen and (max-width: @mobile-xl) {
+        font-size: 36px;
+        margin-bottom: 59px;
+        width: auto;
+        margin-left: 0;
+        margin-right: auto;
       }
     }
   }
@@ -180,6 +191,7 @@
     }
     @media only screen and (max-width: @mobile-xl) {
       width: 100%;
+      align-items: flex-start;
     }
   }
 
@@ -298,6 +310,13 @@
     @media only screen and (max-width: @tablet-xl) {
       margin-bottom: 38px;
     }
+    @media only screen and (max-width: @mobile-xl) {
+      margin-bottom: 38px;
+      margin-right: 0;
+      margin-left: auto;
+      width: 180px;
+      line-height: 16px;
+    }
   }
   &__about-us_btn-top {
     width: 244px;
@@ -316,6 +335,10 @@
     }
     @media only screen and (max-width: @tablet-xl) {
       display: block;
+    }
+    @media only screen and (max-width: @mobile-xl) {
+      margin-left: auto;
+      margin-right: auto;
     }
   }
 }

@@ -273,6 +273,14 @@ $(document).ready(function () {
                     '<div class="aussie-casino__latest-articles_pag-wrap-el"><span class="' + totalClass + '"></span></div></div>';
             }
         },
+        breakpoints: {
+            768: {
+                spaceBetween: 50,
+            },
+            640: {
+                spaceBetween: 50,
+            }
+        },
         navigation: {
             nextEl: '.swiper-button-next',
             prevEl: '.swiper-button-prev',
@@ -342,7 +350,62 @@ $('.menu-burger, .menu-items').on('click', function() {
 });
 
 
+//ANIMATED HEADER
+//-------------------------------------------------
+(function($) {
+    var fixedItem = $('#header-block'),
+        animeClass = 'animated',
+        fixedClass = 'fixed',
+        window_width = 768,
+        is_fixed = $('.aussie-casino__header').size(),
+        minMarginTop;
 
+    if (fixedItem.size()) {
+
+        var scrollTopValue = function() {
+            return $(window).scrollTop()
+        };
+
+        var addCustomClass = function(cls) {
+            fixedItem.addClass(cls);
+        };
+
+        var removeCustomClass = function(cls) {
+            fixedItem.removeClass(cls);
+        };
+
+        var toggleAnimeFunc = function() {
+
+            minMarginTop = fixedItem.height();
+
+            if (scrollTopValue() > minMarginTop) {
+                addCustomClass(animeClass);
+            } else if (scrollTopValue() === 0) {
+                removeCustomClass(animeClass);
+            }
+        };
+
+        $(window).on('scroll', toggleAnimeFunc);
+        $(window).on('load', toggleAnimeFunc);
+
+        if (!is_fixed) {
+            var toggleFixedFunc = function() {
+                minMarginTop = fixedItem.height();
+                if (scrollTopValue() > 0) {
+                    addCustomClass(fixedClass);
+                    $('body').css({marginTop:minMarginTop})
+                } else if (scrollTopValue() === 0) {
+                    removeCustomClass(fixedClass);
+                    $('body').css({marginTop:0});
+                }
+            };
+
+            $(window).on('scroll', toggleFixedFunc);
+            $(window).on('load', toggleFixedFunc);
+        }
+    }
+
+})(jQuery);
 
 
 

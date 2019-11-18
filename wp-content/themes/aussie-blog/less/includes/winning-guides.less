@@ -23,6 +23,9 @@
       margin-right: auto;
       margin-bottom: 0;
     }
+    @media only screen and (max-width: @mobile-xl) {
+      width: 267px;
+    }
   }
 
   &__winning-guides_sort-post--wrap {
@@ -43,6 +46,9 @@
       flex-direction: column;
       align-items: flex-start;
     }
+    @media only screen and (max-width: @mobile-xl) {
+      align-items: center;
+    }
 
     h2 {
       @media only screen and (max-width: @desktop-xxs) {
@@ -50,6 +56,11 @@
       }
       @media only screen and (max-width: @tablet-l) {
         font-size: 44px;
+      }
+      @media only screen and (max-width: @mobile-xl) {
+        font-size: 36px;
+        margin-left: 0;
+        margin-right: auto;
       }
     }
 
@@ -71,6 +82,15 @@
       opacity: 1;
       cursor: pointer;
       transition: .5s;
+      @media only screen and (max-width: @mobile-xl) {
+        font-size: 12px;
+        letter-spacing: 0;
+        width: 180px;
+        height: 42px;
+        background-position-x: 106px;
+        background-position-y: 0;
+        background-size: 90px 66px;
+      }
     }
   }
 
@@ -80,6 +100,9 @@
     color: #B9B9B9;
     margin-right: 19px;
     letter-spacing: 0;
+    @media only screen and (max-width: @mobile-xl) {
+      font-size: 14px;
+    }
   }
 
   &__winning-guides_post--item {
@@ -99,6 +122,10 @@
       height: 390px;
       margin-right: 0;
       margin-bottom: 165px;
+    }
+    @media only screen and (max-width: @mobile-xl) {
+      max-width: 245px;
+      height: 293px;
     }
     img {
       width: 417px;
@@ -125,6 +152,10 @@
         max-width: 300px;
         height: 390px;
       }
+      @media only screen and (max-width: @mobile-xl) {
+        max-width: 245px;
+        height: 293px;
+      }
     }
 
     a {
@@ -134,6 +165,10 @@
       text-decoration: underline;
       text-decoration-color: transparent;
       transition: .5s;
+      @media only screen and (max-width: @mobile-xl) {
+        font-size: 16px;
+        line-height: 20px;
+      }
 
       &:hover {
         text-decoration-color: #000;
@@ -153,6 +188,13 @@
     font-family: @montserrat-r;
     font-size: 12px;
     text-transform: uppercase;
+    @media only screen and (max-width: @mobile-xl) {
+      font-size: 10px;
+      right: -67px;
+    }
+    @media only screen and (max-width: @mobile-s) {
+      right: -50px;
+    }
   }
 
   &__winning-guides_post--item:last-child {

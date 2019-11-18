@@ -5,13 +5,17 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/wp-content/themes/aussie-blog/css/maps/style.min.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/aussie-blog/css/maps/style.min.css.map" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/wp-content/themes/aussie-blog/css/style.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/aussie-blog/css/style.min.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/themes/aussie-blog/js/custom.js" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/aussie-blog/js/custom.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/themes/aussie-blog/js/scripts.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/aussie-blog/js/scripts.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/themes/aussie-blog/less/includes/about-us.less" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/aussie-blog/less/includes/about-us.less" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/wp-content/themes/aussie-blog/less/includes/blog-menu-mobile.less" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/aussie-blog/less/includes/blog-menu-mobile.less" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/wp-content/themes/aussie-blog/less/includes/games-reviews.less" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/aussie-blog/less/includes/games-reviews.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/themes/aussie-blog/less/includes/header.less" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/aussie-blog/less/includes/header.less" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/wp-content/themes/aussie-blog/less/includes/latest-articles.less" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/aussie-blog/less/includes/latest-articles.less" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/wp-content/themes/aussie-blog/less/includes/main-screen.less" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/aussie-blog/less/includes/main-screen.less" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/wp-content/themes/aussie-blog/less/includes/news.less" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/aussie-blog/less/includes/news.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/themes/aussie-blog/less/includes/subscribe-us.less" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/aussie-blog/less/includes/subscribe-us.less" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/wp-content/themes/aussie-blog/less/includes/winning-guides.less" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/aussie-blog/less/includes/winning-guides.less" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wp-content/themes/aussie-blog/page.php" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/aussie-blog/page.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -30,19 +34,10 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/wp-content/themes/aussie-blog/includes/inc-blog-menu-mobile.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="442">
-              <caret line="26" column="18" selection-start-line="26" selection-start-column="18" selection-end-line="26" selection-end-column="18" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/wp-content/themes/aussie-blog/less/includes/blog-menu-mobile.less">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2380">
-              <caret line="140" column="10" selection-start-line="140" selection-start-column="10" selection-end-line="140" selection-end-column="10" />
+            <state relative-caret-position="219">
+              <caret line="191" column="26" selection-start-line="191" selection-start-column="26" selection-end-line="191" selection-end-column="26" />
             </state>
           </provider>
         </entry>
@@ -50,17 +45,26 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/wp-content/themes/aussie-blog/less/includes/latest-articles.less">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="12" column="9" selection-start-line="11" selection-start-column="4" selection-end-line="13" selection-end-column="5" />
+            <state relative-caret-position="17">
+              <caret line="246" column="35" selection-start-line="246" selection-start-column="35" selection-end-line="246" selection-end-column="35" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/wp-content/themes/aussie-blog/less/includes/main-screen.less">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="238">
+              <caret line="14" column="20" lean-forward="true" selection-start-line="14" selection-start-column="20" selection-end-line="14" selection-end-column="20" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/wp-content/themes/aussie-blog/less/includes/main-screen.less">
+        <entry file="file://$PROJECT_DIR$/wp-content/themes/aussie-blog/less/includes/about-us.less">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1071">
-              <caret line="63" column="20" selection-start-line="63" selection-start-column="20" selection-end-line="63" selection-end-column="20" />
+            <state relative-caret-position="203">
+              <caret line="79" column="18" lean-forward="true" selection-start-line="79" selection-start-column="18" selection-end-line="79" selection-end-column="18" />
             </state>
           </provider>
         </entry>
@@ -68,8 +72,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/wp-content/themes/aussie-blog/js/custom.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="5746">
-              <caret line="339" column="61" selection-start-line="339" selection-start-column="61" selection-end-line="339" selection-end-column="61" />
+            <state relative-caret-position="848">
+              <caret line="401" lean-forward="true" selection-start-line="401" selection-end-line="401" />
               <folding>
                 <element signature="n#!!doc" expanded="true" />
               </folding>
@@ -77,23 +81,20 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/wp-content/themes/aussie-blog/less/variables.less">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/wp-content/themes/aussie-blog/less/includes/header.less">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="358">
-              <caret line="26" column="17" lean-forward="true" selection-start-line="26" selection-start-column="17" selection-end-line="26" selection-end-column="17" />
+            <state relative-caret-position="357">
+              <caret line="59" column="28" lean-forward="true" selection-start-line="59" selection-start-column="28" selection-end-line="59" selection-end-column="28" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/wp-content/themes/aussie-blog/category.php">
+        <entry file="file://$PROJECT_DIR$/wp-content/themes/aussie-blog/less/variables.less">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="51">
-              <caret line="5" selection-start-line="5" selection-end-line="5" />
-              <folding>
-                <element signature="e#3#34#0#PHP" expanded="true" />
-              </folding>
+            <state relative-caret-position="196">
+              <caret line="17" column="1" selection-start-line="17" selection-start-column="1" selection-end-line="17" selection-end-column="1" />
             </state>
           </provider>
         </entry>
@@ -101,8 +102,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/wp-content/themes/aussie-blog/less/includes/winning-guides.less">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
-              <caret line="21" column="24" selection-start-line="21" selection-start-column="24" selection-end-line="21" selection-end-column="24" />
+            <state relative-caret-position="424">
+              <caret line="196" column="5" selection-start-line="196" selection-start-column="5" selection-end-line="196" selection-end-column="5" />
             </state>
           </provider>
         </entry>
@@ -110,8 +111,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/wp-content/themes/aussie-blog/less/includes/games-reviews.less">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="13" column="51" selection-start-line="13" selection-start-column="51" selection-end-line="13" selection-end-column="51" />
+            <state relative-caret-position="390">
+              <caret line="308" column="4" selection-start-line="308" selection-start-column="4" selection-end-line="310" selection-end-column="5" />
             </state>
           </provider>
         </entry>
@@ -119,8 +120,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/wp-content/themes/aussie-blog/less/includes/news.less">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2635">
-              <caret line="155" column="22" selection-start-line="155" selection-start-column="22" selection-end-line="155" selection-end-column="22" />
+            <state relative-caret-position="271">
+              <caret line="43" column="23" lean-forward="true" selection-start-line="43" selection-start-column="23" selection-end-line="43" selection-end-column="23" />
             </state>
           </provider>
         </entry>
@@ -137,36 +138,36 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>aussie-casino__latest-articles_pag-wrap</find>
-      <find>__subscribe-us</find>
-      <find>swiper-button-prev</find>
-      <find>__winning-guides_date</find>
-      <find>human_time_diff_enhanced</find>
-      <find>250% Slots Match</find>
-      <find>__main-screen_box-left</find>
-      <find>__main-screen</find>
-      <find>aussie-casino__main-screen_box-right</find>
-      <find>__main-screen_desc</find>
-      <find>__blog-menu_</find>
-      <find>__blog-menu-mobile_wrap-left</find>
-      <find>__winning-guides_top--wrap</find>
-      <find>_pagination--wrap</find>
-      <find>-articles_container</find>
-      <find>blog-menu</find>
-      <find>_pagination--wrap-box</find>
-      <find>_games-reviews_post--item</find>
+      <find>__main-screen_code--wrap</find>
+      <find>.swiper-slide</find>
+      <find>h2</find>
       <find>__games-reviews_post--item</find>
-      <find>__games-reviews_post--item-wrap1</find>
-      <find>__news_post--wrap</find>
-      <find>desktop-l</find>
-      <find>@desktop-l</find>
-      <find>__winning-guides_sort-post--wrap</find>
-      <find>__latest-articles</find>
+      <find>390px</find>
+      <find>post--item</find>
+      <find>sele</find>
+      <find>_top--wrap</find>
+      <find>36</find>
       <find>__winning-guides_wrap</find>
-      <find>__news_post--item-wrap</find>
-      <find>__winning-guides_post--item</find>
-      <find>_date</find>
-      <find>.menu-bg</find>
+      <find>91</find>
+      <find>__games-reviews_wrap</find>
+      <find>_wrap</find>
+      <find>_post--item</find>
+      <find>__news_btn</find>
+      <find>input[type</find>
+      <find>_col-bottom--wrap</find>
+      <find>__subscribe-us_content--wrap</find>
+      <find>__about-us_col</find>
+      <find>__about-us</find>
+      <find>_games-reviews_date</find>
+      <find>__news_top--wrap</find>
+      <find>__games-reviews</find>
+      <find>__games-reviews_top--wrap</find>
+      <find>.menu-items</find>
+      <find>__winning-guides</find>
+      <find>__games-reviews_dat</find>
+      <find>__winning-guides_date</find>
+      <find>__header</find>
+      <find>__main-screen</find>
     </findStrings>
     <replaceStrings>
       <replace>aussie-casino</replace>
@@ -213,7 +214,6 @@
         <option value="$PROJECT_DIR$/wp-content/themes/aussie-blog/includes/inc-subscribe-us.php" />
         <option value="$PROJECT_DIR$/wp-content/plugins/wp-postratings/wp-postratings.php" />
         <option value="$PROJECT_DIR$/wp-content/themes/aussie-blog/includes/inc-about-us.php" />
-        <option value="$PROJECT_DIR$/wp-content/themes/aussie-blog/less/includes/about-us.less" />
         <option value="$PROJECT_DIR$/wp-content/themes/aussie-blog/single.php" />
         <option value="$PROJECT_DIR$/wp-content/themes/aussie-blog/less/includes/single-tpl.less" />
         <option value="$PROJECT_DIR$/wp-content/plugins/ajax-cat/ajax-cat.php" />
@@ -225,22 +225,23 @@
         <option value="$PROJECT_DIR$/wp-content/themes/aussie-blog/less/variables.less" />
         <option value="$PROJECT_DIR$/wp-content/themes/aussie-blog/includes/inc-latest-articles.php" />
         <option value="$PROJECT_DIR$/readme.html" />
-        <option value="$PROJECT_DIR$/wp-content/themes/aussie-blog/less/includes/subscribe-us.less" />
-        <option value="$PROJECT_DIR$/wp-content/themes/aussie-blog/less/includes/header.less" />
         <option value="$PROJECT_DIR$/wp-content/themes/aussie-blog/less/includes/blog-menu.less" />
         <option value="$PROJECT_DIR$/wp-content/themes/aussie-blog/functions.php" />
         <option value="$PROJECT_DIR$/wp-content/themes/aussie-blog/includes/inc-main-screen.php" />
         <option value="$PROJECT_DIR$/wp-content/themes/aussie-blog/front-page.php" />
         <option value="$PROJECT_DIR$/wp-content/themes/aussie-blog/less/style.less" />
-        <option value="$PROJECT_DIR$/wp-content/themes/aussie-blog/js/custom.js" />
         <option value="$PROJECT_DIR$/wp-content/themes/aussie-blog/includes/inc-blog-menu-mobile.php" />
         <option value="$PROJECT_DIR$/wp-content/themes/aussie-blog/page.php" />
+        <option value="$PROJECT_DIR$/wp-content/themes/aussie-blog/less/includes/latest-articles.less" />
+        <option value="$PROJECT_DIR$/wp-content/themes/aussie-blog/less/includes/subscribe-us.less" />
+        <option value="$PROJECT_DIR$/wp-content/themes/aussie-blog/less/includes/about-us.less" />
         <option value="$PROJECT_DIR$/wp-content/themes/aussie-blog/less/includes/news.less" />
+        <option value="$PROJECT_DIR$/wp-content/themes/aussie-blog/less/includes/blog-menu-mobile.less" />
         <option value="$PROJECT_DIR$/wp-content/themes/aussie-blog/less/includes/games-reviews.less" />
         <option value="$PROJECT_DIR$/wp-content/themes/aussie-blog/less/includes/winning-guides.less" />
-        <option value="$PROJECT_DIR$/wp-content/themes/aussie-blog/less/includes/latest-articles.less" />
+        <option value="$PROJECT_DIR$/wp-content/themes/aussie-blog/js/custom.js" />
+        <option value="$PROJECT_DIR$/wp-content/themes/aussie-blog/less/includes/header.less" />
         <option value="$PROJECT_DIR$/wp-content/themes/aussie-blog/less/includes/main-screen.less" />
-        <option value="$PROJECT_DIR$/wp-content/themes/aussie-blog/less/includes/blog-menu-mobile.less" />
       </list>
     </option>
   </component>
@@ -473,17 +474,19 @@
       <workItem from="1572852898522" duration="3953000" />
       <workItem from="1573640170798" duration="16510000" />
       <workItem from="1573717272786" duration="22612000" />
-      <workItem from="1573746271565" duration="272000" />
+      <workItem from="1573746271565" duration="1248000" />
+      <workItem from="1574062854293" duration="19058000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="592643000" />
+    <option name="totallyTimeSpent" value="612677000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1912" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4984326" visible="true" weight="0.37153518" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4984326" visible="true" weight="0.37579957" />
       <window_info id="Structure" order="1" sideWeight="0.5015674" side_tool="true" weight="0.30277187" />
       <window_info id="Favorites" order="2" sideWeight="0.5015674" side_tool="true" weight="0.19989339" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -705,13 +708,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/aussie-blog/less/includes/about-us.less">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="629">
-          <caret line="37" column="7" selection-start-line="34" selection-start-column="6" selection-end-line="37" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file:////DOM-PDC/HomeWin7$/maxim/Downloads/bettings_wp641.sql" />
     <entry file="file://$PROJECT_DIR$/readme.html">
       <provider selected="true" editor-type-id="text-editor">
@@ -748,24 +744,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/aussie-blog/less/includes/header.less">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-68">
-          <caret line="53" column="54" lean-forward="true" selection-start-line="53" selection-start-column="54" selection-end-line="53" selection-end-column="54" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/wp-content/themes/aussie-blog/less/includes/single-tpl.less">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="13192">
           <caret line="776" column="52" selection-start-line="776" selection-start-column="4" selection-end-line="776" selection-end-column="52" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/aussie-blog/less/includes/subscribe-us.less">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="38" column="26" selection-start-line="38" selection-start-column="26" selection-end-line="38" selection-end-column="26" />
         </state>
       </provider>
     </entry>
@@ -860,37 +842,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/aussie-blog/less/includes/blog-menu-mobile.less">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2380">
-          <caret line="140" column="10" selection-start-line="140" selection-start-column="10" selection-end-line="140" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/aussie-blog/less/includes/latest-articles.less">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" column="9" selection-start-line="11" selection-start-column="4" selection-end-line="13" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/aussie-blog/less/includes/main-screen.less">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1071">
-          <caret line="63" column="20" selection-start-line="63" selection-start-column="20" selection-end-line="63" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/aussie-blog/js/custom.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="5746">
-          <caret line="339" column="61" selection-start-line="339" selection-start-column="61" selection-end-line="339" selection-end-column="61" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/wp-content/themes/aussie-blog/category.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="51">
@@ -901,31 +852,83 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/aussie-blog/less/includes/winning-guides.less">
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/aussie-blog/less/includes/subscribe-us.less">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="21" column="24" selection-start-line="21" selection-start-column="24" selection-end-line="21" selection-end-column="24" />
+        <state relative-caret-position="322">
+          <caret line="158" column="19" selection-start-line="158" selection-start-column="19" selection-end-line="158" selection-end-column="19" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/aussie-blog/less/includes/games-reviews.less">
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/aussie-blog/less/includes/about-us.less">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="13" column="51" selection-start-line="13" selection-start-column="51" selection-end-line="13" selection-end-column="51" />
+        <state relative-caret-position="203">
+          <caret line="79" column="18" lean-forward="true" selection-start-line="79" selection-start-column="18" selection-end-line="79" selection-end-column="18" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/wp-content/themes/aussie-blog/less/includes/news.less">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2635">
-          <caret line="155" column="22" selection-start-line="155" selection-start-column="22" selection-end-line="155" selection-end-column="22" />
+        <state relative-caret-position="271">
+          <caret line="43" column="23" lean-forward="true" selection-start-line="43" selection-start-column="23" selection-end-line="43" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/aussie-blog/less/includes/latest-articles.less">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="246" column="35" selection-start-line="246" selection-start-column="35" selection-end-line="246" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/aussie-blog/less/includes/blog-menu-mobile.less">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="219">
+          <caret line="191" column="26" selection-start-line="191" selection-start-column="26" selection-end-line="191" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/aussie-blog/less/includes/games-reviews.less">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="390">
+          <caret line="308" column="4" selection-start-line="308" selection-start-column="4" selection-end-line="310" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/aussie-blog/less/includes/winning-guides.less">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="424">
+          <caret line="196" column="5" selection-start-line="196" selection-start-column="5" selection-end-line="196" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/aussie-blog/js/custom.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="848">
+          <caret line="401" lean-forward="true" selection-start-line="401" selection-end-line="401" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/aussie-blog/less/includes/header.less">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="59" column="28" lean-forward="true" selection-start-line="59" selection-start-column="28" selection-end-line="59" selection-end-column="28" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/wp-content/themes/aussie-blog/less/variables.less">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="358">
-          <caret line="26" column="17" lean-forward="true" selection-start-line="26" selection-start-column="17" selection-end-line="26" selection-end-column="17" />
+        <state relative-caret-position="196">
+          <caret line="17" column="1" selection-start-line="17" selection-start-column="1" selection-end-line="17" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/aussie-blog/less/includes/main-screen.less">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" column="20" lean-forward="true" selection-start-line="14" selection-start-column="20" selection-end-line="14" selection-end-column="20" />
         </state>
       </provider>
     </entry>

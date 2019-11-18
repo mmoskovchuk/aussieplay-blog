@@ -15,6 +15,9 @@
       @media only screen and (max-width: @tablet-l) {
         font-size: 44px;
       }
+      @media only screen and (max-width: @mobile-xl) {
+        font-size: 36px;
+      }
     }
   }
 
@@ -27,6 +30,9 @@
     @media only screen and (max-width: @tablet-l) {
       margin-right: auto;
       margin-left: auto;
+    }
+    @media only screen and (max-width: @mobile-xl) {
+      width: 267px;
     }
   }
 
@@ -41,6 +47,9 @@
     justify-content: space-between;
     align-items: center;
     margin-bottom: 65px;
+    @media only screen and (max-width: @mobile-xl) {
+      padding-top: 0;
+    }
   }
 
   &__news_post--wrap {
@@ -58,6 +67,9 @@
     letter-spacing: 0;
     @media only screen and (max-width: @tablet-l) {
       font-size: 44px;
+    }
+    @media only screen and (max-width: @mobile-xl) {
+      font-size: 16px;
     }
   }
 
@@ -83,6 +95,10 @@
       min-width: 300px;
       margin-bottom: 165px;
     }
+    @media only screen and (max-width: @mobile-xl) {
+      min-width: 245px;
+      height: 293px;
+    }
 
     img {
       width: 270px;
@@ -99,6 +115,10 @@
         height: 390px;
         min-width: 300px;
       }
+      @media only screen and (max-width: @mobile-xl) {
+        min-width: 245px;
+        height: 293px;
+      }
     }
 
     a {
@@ -112,6 +132,9 @@
       text-decoration: underline;
       text-decoration-color: transparent;
       transition: .5s;
+      @media only screen and (max-width: @mobile-xl) {
+        font-size: 16px;
+      }
 
       &:hover {
         text-decoration-color: #000;
@@ -132,7 +155,7 @@
   &__news_post--item-wrap:nth-child(2) {
       @media only screen and (max-width: @tablet-l) {
         display: none;
-    }
+      }
   }
 
 
@@ -143,6 +166,9 @@
     margin-top: 25px;
     display: inline-block;
     text-transform: uppercase;
+    @media only screen and (max-width: @mobile-xl) {
+      font-size: 10px;
+    }
   }
 
   &__news_post--item-wrap {
@@ -179,7 +205,11 @@
       font-weight: 600;
       letter-spacing: 0;
       transition: .3s;
-
+      @media only screen and (max-width: @mobile-xl) {
+        font-size: 10px;
+        width: 244px;
+        height: 42px;
+      }
       &:hover {
         color: @c1;
         background: linear-gradient(45deg, #E3752C, #F2CC3D);

@@ -51,6 +51,14 @@
   &__header {
     height: 70px;
     background-color: @c3;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 999;
+    transition: .25s;
+    &.animated {
+      background-color: @c3;
+    }
     @media only screen and (max-width: @desktop-xxs) {
       display: none;
     }
