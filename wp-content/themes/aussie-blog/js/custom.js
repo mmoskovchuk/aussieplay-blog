@@ -407,6 +407,27 @@ $('.menu-burger, .menu-items').on('click', function() {
 
 })(jQuery);
 
+//SCROLL TOP BUTTON
+//-------------------------------------------------
+(function ($) {
+    var findWindowHeight = function () {
+        return windowHeight = $(window).height();
+    };
+
+    var scrollPage = function () {
+        $('body, html').animate({
+            scrollTop: 0
+        }, 800);
+    };
+
+    var windowHeight = findWindowHeight();
+
+
+    $(window).resize(findWindowHeight);
+
+    $('body').on('click', '#btn-top', scrollPage);
+})(jQuery);
+
 
 
 

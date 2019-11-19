@@ -1,0 +1,46 @@
+//FIXED SIDEBAR
+
+.fixed-sidebar {
+  width: 79px;
+  height: 406px;
+  position: fixed;
+  margin-top: 30px;
+  -webkit-perspective: 1000px;
+  perspective: 1000px;
+  background: #280E01;
+  z-index: 3;
+  right: 0;
+  top: 40%;
+  border-radius: 4px 0 0 4px;
+  cursor: pointer;
+
+  &:after {
+    position: absolute;
+    content: '';
+    background: url(../img/logo-fixed-sidebar.svg) center no-repeat;
+    width: 106px;
+    height: 135px;
+    top: 40%;
+    right: 16px;
+  }
+
+  &__title-1,
+  &__title-2 {
+    position: absolute;
+    transform: rotate(-90deg);
+    color: @c1;
+    text-transform: uppercase;
+  }
+
+  &__title-1 {
+    top: 88px;
+    width: max-content;
+    right: -13px;
+  }
+
+  &__title-2 {
+    bottom: 60px;
+    right: 12px;
+  }
+
+}

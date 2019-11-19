@@ -8,6 +8,8 @@
 
     <!--HEADER-->
 <?php get_template_part('includes/inc', 'header'); ?>
+    <!--FIXED SIDEBAR-->
+<?php get_template_part('includes/inc', 'fixed-sidebar'); ?>
     <!--MAIN SCREEN-->
 <?php get_template_part('includes/inc', 'main-screen'); ?>
     <!--BLOG MENU-MOBILE-->
