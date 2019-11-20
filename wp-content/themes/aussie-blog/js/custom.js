@@ -59,7 +59,7 @@ function displaySearch() {
         });
         // Change search icon to x
         $searchBtn.html('<img src="./wp-content/themes/aussie-blog/img/close.svg" alt="aussie-casino">');
-        $searchFormWrapper.html('<div class="aussie-casino__blog-menu_search-wrap"><form class="aussie-casino__blog-menu_search-form"><input class="aussie-casino__blog-menu_search-field" placeholder="Search..." type="text" /></form></div>');
+        $searchFormWrapper.html('<div class="aussie-casino__blog-menu_search-wrap"><form role="search" method="get" id="searchform" class="aussie-casino__blog-menu_search-form"><input class="aussie-casino__blog-menu_search-field" placeholder="Search..." type="text" value="" name="s" id="s"/></form></div>');
 
         if ($(document).width() > 1700) {
             $('.search-displayed .aussie-casino__blog-menu_search-field').velocity({
@@ -455,6 +455,14 @@ jQuery(function($){
         }
     });
 });
+
+//PREV PAGE
+//------------------------------------------------------
+
+function prevPage() {
+    window.history.back();
+}
+
 
 
 

@@ -1,7 +1,22 @@
 //404
 
+.error404 {
+  overflow: hidden;
+  @media only screen and (max-width: @tablet-xl) {
+    overflow: inherit;
+  }
+}
 
 .aussie-casino-404 {
+  &__blog-menu_wrap {
+    display: flex;
+    margin-top: 73px;
+    margin-bottom: 140px;
+    @media only screen and (max-width: @desktop-xxs) {
+      display: none;
+    }
+  }
+
   &__blog-menu {
     max-width: 90%;
     margin: 0 auto;
@@ -15,8 +30,212 @@
     align-items: center;
     justify-content: center;
     z-index: 2;
-    @media only screen and (max-width: @desktop-xxs) {
+  }
+
+  &__blog-menu-mobile--wrap {
+    display: flex;
+    height: 120px;
+    @media only screen and (min-width: @desktop-xxs) {
       display: none;
+    }
+  }
+
+  &__error {
+    padding-top: 120px;
+    padding-bottom: 25px;
+    width: 100%;
+    position: relative;
+    z-index: 1;
+    background-color: @c1;
+    @media only screen and (max-width: @tablet-l) {
+      margin-bottom: 70px;
+    }
+
+    &:after {
+      content: '';
+      background-color: #FFBE1D;
+      position: absolute;
+      width: 30%;
+      height: 66%;
+      top: 56px;
+      z-index: -1;
+      @media only screen and (max-width: @tablet-l) {
+        height: 58%;
+        top: 91px;
+      }
+      @media only screen and (max-width: @mobile-xl) {
+        height: 46%;
+        width: 29%;
+        top: 91px;
+      }
+    }
+
+    h2 {
+      font-family: @montserrat-b;
+      font-size: 73px;
+      color: @c2;
+      z-index: 2;
+      margin-bottom: 104px;
+      @media only screen and (max-width: @desktop-m) {
+        font-size: 51px;
+      }
+      @media only screen and (max-width: @tablet-l) {
+        font-size: 40px;
+      }
+      @media only screen and (max-width: @mobile-xl) {
+        font-size: 36px;
+        margin-bottom: 103px;
+      }
+    }
+
+    &_container {
+      width: 65%;
+      margin-left: auto;
+      margin-right: auto;
+      @media only screen and (max-width: @desktop-xxs) {
+        display: flex;
+        justify-content: flex-start;
+        width: auto;
+      }
+    }
+
+    &_wrap {
+      margin-left: 4%;
+      @media only screen and (max-width: @tablet-l) {
+        margin-left: 10%;
+      }
+    }
+  }
+
+  &__error_text {
+    font-family: @montserrat-r;
+    font-size: 24px;
+    color: #B9B9B9;
+    margin-left: 26%;
+    @media only screen and (max-width: @desktop-xxs) {
+      margin-left: 32%;
+    }
+    @media only screen and (max-width: @mobile-xl) {
+      font-size: 17px;
+    }
+  }
+  &__error_container {
+    @media only screen and (max-width: @desktop-xxs) {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+
+  &__error_aussie {
+    height: 70%;
+    position: absolute;
+    right: -144px;
+    bottom: -34px;
+    @media only screen and (max-width: @desktop-xxl) {
+      right: 86px;
+    }
+    @media only screen and (max-width: @desktop-xl) {
+      right: -140px;
+    }
+    @media only screen and (max-width: @tablet-xl) {
+      display: none;
+    }
+  }
+
+  &__error_cat {
+    margin-bottom: -41px;
+    z-index: 3;
+    position: relative;
+    @media only screen and (max-width: @desktop-m) {
+      margin-bottom: -32px;
+    }
+    @media only screen and (max-width: @tablet-l) {
+      margin-bottom: -23px;
+      width: 156px;
+    }
+    @media only screen and (max-width: @mobile-xl) {
+      width: 116px;
+      margin-bottom: -20px;
+    }
+  }
+
+  &__error_btn--wrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @media only screen and (max-width: @desktop-xxs) {
+      width: 100%;
+    }
+    @media only screen and (max-width: @tablet-l) {
+      margin-left: -10%;
+    }
+    @media only screen and (max-width: @mobile-xl) {
+      flex-direction: column;
+      margin-left: -6%;
+    }
+  }
+
+  &__error_btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: transparent linear-gradient(270deg, #F2CC3D 0%, #E3752C 100%) 0% 0% no-repeat padding-box;
+    width: 270px;
+    height: 60px;
+    box-shadow: 0 0 24px #FFA60A9E;
+    border: 1px solid #FFAC1A;
+    border-radius: 30px;
+    transition: .5s;
+    text-decoration: none;
+    margin-right: 25px;
+    @media only screen and (max-width: @mobile-xl) {
+      margin-right: 0;
+      margin-bottom: 24px;
+      width: 211px;
+      height: 41px;
+    }
+    &:hover {
+      box-shadow: none;
+    }
+
+    span {
+      text-transform: uppercase;
+      font-family: @montserrat-r;
+      font-size: 16px;
+      color: @c1;
+      font-weight: 600;
+      @media only screen and (max-width: @mobile-xl) {
+        font-size: 13px;
+      }
+    }
+  }
+
+  &__error_btn--prev {
+    width: 270px;
+    height: 60px;
+    border: 1px solid #FFAC1A;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    transition: .5s;
+    font-family: @montserrat-m;
+    font-weight: 600;
+    font-size: 16px;
+    letter-spacing: 0;
+    color: @c2;
+    text-transform: uppercase;
+    cursor: pointer;
+    background: @c1;
+    @media only screen and (max-width: @mobile-xl) {
+      width: 211px;
+      height: 41px;
+      font-size: 13px;
+    }
+    &:hover {
+      color: @c1;
+      background: linear-gradient(45deg,#e3752c,#f2cc3d);
     }
   }
 }
