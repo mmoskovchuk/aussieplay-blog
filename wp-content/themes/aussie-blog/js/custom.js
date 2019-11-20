@@ -428,6 +428,34 @@ $('.menu-burger, .menu-items').on('click', function() {
     $('body').on('click', '#btn-top', scrollPage);
 })(jQuery);
 
+// FIXED RIGHT SIDEBAR
+//-------------------------------------------------
+
+$.fn.extend({
+    toggleText: function(a, b){
+        return this.text(this.text() == b ? a : b);
+    }
+});
+
+function change() {
+    var sidebar = document.getElementById("fixed-sidebar");
+    sidebar.classList.toggle("active");
+    $('.fixed-sidebar__btn_title-1').toggleText('Aussie play', 'Hide');
+    $('.fixed-sidebar__btn_title-2').toggleText('Go to', 'Hide');
+}
+
+jQuery(function($){
+    $(document).mouseup(function (e){ // событие клика по веб-документу
+        var div = $("#fixed-sidebar"); // тут указываем ID элемента
+        if (!div.is(e.target) // если клик был не по нашему блоку
+            && div.has(e.target).length === 0) { // и не по его дочерним элементам
+            div.removeClass('active'); // скрываем его
+            $('.fixed-sidebar__btn_title-1').toggleText('Aussie play', 'Aussie play');
+            $('.fixed-sidebar__btn_title-2').toggleText('Go to', 'Go to');
+        }
+    });
+});
+
 
 
 

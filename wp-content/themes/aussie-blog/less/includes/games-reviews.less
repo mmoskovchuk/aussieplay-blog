@@ -296,18 +296,23 @@
   }
   &__games-reviews_date {
     position: absolute;
-    right: -64px;
-    bottom: 45px;
-    transform: rotate(-91deg);
+    right: -84px;
+    bottom: 56px;
+    transform: rotate(-90deg);
     font-family: @montserrat-r;
     font-size: 12px;
     text-transform: uppercase;
+    height: 12px;
+    width: 110px;
+    @media only screen and (max-width: @tablet-l) {
+      right: -94px;
+    }
     @media only screen and (max-width: @mobile-xl) {
       font-size: 10px;
-      right: -65px;
+      right: -88px;
     }
     @media only screen and (max-width: @mobile-s) {
-      right: -50px;
+      right: -74px;
     }
   }
   &__games-reviews_top--desc {

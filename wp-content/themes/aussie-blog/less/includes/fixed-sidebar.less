@@ -1,46 +1,189 @@
 //FIXED SIDEBAR
 
 .fixed-sidebar {
-  width: 79px;
+  width: 73px;
   height: 406px;
   position: fixed;
-  margin-top: 30px;
-  -webkit-perspective: 1000px;
   perspective: 1000px;
   background: #280E01;
   z-index: 3;
   right: 0;
-  top: 40%;
+  top: 30%;
   border-radius: 4px 0 0 4px;
   cursor: pointer;
-
+  transition: .5s;
+  @media only screen and (max-width: @tablet-l) {
+    top: inherit;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    width: 285px;
+    height: 40px;
+    display: flex;
+    flex-direction: row;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 4px 4px 0 0;
+  }
   &:after {
     position: absolute;
     content: '';
-    background: url(../img/logo-fixed-sidebar.svg) center no-repeat;
+    background: url(../img/main-screen-little-animal.svg) center no-repeat;
     width: 106px;
     height: 135px;
-    top: 40%;
-    right: 16px;
+    top: 150px;
+    right: 3px;
+    transform: rotateY(180deg);
+    @media only screen and (max-width: @tablet-l) {
+      width: 44px;
+      height: 58px;
+      top: -23px;
+      right: 143px;
+    }
+  }
+  &.active {
+    right: 721px;
+    background: #42281B;
+    @media only screen and (max-width: @tablet-l) {
+      bottom: 233px;
+      right: 0;
+      left: 0;
+      margin-left: auto;
+      margin-right: auto;
+      transition: .3s;
+    }
+    &:after {
+      @media only screen and (max-width: @tablet-l) {
+        right: 129px;
+      }
+    }
   }
 
-  &__title-1,
-  &__title-2 {
+  &__btn_title-1,
+  &__btn_title-2 {
     position: absolute;
     transform: rotate(-90deg);
     color: @c1;
     text-transform: uppercase;
+    font-family: @montserrat-m;
+    font-size: 16px;
+    outline: none;
+    @media only screen and (max-width: @tablet-l) {
+      transform: none;
+      top: inherit;
+      bottom: 0;
+      font-size: 14px;
+    }
   }
 
-  &__title-1 {
+  &__btn_title-1 {
     top: 88px;
-    width: max-content;
-    right: -13px;
+    width: 112px;
+    height: 16px;
+    right: -20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    @media only screen and (max-width: @tablet-l) {
+      top: 15px;
+      right: 18px;
+    }
   }
 
-  &__title-2 {
-    bottom: 60px;
-    right: 12px;
+  &__btn_title-2 {
+    top: 335px;
+    right: 8px;
+    width: 56px;
+    height: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    @media only screen and (max-width: @tablet-l) {
+      top: 15px;
+      left: 29px;
+    }
+  }
+
+  &__content_wrap {
+    width: 721px;
+    height: 100%;
+    margin-left: 73px;
+    background: #280E01;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    @media only screen and (max-width: @tablet-l) {
+      margin-top: 40px;
+      height: 234px;
+      margin-left: 0;
+    }
+  }
+
+  &__content_title {
+    color: #FFC100;
+    font-size: 73px;
+    font-family: @montserrat-b;
+    margin-bottom: 29px;
+    @media only screen and (max-width: @tablet-l) {
+      font-size: 24px;
+      margin-bottom: 15px;
+    }
+  }
+
+  &__content_desc {
+    color: @c1;
+    font-size: 24px;
+    font-family: @montserrat-r;
+    margin-bottom: 51px;
+    @media only screen and (max-width: @tablet-l) {
+      font-size: 14px;
+      width: 244px;
+      text-align: center;
+      line-height: 22px;
+      margin-bottom: 25px;
+    }
+  }
+
+  &__content_btn {
+    color: @c1;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-family: @montserrat-m;
+    width: 270px;
+    height: 60px;
+    background: linear-gradient(45deg, #E3752C, #F2CC3D);
+    border-radius: 30px;
+    box-shadow: 0 0 24px 0 #ffa60a;
+    transition: .5s;
+    &:hover {
+      box-shadow: none;
+    }
+    @media only screen and (max-width: @tablet-l) {
+      width: 246px;
+      height: 42px;
+    }
+
+    span {
+      position: relative;
+      font-family: @montserrat-m;
+      color: #fff;
+      font-size: 14px;
+      padding: 12px 75px;
+      text-transform: uppercase;
+      letter-spacing: 0;
+      text-decoration: none;
+      transition: .3s;
+      height: 36px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      @media only screen and (max-width: @tablet-l) {
+        font-size: 14px;
+        height: 22px;
+        padding: 10px 0;
+      }
+    }
   }
 
 }
