@@ -1,0 +1,93 @@
+//SEARCH
+
+.aussie-casino {
+  &__search {
+
+  }
+  &__search_wrap--top {
+    padding-top: 250px;
+    padding-bottom: 25px;
+    margin-bottom: 181px;
+    width: 100%;
+    position: relative;
+    z-index: 1;
+    background-color: @c1;
+    &:after {
+      content: '';
+      background-color: #FFBE1D;
+      position: absolute;
+      width: 30%;
+      height: 73%;
+      top: 168px;
+      z-index: -1;
+      @media only screen and (max-width: @tablet-l) {
+        height: 84%;
+      }
+      @media only screen and (max-width: @mobile-xl) {
+        height: 76%;
+        width: 37%;
+      }
+    }
+  }
+  &__search_wrap {
+    margin-left: 4%;
+  }
+  &__search_container {
+    width: max-content;
+    margin-left: 16%;
+    margin-right: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    h2 {
+      font-family: @montserrat-b;
+      font-size: 73px;
+      color: @c2;
+      z-index: 2;
+      padding-top: 40px;
+      margin-bottom: 50px
+    }
+    .aussie-casino-breadcrumb {
+      margin-left: 32%;
+      a {
+        color: #B9B9B9;
+        font-family: @montserrat-r;
+        font-size: 12px;
+        text-decoration: none;
+        text-transform: uppercase;
+        letter-spacing: 2.4px;
+      }
+      .current-item {
+        color: @c2;
+        font-family: @montserrat-r;
+        font-size: 12px;
+        text-transform: uppercase;
+        font-weight: 600;
+      }
+    }
+  }
+  &__search_result--top {
+    font-family: @montserrat-m;
+    font-size: 24px;
+    color: @c2;
+    font-weight: 600;
+    b {
+      color: #FFC100;
+    }
+  }
+  &__search_result--bottom {
+    max-width: 92%;
+    margin: 0 auto;
+  }
+  &__search_result--wrap {
+    max-width: 91%;
+    margin-left: 0;
+    margin-right: auto;
+  }
+  &__search_result--fatality {
+    font-family: @montserrat-m;
+    font-size: 24px;
+    color: @c2;
+    font-weight: 600;
+  }
+}

@@ -241,13 +241,13 @@ function human_time_diff_enhanced($duration = 60)
 }
 //SEARCH ONLY POSTS
 //--------------------------------------------------
-function SearchFilter($query) {
+/*function SearchFilter($query) {
     if ($query->is_search) {
         $query->set('post_type', 'post');
     }
     return $query;
 }
-add_filter('pre_get_posts','SearchFilter');
+add_filter('pre_get_posts','SearchFilter');*/
 
 //FILTER WINNING GUIDES AND GAMES REVIEWS
 //--------------------------------------------------
