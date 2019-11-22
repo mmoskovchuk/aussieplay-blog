@@ -1,8 +1,27 @@
 //SEARCH
 
+.search {
+  .aussie-casino__latest-articles {
+    &:after {
+      content: '';
+      background: #ffbe1d;
+      width: 100%;
+      height: 500px;
+      position: absolute;
+      top: 109px;
+      @media only screen and (max-width: @tablet-xl) {
+        height: 338px;
+      }
+      @media only screen and (max-width: @mobile-xl) {
+        height: 238px;
+      }
+    }
+  }
+}
+
 .aussie-casino {
   &__search {
-
+    padding-bottom: 165px;
   }
   &__search_wrap--top {
     padding-top: 250px;
@@ -45,7 +64,13 @@
       color: @c2;
       z-index: 2;
       padding-top: 40px;
-      margin-bottom: 50px
+      margin-bottom: 50px;
+      @media only screen and (max-width: @tablet-l) {
+        font-size: 44px;
+      }
+      @media only screen and (max-width: @mobile-xl) {
+        font-size: 25px;
+      }
     }
     .aussie-casino-breadcrumb {
       margin-left: 32%;
@@ -56,6 +81,9 @@
         text-decoration: none;
         text-transform: uppercase;
         letter-spacing: 2.4px;
+        @media only screen and (max-width: @tablet-l) {
+          font-size: 10px;
+        }
       }
       .current-item {
         color: @c2;
@@ -63,6 +91,9 @@
         font-size: 12px;
         text-transform: uppercase;
         font-weight: 600;
+        @media only screen and (max-width: @tablet-l) {
+          font-size: 10px;
+        }
       }
     }
   }
@@ -71,6 +102,12 @@
     font-size: 24px;
     color: @c2;
     font-weight: 600;
+    @media only screen and (max-width: @tablet-l) {
+      font-size: 18px;
+    }
+    @media only screen and (max-width: @mobile-xl) {
+      font-size: 14px;
+    }
     b {
       color: #FFC100;
     }
@@ -79,7 +116,7 @@
     max-width: 92%;
     margin: 0 auto;
   }
-  &__search_result--wrap {
+  &__search_result-sort--wrap {
     max-width: 91%;
     margin-left: 0;
     margin-right: auto;
@@ -89,5 +126,104 @@
     font-size: 24px;
     color: @c2;
     font-weight: 600;
+    @media only screen and (max-width: @mobile-xl) {
+      font-size: 16px;
+    }
+  }
+  &__search_result--wrap {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 167px;
+    @media only screen and (max-width: @tablet-l) {
+      align-items: center;
+      flex-direction: column;
+      margin-bottom: 0;
+    }
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+  &__search_result--item {
+    width: 417px;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    margin-right: 171px;
+    @media only screen and (max-width: @desktop-l) {
+      margin-right: 80px;
+      max-width: 345px;
+      width: 100%;
+    }
+    @media only screen and (max-width: @desktop-xs) {
+      max-width: 301px;
+    }
+    @media only screen and (max-width: @desktop-xxs) {
+      max-width: 245px;
+      width: 100%;
+    }
+    @media only screen and (max-width: @tablet-l) {
+      max-width: 300px;
+      height: 390px;
+      margin-right: 0;
+      margin-bottom: 165px;
+    }
+    @media only screen and (max-width: @mobile-xl) {
+      max-width: 245px;
+      height: 293px;
+    }
+    img {
+      max-width: 417px;
+      width: 417px;
+      height: 500px;
+      object-fit: cover;
+      box-shadow: 0 4px 24px 0 #0000007a;
+      margin-bottom: 30px;
+      border-radius: 4px;
+      border: 1px solid @c1;
+      @media only screen and (max-width: @desktop-l) {
+        max-width: 345px;
+        width: 100%;
+        height: 500px;
+      }
+      @media only screen and (max-width: @desktop-m) {
+        height: 400px;
+      }
+      @media only screen and (max-width: @desktop-xs) {
+        max-width: 301px;
+      }
+      @media only screen and (max-width: @desktop-xxs) {
+        max-width: 245px;
+        width: 100%;
+        height: 300px;
+      }
+      @media only screen and (max-width: @tablet-l) {
+        max-width: 300px;
+        height: 390px;
+      }
+      @media only screen and (max-width: @mobile-xl) {
+        max-width: 245px;
+        height: 293px;
+      }
+    }
+
+    a {
+      font-family: @montserrat-sb;
+      font-size: 24px;
+      color: @c2;
+      text-decoration: underline;
+      text-decoration-color: transparent;
+      transition: .5s;
+      @media only screen and (max-width: @mobile-xl) {
+        font-size: 16px;
+        line-height: 20px;
+      }
+
+      &:hover {
+        text-decoration-color: #000;
+      }
+    }
+    &:last-child {
+      margin-right: 0;
+    }
   }
 }

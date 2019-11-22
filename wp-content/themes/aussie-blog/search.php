@@ -25,19 +25,18 @@
 
         </div>
         <div class="aussie-casino__search_result--bottom">
-            <div class="aussie-casino__search_result--wrap">
+            <div class="aussie-casino__search_result-sort--wrap">
 
-                    <?php
-                    $i = 0;
-                    $wrap_div = "<div id='response' class='aussie-casino__winning-guides_sort-post--wrap'>";
-                    if (have_posts()) :
+                <?php
+                $i = 0;
+                $wrap_div = "<div class='aussie-casino__search_result--wrap'>";
+                if (have_posts()) :
                     $total_posts = $wp_query->post_count;
                     echo $wrap_div;
                     while (have_posts()) : the_post();
                         ?>
 
-                        <div class="aussie-casino__winning-guides_post--item" data-filter="app card icon logo web"
-                             id="filter-games">
+                        <div class="aussie-casino__search_result--item">
                             <div class="aussie-casino__winning-guides_wrap--img">
                                 <?php if (has_post_thumbnail()) : ?>
 
@@ -47,9 +46,9 @@
                                     <img src="<?php bloginfo('template_url'); ?>/img/default-img.jpg"
                                          alt="<?php bloginfo('name'); ?>" class="item__img"/>
                                 <?php endif; ?>
-                                <span class="aussie-casino__winning-guides_date"><b><?php the_date('d M, Y') ?></b></span>
+                                <span class="aussie-casino__winning-guides_date"><b><?php echo get_the_date('d M, Y') ?></b></span>
                             </div>
-                            <a href="#"><?php the_title() ?></a>
+                            <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
                         </div>
 
 
@@ -59,8 +58,8 @@
                         <?php } ?>
 
                         <?php $i++; ?>
-<?php endwhile; ?>
-                        <?php echo '</div>'; ?>
+                    <?php endwhile; ?>
+                    <?php echo '</div>'; ?>
 
 
                 <?php

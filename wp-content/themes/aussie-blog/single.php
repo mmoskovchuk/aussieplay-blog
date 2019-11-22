@@ -54,7 +54,7 @@
 
                 </div>
 
-                <div class="aussie-casino-single__container">
+                <div class="aussie-casino-single__container aussie-casino-single__contant--wrap">
                     <div class="aussie-casino-single__block-left_content-wrap">
 
                         <?php the_content(); ?>
