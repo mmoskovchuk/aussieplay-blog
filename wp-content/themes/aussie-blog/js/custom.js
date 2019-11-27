@@ -297,6 +297,7 @@ $(document).ready(function () {
 //FILTER WINNING GUIDES
 //-------------------------------------------------
 
+//home page winning guides
 $(function ($) {
     $('#filter').change(function () {
         var filter = $(this);
@@ -319,7 +320,42 @@ $(function ($) {
 
 $(document).ready(function () {
     $(".aussie-casino__winning-guides select[name=categoryfilter]").val("16").change();
+
 });
+
+//category page winning guides (filter)
+$(function ($) {
+    $('#filter').click(function () {
+        console.log($(this).serialize());
+        return function() {
+            var filter = $(this);
+            $.ajax({
+                url: my_ajax_object.ajax_url, // обработчик
+                data: filter.serialize(),
+                type: filter.attr('method'),
+                beforeSend: function (xhr) {
+                    /!*filter.find('button').text('Загружаю...');*!/ // изменяем текст кнопки
+
+                },
+                success: function (data) {
+                    filter.find('button').text('Применить фильтр'); // возвращаеи текст кнопки
+                    $('#response').html(data);
+                }
+            });
+            return false;
+        };
+    });
+});
+
+$(document).ready(function () {
+    $('.label-btn').on('click', function() {
+            $('.label-btn').removeClass("active");
+            $(this).addClass("active");
+    });
+    $("#wg-16").click();
+    $("[for='wg-16']").click();
+});
+
 
 //FILTER GAMES REVIEWS
 //-------------------------------------------------
@@ -346,6 +382,7 @@ $(function ($) {
 $(document).ready(function () {
     $(".aussie-casino__games-reviews select[name=categoryfiltergames]").val("23").change();
 });
+
 
 //MOBILE MENU
 //-------------------------------------------------

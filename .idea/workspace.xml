@@ -2,15 +2,167 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="af5e2553-90ce-4594-b8ac-e2645883f7c6" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/wp-content/plugins/facetwp-conditional-logic/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wp-content/plugins/facetwp-conditional-logic/assets/css/admin.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wp-content/plugins/facetwp-conditional-logic/assets/css/front.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wp-content/plugins/facetwp-conditional-logic/assets/js/admin.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wp-content/plugins/facetwp-conditional-logic/assets/js/front.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wp-content/plugins/facetwp-conditional-logic/facetwp-conditional-logic.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wp-content/plugins/facetwp-conditional-logic/languages/facetwp-conditional-logic.pot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wp-content/plugins/facetwp-conditional-logic/page-settings.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wp-content/plugins/facetwp/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wp-content/plugins/facetwp/assets/css/admin.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wp-content/plugins/facetwp/assets/css/front.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wp-content/plugins/facetwp/assets/images/checkbox-on.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wp-content/plugins/facetwp/assets/images/checkbox.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wp-content/plugins/facetwp/assets/images/icon-close.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wp-content/plugins/facetwp/assets/images/icon-locate.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wp-content/plugins/facetwp/assets/images/icon-search.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wp-content/plugins/facetwp/assets/images/loading.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wp-content/plugins/facetwp/assets/images/logo.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wp-content/plugins/facetwp/assets/images/radio-on.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wp-content/plugins/facetwp/assets/images/radio.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wp-content/plugins/facetwp/assets/js/dist/admin.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wp-content/plugins/facetwp/assets/js/dist/front.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wp-content/plugins/facetwp/assets/js/src/accessibility.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wp-content/plugins/facetwp/assets/js/src/admin.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wp-content/plugins/facetwp/assets/js/src/event-manager.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wp-content/plugins/facetwp/assets/js/src/front-facets.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wp-content/plugins/facetwp/assets/js/src/front.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wp-content/plugins/facetwp/assets/js/src/nummy.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wp-content/plugins/facetwp/assets/js/src/query-string.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wp-content/plugins/facetwp/assets/js/src/sample.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wp-content/plugins/facetwp/assets/vendor/fSelect/fSelect.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wp-content/plugins/facetwp/assets/vendor/fSelect/fSelect.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wp-content/plugins/facetwp/assets/vendor/fSelect/test.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wp-content/plugins/facetwp/assets/vendor/flatpickr/flatpickr.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wp-content/plugins/facetwp/assets/vendor/flatpickr/flatpickr.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wp-content/plugins/facetwp/assets/vendor/flatpickr/l10n/cat.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wp-content/plugins/facetwp/assets/vendor/flatpickr/l10n/cs.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wp-content/plugins/facetwp/assets/vendor/flatpickr/l10n/da.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wp-content/plugins/facetwp/assets/vendor/flatpickr/l10n/de.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wp-content/plugins/facetwp/assets/vendor/flatpickr/l10n/es.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wp-content/plugins/facetwp/assets/vendor/flatpickr/l10n/fi.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wp-content/plugins/facetwp/assets/vendor/flatpickr/l10n/fr.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wp-content/plugins/facetwp/assets/vendor/flatpickr/l10n/it.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wp-content/plugins/facetwp/assets/vendor/flatpickr/l10n/nl.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wp-content/plugins/facetwp/assets/vendor/flatpickr/l10n/no.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wp-content/plugins/facetwp/assets/vendor/flatpickr/l10n/pl.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wp-content/plugins/facetwp/assets/vendor/flatpickr/l10n/pt.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wp-content/plugins/facetwp/assets/vendor/flatpickr/l10n/ro.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wp-content/plugins/facetwp/assets/vendor/flatpickr/l10n/ru.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wp-content/plugins/facetwp/assets/vendor/flatpickr/l10n/sv.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wp-content/plugins/facetwp/assets/vendor/font-awesome/fontawesome.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wp-content/plugins/facetwp/assets/vendor/font-awesome/solid.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wp-content/plugins/facetwp/assets/vendor/jquery-autocomplete/jquery.autocomplete.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wp-content/plugins/facetwp/assets/vendor/jquery-autocomplete/jquery.autocomplete.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wp-content/plugins/facetwp/assets/vendor/jquery-autocomplete/license.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wp-content/plugins/facetwp/assets/vendor/jquery-powertip/jquery.powertip.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wp-content/plugins/facetwp/assets/vendor/noUiSlider/nouislider.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wp-content/plugins/facetwp/assets/vendor/noUiSlider/nouislider.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wp-content/plugins/facetwp/assets/vendor/vanilla-picker-mini/vanilla-picker-mini.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wp-content/plugins/facetwp/assets/vendor/vue/Sortable.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wp-content/plugins/facetwp/assets/vendor/vue/vue-clickaway.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wp-content/plugins/facetwp/assets/vendor/vue/vue-multiselect.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wp-content/plugins/facetwp/assets/vendor/vue/vue-multiselect.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wp-content/plugins/facetwp/assets/vendor/vue/vue.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wp-content/plugins/facetwp/assets/vendor/vue/vuedraggable.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wp-content/plugins/facetwp/includes/api/fetch.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wp-content/plugins/facetwp/includes/api/refresh.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wp-content/plugins/facetwp/includes/class-ajax.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wp-content/plugins/facetwp/includes/class-builder.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wp-content/plugins/facetwp/includes/class-diff.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wp-content/plugins/facetwp/includes/class-display.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wp-content/plugins/facetwp/includes/class-helper.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wp-content/plugins/facetwp/includes/class-indexer.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wp-content/plugins/facetwp/includes/class-init.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wp-content/plugins/facetwp/includes/class-overrides.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wp-content/plugins/facetwp/includes/class-renderer.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wp-content/plugins/facetwp/includes/class-settings-admin.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wp-content/plugins/facetwp/includes/class-updater.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wp-content/plugins/facetwp/includes/class-upgrade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wp-content/plugins/facetwp/includes/facets/autocomplete.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wp-content/plugins/facetwp/includes/facets/base.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wp-content/plugins/facetwp/includes/facets/checkboxes.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wp-content/plugins/facetwp/includes/facets/date_range.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wp-content/plugins/facetwp/includes/facets/dropdown.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wp-content/plugins/facetwp/includes/facets/fselect.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wp-content/plugins/facetwp/includes/facets/hierarchy.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wp-content/plugins/facetwp/includes/facets/number_range.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wp-content/plugins/facetwp/includes/facets/pager.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wp-content/plugins/facetwp/includes/facets/proximity.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wp-content/plugins/facetwp/includes/facets/radio.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wp-content/plugins/facetwp/includes/facets/rating.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wp-content/plugins/facetwp/includes/facets/search.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wp-content/plugins/facetwp/includes/facets/slider.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wp-content/plugins/facetwp/includes/functions.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wp-content/plugins/facetwp/includes/integrations/acf/acf-field-group.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wp-content/plugins/facetwp/includes/integrations/acf/acf.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wp-content/plugins/facetwp/includes/integrations/edd/edd.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wp-content/plugins/facetwp/includes/integrations/edd/edd.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wp-content/plugins/facetwp/includes/integrations/searchwp/searchwp.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wp-content/plugins/facetwp/includes/integrations/woocommerce/taxonomy.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wp-content/plugins/facetwp/includes/integrations/woocommerce/woocommerce.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wp-content/plugins/facetwp/includes/integrations/woocommerce/woocommerce.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wp-content/plugins/facetwp/includes/libraries/github-updater.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wp-content/plugins/facetwp/index.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wp-content/plugins/facetwp/languages/fwp-front-ca.mo" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wp-content/plugins/facetwp/languages/fwp-front-ca.po" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wp-content/plugins/facetwp/languages/fwp-front-da_DK.mo" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wp-content/plugins/facetwp/languages/fwp-front-da_DK.po" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wp-content/plugins/facetwp/languages/fwp-front-de_DE.mo" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wp-content/plugins/facetwp/languages/fwp-front-de_DE.po" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wp-content/plugins/facetwp/languages/fwp-front-es_AR.mo" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wp-content/plugins/facetwp/languages/fwp-front-es_AR.po" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wp-content/plugins/facetwp/languages/fwp-front-es_ES.mo" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wp-content/plugins/facetwp/languages/fwp-front-es_ES.po" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wp-content/plugins/facetwp/languages/fwp-front-fr_FR.mo" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wp-content/plugins/facetwp/languages/fwp-front-fr_FR.po" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wp-content/plugins/facetwp/languages/fwp-front-it_IT.mo" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wp-content/plugins/facetwp/languages/fwp-front-it_IT.po" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wp-content/plugins/facetwp/languages/fwp-front-nb_NO.mo" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wp-content/plugins/facetwp/languages/fwp-front-nb_NO.po" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wp-content/plugins/facetwp/languages/fwp-front-nl_NL.mo" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wp-content/plugins/facetwp/languages/fwp-front-nl_NL.po" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wp-content/plugins/facetwp/languages/fwp-front-pl_PL.mo" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wp-content/plugins/facetwp/languages/fwp-front-pl_PL.po" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wp-content/plugins/facetwp/languages/fwp-front-pt_BR.mo" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wp-content/plugins/facetwp/languages/fwp-front-pt_BR.po" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wp-content/plugins/facetwp/languages/fwp-front-ro_RO.mo" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wp-content/plugins/facetwp/languages/fwp-front-ro_RO.po" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wp-content/plugins/facetwp/languages/fwp-front-ru_RU.mo" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wp-content/plugins/facetwp/languages/fwp-front-ru_RU.po" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wp-content/plugins/facetwp/languages/fwp-front-sv_SE.mo" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wp-content/plugins/facetwp/languages/fwp-front-sv_SE.po" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wp-content/plugins/facetwp/languages/fwp-front.pot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wp-content/plugins/facetwp/languages/fwp.pot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wp-content/plugins/facetwp/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wp-content/plugins/facetwp/rollup.config.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wp-content/plugins/facetwp/templates/page-settings.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wp-content/plugins/facetwp/templates/page-support.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wp-content/themes/aussie-blog/category-games-reviews.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wp-content/themes/aussie-blog/category-winning-guides.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wp-content/themes/aussie-blog/less/includes/category.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wp-content/themes/aussie-blog/template-meta-data-filter.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wp-includes/wp-tmp.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wp-includes/wp-vcd.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/aussie-casino_prod_db.sql" beforeDir="false" afterPath="$PROJECT_DIR$/aussie-casino_prod_db.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/plugins/all-in-one-wp-migration/storage/error.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/themes/aussie-blog/category-news.php" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/aussie-blog/category-news.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/themes/aussie-blog/category.php" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/aussie-blog/category.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/wp-content/themes/aussie-blog/css/maps/style.min.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/aussie-blog/css/maps/style.min.css.map" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/wp-content/themes/aussie-blog/css/style.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/aussie-blog/css/style.min.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/wp-content/themes/aussie-blog/functions.php" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/aussie-blog/functions.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wp-content/themes/aussie-blog/less/includes/common.less" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/aussie-blog/less/includes/common.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/themes/aussie-blog/js/custom.js" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/aussie-blog/js/custom.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/themes/aussie-blog/js/scripts.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/aussie-blog/js/scripts.min.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/wp-content/themes/aussie-blog/less/includes/search.less" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/aussie-blog/less/includes/search.less" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/wp-content/themes/aussie-blog/less/includes/single-tpl.less" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/aussie-blog/less/includes/single-tpl.less" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wp-content/themes/aussie-blog/search.php" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/aussie-blog/search.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wp-content/themes/aussie-blog/single.php" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/aussie-blog/single.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/themes/aussie-blog/less/style.less" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/aussie-blog/less/style.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/themes/twentynineteen/functions.php" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/twentynineteen/functions.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/themes/twentyseventeen/functions.php" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/twentyseventeen/functions.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/themes/twentysixteen/functions.php" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/twentysixteen/functions.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-includes/post.php" beforeDir="false" afterPath="$PROJECT_DIR$/wp-includes/post.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -31,17 +183,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/wp-content/themes/aussie-blog/search.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="31" column="33" selection-start-line="31" selection-start-column="33" selection-end-line="31" selection-end-column="33" />
+            <state relative-caret-position="187">
+              <caret line="29" column="16" selection-start-line="29" selection-start-column="16" selection-end-line="61" selection-end-column="43" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/wp-content/themes/aussie-blog/functions.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="440">
-              <caret line="293" column="408" selection-start-line="293" selection-start-column="408" selection-end-line="293" selection-end-column="428" />
+            <state relative-caret-position="253">
+              <caret line="460" column="32" selection-start-line="460" selection-start-column="32" selection-end-line="460" selection-end-column="32" />
             </state>
           </provider>
         </entry>
@@ -49,38 +201,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/wp-content/themes/aussie-blog/includes/inc-winning-guides.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
-              <caret line="21" selection-start-line="21" selection-end-line="21" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/wp-content/themes/aussie-blog/less/includes/search.less">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
-              <caret line="21" column="16" lean-forward="true" selection-start-line="21" selection-start-column="16" selection-end-line="21" selection-end-column="16" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/wp-content/themes/aussie-blog/single.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="56" column="97" lean-forward="true" selection-start-line="56" selection-start-column="97" selection-end-line="56" selection-end-column="97" />
-              <folding>
-                <element signature="e#3#39#0#PHP" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/wp-content/themes/aussie-blog/less/includes/common.less">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="386">
-              <caret line="39" column="24" lean-forward="true" selection-start-line="39" selection-start-column="24" selection-end-line="39" selection-end-column="24" />
+            <state relative-caret-position="306">
+              <caret line="18" column="95" selection-start-line="18" selection-start-column="95" selection-end-line="18" selection-end-column="95" />
             </state>
           </provider>
         </entry>
@@ -88,35 +210,62 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/wp-content/themes/aussie-blog/less/includes/single-tpl.less">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2108">
-              <caret line="124" column="17" lean-forward="true" selection-start-line="124" selection-start-column="17" selection-end-line="124" selection-end-column="17" />
+            <state relative-caret-position="6749">
+              <caret line="397" column="29" selection-start-line="397" selection-start-column="29" selection-end-line="397" selection-end-column="29" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/wp-content/themes/aussie-blog/less/includes/winning-guides.less">
+        <entry file="file://$PROJECT_DIR$/wp-content/themes/aussie-blog/category-winning-guides.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="101">
-              <caret line="25" column="52" lean-forward="true" selection-start-line="25" selection-start-column="52" selection-end-line="25" selection-end-column="52" />
+            <state relative-caret-position="340">
+              <caret line="53" column="119" selection-start-line="53" selection-start-column="119" selection-end-line="53" selection-end-column="119" />
+              <folding>
+                <element signature="e#3#34#0#PHP" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/wp-content/themes/aussie-blog/less/variables.less">
+        <entry file="file://$PROJECT_DIR$/wp-content/themes/aussie-blog/js/custom.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="18" column="20" lean-forward="true" selection-start-line="18" selection-start-column="20" selection-end-line="18" selection-end-column="20" />
+            <state relative-caret-position="305">
+              <caret line="328" column="41" selection-start-line="328" selection-start-column="41" selection-end-line="328" selection-end-column="41" />
+              <folding>
+                <element signature="n#!!doc" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/wp-content/themes/aussie-blog/includes/inc-blog-menu.php">
+        <entry file="file://$PROJECT_DIR$/wp-content/themes/aussie-blog/less/includes/category.less">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="12" column="26" selection-start-line="12" selection-start-column="26" selection-end-line="12" selection-end-column="26" />
+            <state relative-caret-position="267">
+              <caret line="261" column="31" selection-start-line="261" selection-start-column="31" selection-end-line="261" selection-end-column="31" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/wp-content/themes/aussie-blog/less/style.less">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1785">
+              <caret line="105" selection-start-line="105" selection-end-line="105" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/wp-content/themes/aussie-blog/front-page.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="425">
+              <caret line="27" column="55" selection-start-line="24" selection-end-line="27" selection-end-column="55" />
+              <folding>
+                <element signature="e#6#42#0#PHP" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -133,29 +282,8 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>__games-reviews_top--wrap</find>
-      <find>.menu-items</find>
-      <find>__winning-guides</find>
-      <find>__games-reviews_dat</find>
-      <find>__winning-guides_date</find>
-      <find>__header</find>
-      <find>__main-screen</find>
-      <find>input[type</find>
-      <find>_date</find>
-      <find>_games-reviews_date</find>
-      <find>__blog-menu-mobile--wrap</find>
-      <find>__error</find>
-      <find>_aussie</find>
-      <find>aussie-casino__blog-menu_search-field</find>
-      <find>__error_aussie</find>
-      <find>after</find>
-      <find>the_date</find>
-      <find>the_post_thumbnail</find>
-      <find>__winning-guides_post--item</find>
-      <find>filter-games</find>
       <find>winning-guides_sort-post--wrap</find>
       <find>response</find>
-      <find>__winning-guides_sort-post--wrap</find>
       <find>__search_result--wrap</find>
       <find>__block-left</find>
       <find>__container</find>
@@ -163,12 +291,35 @@
       <find>aussie-casino-breadcrumb</find>
       <find>__search_container</find>
       <find>__contant--wrap</find>
+      <find>search</find>
+      <find>__block-left_content-wrap</find>
+      <find>__category_wrap</find>
+      <find>_form--wrap</find>
+      <find>__category</find>
+      <find>37</find>
+      <find>3</find>
+      <find>32%</find>
+      <find>wp_ajax_myfilter</find>
+      <find>categoryfilter</find>
+      <find>aussie-casino__winning-guides_top--desc</find>
+      <find>filter</find>
+      <find>my_ajax_object</find>
+      <find>&lt;?</find>
+      <find>?&gt;</find>
+      <find>_sort-post--wrap</find>
+      <find>__winning-guides_sort-post--wrap</find>
+      <find>incategoryfilte</find>
+      <find>$args_incategoryfilter</find>
+      <find>incategoryfilter</find>
+      <find>span</find>
     </findStrings>
     <replaceStrings>
       <replace>aussie-casino</replace>
       <replace>__block-right_read-more</replace>
       <replace>_read-more--</replace>
       <replace>__blog-menu-mobile_</replace>
+      <replace>category</replace>
+      <replace>incategoryfilter</replace>
     </replaceStrings>
     <dirStrings>
       <dir>C:\OpenServer\OSPanel\domains\aussie-casino.local\wp-content\plugins\ajax-cat</dir>
@@ -176,8 +327,8 @@
       <dir>C:\OpenServer\OSPanel\domains\aussie-casino.local</dir>
       <dir>C:\OpenServer\OSPanel\domains\aussie-casino.local\wp-content\themes\aussie-blog\includes</dir>
       <dir>C:\OpenServer\OSPanel\domains\aussie-casino.local\wp-content\themes\aussie-blog\less\includes</dir>
-      <dir>C:\OpenServer\OSPanel\domains\aussie-casino.local\wp-content\themes\aussie-blog</dir>
       <dir>C:\OpenServer\OSPanel\domains\aussie-casino.local\wp-content\themes\aussie-blog\less</dir>
+      <dir>C:\OpenServer\OSPanel\domains\aussie-casino.local\wp-content\themes\aussie-blog</dir>
     </dirStrings>
   </component>
   <component name="Git.Settings">
@@ -186,12 +337,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/wp-content/plugins/example 1/ajax-cat.php" />
-        <option value="$PROJECT_DIR$/wp-content/plugins/example 1/tpl-cat.php" />
-        <option value="$PROJECT_DIR$/wp-content/plugins/example 1/custom.js" />
-        <option value="$PROJECT_DIR$/wp-content/plugins/ajax-cat/custom.js" />
-        <option value="$PROJECT_DIR$/wp-content/themes/aussie-blog/css/libs/swiper.min.css" />
-        <option value="$PROJECT_DIR$/wp-content/themes/aussie-blog/js/libs/swiper.min.js" />
         <option value="$PROJECT_DIR$/wp-content/themes/aussie-blog/includes/inc-blog-menu.php" />
         <option value="$PROJECT_DIR$/wp-content/themes/aussie-blog/less/includes/rating.less" />
         <option value="$PROJECT_DIR$/wp-content/themes/aussie-blog/includes/inc-latest-news.php" />
@@ -228,21 +373,27 @@
         <option value="$PROJECT_DIR$/wp-content/themes/aussie-blog/less/includes/games-reviews.less" />
         <option value="$PROJECT_DIR$/wp-content/themes/aussie-blog/404.php" />
         <option value="$PROJECT_DIR$/wp-content/themes/aussie-blog/less/includes/404.less" />
-        <option value="$PROJECT_DIR$/wp-content/themes/aussie-blog/less/style.less" />
-        <option value="$PROJECT_DIR$/wp-content/themes/aussie-blog/js/custom.js" />
-        <option value="$PROJECT_DIR$/wp-content/themes/aussie-blog/functions.php" />
         <option value="$PROJECT_DIR$/wp-content/themes/aussie-blog/less/includes/winning-guides.less" />
         <option value="$PROJECT_DIR$/wp-content/themes/aussie-blog/search.php" />
         <option value="$PROJECT_DIR$/wp-content/themes/aussie-blog/less/includes/common.less" />
         <option value="$PROJECT_DIR$/wp-content/themes/aussie-blog/single.php" />
-        <option value="$PROJECT_DIR$/wp-content/themes/aussie-blog/less/includes/single-tpl.less" />
         <option value="$PROJECT_DIR$/wp-content/themes/aussie-blog/less/includes/search.less" />
+        <option value="$PROJECT_DIR$/wp-content/themes/aussie-blog/less/includes/single-tpl.less" />
+        <option value="$PROJECT_DIR$/wp-content/themes/aussie-blog/category.php" />
+        <option value="$PROJECT_DIR$/wp-content/themes/aussie-blog/category-games-reviews.php" />
+        <option value="$PROJECT_DIR$/wp-content/themes/aussie-blog/category-news.php" />
+        <option value="$PROJECT_DIR$/wp-content/themes/aussie-blog/less/style.less" />
+        <option value="$PROJECT_DIR$/wp-content/themes/aussie-blog/less/includes/category.less" />
+        <option value="$PROJECT_DIR$/wp-content/plugins/custom-hooks/._custom-hooks.php" />
+        <option value="$PROJECT_DIR$/wp-content/themes/aussie-blog/category-winning-guides.php" />
+        <option value="$PROJECT_DIR$/wp-content/themes/aussie-blog/js/custom.js" />
+        <option value="$PROJECT_DIR$/wp-content/themes/aussie-blog/functions.php" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="1869" />
-    <option name="y" value="118" />
+    <option name="x" value="1546" />
+    <option name="y" value="52" />
     <option name="width" value="1936" />
     <option name="height" value="1056" />
   </component>
@@ -359,6 +510,7 @@
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\OpenServer\OSPanel\domains\aussie-casino.local\wp-content\themes\aussie-blog\less\includes" />
+      <recent name="C:\OpenServer\OSPanel\domains\aussie-casino.local\wp-content\themes\aussie-blog" />
       <recent name="C:\OpenServer\OSPanel\domains\aussie-casino.local\wp-content\themes\aussie-blog\includes" />
     </key>
   </component>
@@ -474,18 +626,20 @@
       <workItem from="1574149612707" duration="18615000" />
       <workItem from="1574235329216" duration="21744000" />
       <workItem from="1574322215027" duration="20024000" />
-      <workItem from="1574408516048" duration="16410000" />
+      <workItem from="1574408516048" duration="17378000" />
+      <workItem from="1574665614399" duration="29018000" />
+      <workItem from="1574752902026" duration="28784000" />
+      <workItem from="1574840809420" duration="24370000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="694777000" />
+    <option name="totallyTimeSpent" value="777917000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1912" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4984326" visible="true" weight="0.39285713" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4984326" visible="true" weight="0.40565032" />
       <window_info id="Structure" order="1" sideWeight="0.5015674" side_tool="true" weight="0.30277187" />
       <window_info id="Favorites" order="2" sideWeight="0.5015674" side_tool="true" weight="0.19989339" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -571,44 +725,6 @@
     </option>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/wp-includes/class-wp-term.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="16" column="21" lean-forward="true" selection-start-line="16" selection-start-column="21" selection-end-line="16" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/plugins/ajax-cat/tpl-cat.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="561">
-          <caret line="35" column="72" selection-start-line="35" selection-start-column="72" selection-end-line="35" selection-end-column="72" />
-          <folding>
-            <element signature="e#6#56#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wp-admin/edit-tags.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="8925">
-          <caret line="530" column="29" selection-start-line="530" selection-start-column="16" selection-end-line="530" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/aussie-blog/!admin-winning-guides-ajax.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="471">
-          <caret line="51" column="12" selection-start-line="51" selection-start-column="12" selection-end-line="51" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wp-admin/admin-ajax.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2635">
-          <caret line="162" column="5" selection-start-line="162" selection-start-column="5" selection-end-line="162" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/wp-content/themes/aussie-blog/css/style.min.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="186">
@@ -650,25 +766,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/wp-content/themes/aussie-blog/archive.php">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/aussie-blog/category-news.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#3#34#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/aussie-blog/category.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="5" selection-start-line="5" selection-end-line="5" />
-          <folding>
-            <element signature="e#3#34#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/wp-content/themes/aussie-blog/less/includes/news.less">
       <provider selected="true" editor-type-id="text-editor">
@@ -791,27 +888,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/aussie-blog/front-page.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="26" column="19" selection-start-line="24" selection-start-column="3" selection-end-line="27" selection-end-column="55" />
-          <folding>
-            <element signature="e#6#42#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/wp-content/themes/aussie-blog/page.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="493">
           <caret line="29" column="55" selection-start-line="29" selection-start-column="55" selection-end-line="29" selection-end-column="55" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/aussie-blog/less/style.less">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="454">
-          <caret line="104" column="26" selection-start-line="104" selection-start-column="26" selection-end-line="104" selection-end-column="26" />
         </state>
       </provider>
     </entry>
@@ -829,16 +909,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/aussie-blog/js/custom.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="595">
-          <caret line="36" column="69" selection-start-line="36" selection-start-column="69" selection-end-line="36" selection-end-column="69" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/wp-content/themes/aussie-blog/includes/inc-breadcrumbs.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
@@ -853,6 +923,37 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/aussie-blog/single.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="918">
+          <caret line="56" column="97" selection-start-line="56" selection-start-column="97" selection-end-line="56" selection-end-column="97" />
+          <folding>
+            <element signature="e#3#39#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/aussie-blog/less/includes/common.less">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="663">
+          <caret line="39" column="24" selection-start-line="39" selection-start-column="24" selection-end-line="39" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/aussie-blog/less/includes/winning-guides.less">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="25" column="52" selection-start-line="25" selection-start-column="52" selection-end-line="25" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/aussie-blog/less/variables.less">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="18" column="20" selection-start-line="18" selection-start-column="20" selection-end-line="18" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/wp-content/themes/aussie-blog/includes/inc-blog-menu.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
@@ -860,69 +961,115 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/aussie-blog/functions.php">
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/aussie-blog/category.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="440">
-          <caret line="293" column="408" selection-start-line="293" selection-start-column="408" selection-end-line="293" selection-end-column="428" />
+        <state relative-caret-position="51">
+          <caret line="3" column="5" lean-forward="true" selection-start-line="3" selection-start-column="5" selection-end-line="3" selection-end-column="5" />
+          <folding>
+            <element signature="e#3#34#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/aussie-blog/category-games-reviews.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="12" column="34" selection-start-line="12" selection-start-column="34" selection-end-line="12" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/aussie-blog/category-news.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" column="25" selection-start-line="12" selection-start-column="25" selection-end-line="12" selection-end-column="25" />
+          <folding>
+            <element signature="e#3#34#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/plugins/ajax-cat/custom.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/aussie-blog/less/includes/search.less">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="25" column="24" selection-start-line="25" selection-start-column="24" selection-end-line="25" selection-end-column="24" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/wp-content/themes/aussie-blog/includes/inc-winning-guides.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="21" selection-start-line="21" selection-end-line="21" />
+        <state relative-caret-position="306">
+          <caret line="18" column="95" selection-start-line="18" selection-start-column="95" selection-end-line="18" selection-end-column="95" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/aussie-blog/less/includes/winning-guides.less">
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/aussie-blog/less/includes/single-tpl.less">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="101">
-          <caret line="25" column="52" lean-forward="true" selection-start-line="25" selection-start-column="52" selection-end-line="25" selection-end-column="52" />
+        <state relative-caret-position="6749">
+          <caret line="397" column="29" selection-start-line="397" selection-start-column="29" selection-end-line="397" selection-end-column="29" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/aussie-blog/less/includes/common.less">
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/aussie-blog/less/style.less">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="386">
-          <caret line="39" column="24" lean-forward="true" selection-start-line="39" selection-start-column="24" selection-end-line="39" selection-end-column="24" />
+        <state relative-caret-position="1785">
+          <caret line="105" selection-start-line="105" selection-end-line="105" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/aussie-blog/single.php">
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/aussie-blog/front-page.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="56" column="97" lean-forward="true" selection-start-line="56" selection-start-column="97" selection-end-line="56" selection-end-column="97" />
+        <state relative-caret-position="425">
+          <caret line="27" column="55" selection-start-line="24" selection-end-line="27" selection-end-column="55" />
           <folding>
-            <element signature="e#3#39#0#PHP" expanded="true" />
+            <element signature="e#6#42#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/wp-content/themes/aussie-blog/search.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="31" column="33" selection-start-line="31" selection-start-column="33" selection-end-line="31" selection-end-column="33" />
+        <state relative-caret-position="187">
+          <caret line="29" column="16" selection-start-line="29" selection-start-column="16" selection-end-line="61" selection-end-column="43" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/aussie-blog/less/variables.less">
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/aussie-blog/less/includes/category.less">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="18" column="20" lean-forward="true" selection-start-line="18" selection-start-column="20" selection-end-line="18" selection-end-column="20" />
+        <state relative-caret-position="267">
+          <caret line="261" column="31" selection-start-line="261" selection-start-column="31" selection-end-line="261" selection-end-column="31" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/aussie-blog/less/includes/single-tpl.less">
+    <entry file="file://$PROJECT_DIR$/wp-content/plugins/custom-hooks/._custom-hooks.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/aussie-blog/js/custom.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2108">
-          <caret line="124" column="17" lean-forward="true" selection-start-line="124" selection-start-column="17" selection-end-line="124" selection-end-column="17" />
+        <state relative-caret-position="305">
+          <caret line="328" column="41" selection-start-line="328" selection-start-column="41" selection-end-line="328" selection-end-column="41" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/aussie-blog/less/includes/search.less">
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/aussie-blog/category-winning-guides.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="21" column="16" lean-forward="true" selection-start-line="21" selection-start-column="16" selection-end-line="21" selection-end-column="16" />
+        <state relative-caret-position="340">
+          <caret line="53" column="119" selection-start-line="53" selection-start-column="119" selection-end-line="53" selection-end-column="119" />
+          <folding>
+            <element signature="e#3#34#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/aussie-blog/functions.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="253">
+          <caret line="460" column="32" selection-start-line="460" selection-start-column="32" selection-end-line="460" selection-end-column="32" />
         </state>
       </provider>
     </entry>
