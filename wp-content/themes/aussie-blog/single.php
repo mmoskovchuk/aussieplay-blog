@@ -16,7 +16,7 @@
 
             <div id="single-block-left" class="aussie-casino-single__block-left">
 
-                <a class="aussie-casino-single__block-left_close" href="/">
+                <a class="aussie-casino-single__block-left_close" href="#" onclick="prevPage();">
                     <img src="<?php bloginfo('template_url'); ?>/img/close-single.svg"
                          alt="<?php bloginfo('name'); ?>"/>
                 </a>
@@ -76,14 +76,14 @@
                                 </div>
                             </div>
 
-                            <div class="aussie-casino-single__block-left_tag-wrap">
+                            <!--<div class="aussie-casino-single__block-left_tag-wrap">
                                 <div class="aussie-casino-single__block-left_tag-wrap--tags">
-                                    <?php if (has_tag()) : ?>
+                                    <?php /*if (has_tag()) : */?>
                                         <h5 class="aussie-casino-single__block-left_tag-title">Tag list</h5>
-                                        <?php the_tags('<ul><li>', '</li><li>', '</li></ul>'); ?>
-                                    <?php endif; ?>
+                                        <?php /*the_tags('<ul><li>', '</li><li>', '</li></ul>'); */?>
+                                    <?php /*endif; */?>
                                 </div>
-                            </div>
+                            </div>-->
 
                         </div>
 
@@ -99,6 +99,7 @@
                     <?php $post_id = get_the_ID(); ?>
                     <?php $category_id = get_the_category($post_id); ?>
                     <?php $cat_id = $category_id[0]->cat_ID; ?>
+
                     <?php $posts = get_posts("orderby=date&numberposts=3&category=" . $cat_id . "&exclude=" . $post_id); ?>
                     <?php if ($posts) : ?>
                     <div class="aussie-casino-single__block-right_rel-posts-wrap">

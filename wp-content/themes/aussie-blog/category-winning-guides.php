@@ -1,6 +1,6 @@
 <?
 /*
- * Template name: NEWS
+ * Template name: category winning guides
  * */
 ?>
 
@@ -25,7 +25,7 @@
                     <h2>Winning guides</h2>
                     <div class="aussie-casino__category_filter-sort--wrap">
 
-                        <form action="<?php echo site_url() ?>/wp-admin/admin-ajax.php" method="POST" id="filter"
+                        <form action="<?php echo site_url() ?>/wp-admin/admin-ajax.php" method="POST" id="filter-category"
                               class="aussie-casino__category_form--wrap">
 
                             <?php
@@ -35,6 +35,10 @@
                             $termchildren = get_term_children($termID, $taxonomyName);
 
                             echo '<span class="aussie-casino__category_top--desc">Show </span><div name="incategoryfilter" class="aussie-casino__category_form-item--wrap">';
+                            echo '<div class="aussie-casino__category_form-item">';
+                            echo '<input class="input-btn" type="radio" name="incategoryfilter" value="3" id="wg-3">';
+                            echo '<label class="label-btn" name="incategoryfilter" for="wg-3" value="3">All guides</label>';
+                            echo '</div>';
                             foreach ($termchildren as $child) {
                                 $term = get_term_by('id', $child, $taxonomyName);
                                 echo '<div class="aussie-casino__category_form-item"><input class="input-btn" type="radio" name="incategoryfilter" value="' . $term->term_id . '" id="wg-' . $term->term_id . '"/>';
@@ -42,31 +46,8 @@
                             }
                             echo '</div>'; ?>
 
-
-
-                            <?php
-
-                            echo '<span class="aussie-casino__category_top--desc">sort by </span><div name="sort_incategoryfilter" class="aussie-casino__category_form-item--wrap">';
-
-                            echo '<div class="aussie-casino__category_form-item"><input class="input-btn" type="radio" name="sort_incategoryfilter" value="ASC" id="date-1"/>';
-                            echo '<label class="label-btn" name="sort_incategoryfilter" for="date-1" value="ASC" >Date</label></div>';
-
-                            echo '<div class="aussie-casino__category_form-item"><input class="input-btn" type="radio" name="sort_incategoryfilter1" value="DESC" id="date-2"/>';
-                            echo '<label class="label-btn" name="sort_incategoryfilter1" for="date-2" value="DESC" >Date2</label></div>';
-
-                            echo '</div>'; ?>
-
                             <input type="hidden" name="action" value="myfilter">
                         </form>
-
-
-
-                        <?php /*echo do_shortcode('[facetwp facet="filter_category"]')*/?><!--
-                        <?php /*echo do_shortcode('[facetwp facet="sort_category"]')*/?>
-                        --><?php /*echo do_shortcode('[facetwp template="output_info"]')*/?>
-
-
-
                     </div>
                 </div>
             </div>

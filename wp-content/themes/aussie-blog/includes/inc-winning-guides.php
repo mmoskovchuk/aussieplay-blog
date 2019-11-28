@@ -14,6 +14,7 @@
                 $termchildren = get_term_children( $termID, $taxonomyName );
 
                 echo '<span class="aussie-casino__winning-guides_top--desc">Show: </span><select name="categoryfilter">';
+                echo '<option value="3">All guides</option>';
                 foreach ($termchildren as $child) {
                     $term = get_term_by( 'id', $child, $taxonomyName );
                     echo '<option value="' . $term->term_id . '">' . $term->name . '</option>';

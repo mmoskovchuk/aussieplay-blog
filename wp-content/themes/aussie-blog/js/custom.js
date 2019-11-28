@@ -59,8 +59,8 @@ function displaySearch() {
             easing: 'easeOutSine'
         });
         // Change search icon to x
-        $searchBtn.html('<img src="./wp-content/themes/aussie-blog/img/close.svg" alt="aussie-casino">');
-        $searchFormWrapper.html('<div class="aussie-casino__blog-menu_search-wrap"><form role="search" method="get" id="searchform" class="aussie-casino__blog-menu_search-form"><input class="aussie-casino__blog-menu_search-field" placeholder="Search..." type="text" value="'+ val_search +'" name="s" id="s"/></form></div>');
+        $searchBtn.html('<img src="/wp-content/themes/aussie-blog/img/close.svg" alt="aussie-casino">');
+        $searchFormWrapper.html('<div class="aussie-casino__blog-menu_search-wrap"><form role="search" method="get" id="searchform" class="aussie-casino__blog-menu_search-form"><input class="aussie-casino__blog-menu_search-field" placeholder="Search..." type="text" value="' + val_search + '" name="s" id="s"/></form></div>');
 
         if ($(document).width() > 1700) {
             $('.search-displayed .aussie-casino__blog-menu_search-field').velocity({
@@ -99,7 +99,7 @@ function displaySearch() {
             stagger: 100
         });
         $searchFormWrapper.html('');
-        $searchBtn.html('<img src="./wp-content/themes/aussie-blog/img/search.svg" alt="aussie-casino">');
+        $searchBtn.html('<img src="/wp-content/themes/aussie-blog/img/search.svg" alt="aussie-casino">');
     }
 
 }
@@ -294,6 +294,7 @@ $(document).ready(function () {
     })
 });
 
+
 //FILTER WINNING GUIDES
 //-------------------------------------------------
 
@@ -319,22 +320,22 @@ $(function ($) {
 });
 
 $(document).ready(function () {
-    $(".aussie-casino__winning-guides select[name=categoryfilter]").val("16").change();
+    $(".aussie-casino__winning-guides select[name=categoryfilter]").val("3").change();
 
 });
 
 //category page winning guides (filter)
 $(function ($) {
-    $('#filter').click(function () {
-        console.log($(this).serialize());
-        return function() {
+    $('#filter-category').change(function () {
+
+
             var filter = $(this);
             $.ajax({
                 url: my_ajax_object.ajax_url, // обработчик
                 data: filter.serialize(),
                 type: filter.attr('method'),
                 beforeSend: function (xhr) {
-                    /!*filter.find('button').text('Загружаю...');*!/ // изменяем текст кнопки
+                    /*filter.find('button').text('Загружаю...');*/ // изменяем текст кнопки
 
                 },
                 success: function (data) {
@@ -343,17 +344,18 @@ $(function ($) {
                 }
             });
             return false;
-        };
+
     });
 });
 
 $(document).ready(function () {
-    $('.label-btn').on('click', function() {
-            $('.label-btn').removeClass("active");
-            $(this).addClass("active");
+    $('.label-btn').on('click', function () {
+        $('.label-btn').removeClass("active");
+        $(this).addClass("active");
     });
-    $("#wg-16").click();
-    $("[for='wg-16']").click();
+    $("#wg-3").click();
+    $("[for='wg-3']").click();
+
 });
 
 
@@ -380,14 +382,26 @@ $(function ($) {
 });
 
 $(document).ready(function () {
-    $(".aussie-casino__games-reviews select[name=categoryfiltergames]").val("23").change();
+    $(".aussie-casino__games-reviews select[name=categoryfiltergames]").val("4").change();
 });
 
+$(document).ready(function () {
+    $("#gr-4").click();
+    $("[for='gr-4']").click();
+});
+
+//FILTER GAMES REVIEWS
+//-------------------------------------------------
+
+$(document).ready(function () {
+    $("#news-6").click();
+    $("[for='news-6']").click();
+});
 
 //MOBILE MENU
 //-------------------------------------------------
 
-$('.menu-burger, .menu-items').on('click', function() {
+$('.menu-burger, .menu-items').on('click', function () {
     $('.menu-bg, .menu-items, .menu-burger, .menu-burger-icon').toggleClass('fs');
     $('.menu-burger .menu-burger-icon').text() == "☰" ? $('.menu-burger .menu-burger-icon').text('✕') : $('.menu-burger .menu-burger-icon').text('☰');
 });
@@ -395,7 +409,7 @@ $('.menu-burger, .menu-items').on('click', function() {
 
 //ANIMATED HEADER
 //-------------------------------------------------
-(function($) {
+(function ($) {
     var fixedItem = $('#header-block'),
         animeClass = 'animated',
         fixedClass = 'fixed',
@@ -405,19 +419,19 @@ $('.menu-burger, .menu-items').on('click', function() {
 
     if (fixedItem.size()) {
 
-        var scrollTopValue = function() {
+        var scrollTopValue = function () {
             return $(window).scrollTop()
         };
 
-        var addCustomClass = function(cls) {
+        var addCustomClass = function (cls) {
             fixedItem.addClass(cls);
         };
 
-        var removeCustomClass = function(cls) {
+        var removeCustomClass = function (cls) {
             fixedItem.removeClass(cls);
         };
 
-        var toggleAnimeFunc = function() {
+        var toggleAnimeFunc = function () {
 
             minMarginTop = fixedItem.height();
 
@@ -432,14 +446,14 @@ $('.menu-burger, .menu-items').on('click', function() {
         $(window).on('load', toggleAnimeFunc);
 
         if (!is_fixed) {
-            var toggleFixedFunc = function() {
+            var toggleFixedFunc = function () {
                 minMarginTop = fixedItem.height();
                 if (scrollTopValue() > 0) {
                     addCustomClass(fixedClass);
-                    $('body').css({marginTop:minMarginTop})
+                    $('body').css({marginTop: minMarginTop})
                 } else if (scrollTopValue() === 0) {
                     removeCustomClass(fixedClass);
-                    $('body').css({marginTop:0});
+                    $('body').css({marginTop: 0});
                 }
             };
 
@@ -475,7 +489,7 @@ $('.menu-burger, .menu-items').on('click', function() {
 //-------------------------------------------------
 
 $.fn.extend({
-    toggleText: function(a, b){
+    toggleText: function (a, b) {
         return this.text(this.text() == b ? a : b);
     }
 });
@@ -487,8 +501,8 @@ function change() {
     $('.fixed-sidebar__btn_title-2').toggleText('Go to', 'Hide');
 }
 
-jQuery(function($){
-    $(document).mouseup(function (e){ // событие клика по веб-документу
+jQuery(function ($) {
+    $(document).mouseup(function (e) { // событие клика по веб-документу
         var div = $("#fixed-sidebar"); // тут указываем ID элемента
         if (!div.is(e.target) // если клик был не по нашему блоку
             && div.has(e.target).length === 0) { // и не по его дочерним элементам
