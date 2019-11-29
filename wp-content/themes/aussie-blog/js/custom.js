@@ -59,7 +59,7 @@ function displaySearch() {
             easing: 'easeOutSine'
         });
         // Change search icon to x
-        $searchBtn.html('<img src="/wp-content/themes/aussie-blog/img/close.svg" alt="aussie-casino">');
+        $searchBtn.html('<img src="/blog/wp-content/themes/aussie-blog/img/close.svg" alt="aussie-casino">');
         $searchFormWrapper.html('<div class="aussie-casino__blog-menu_search-wrap"><form role="search" method="get" id="searchform" class="aussie-casino__blog-menu_search-form"><input class="aussie-casino__blog-menu_search-field" placeholder="Search..." type="text" value="' + val_search + '" name="s" id="s"/></form></div>');
 
         if ($(document).width() > 1700) {
@@ -99,7 +99,7 @@ function displaySearch() {
             stagger: 100
         });
         $searchFormWrapper.html('');
-        $searchBtn.html('<img src="/wp-content/themes/aussie-blog/img/search.svg" alt="aussie-casino">');
+        $searchBtn.html('<img src="/blog/wp-content/themes/aussie-blog/img/search.svg" alt="aussie-casino">');
     }
 
 }
@@ -410,17 +410,14 @@ $('.menu-burger, .menu-items').on('click', function () {
 //ANIMATED HEADER
 //-------------------------------------------------
 (function ($) {
-    var fixedItem = $('#header-block'),
+    var fixedItem = $('#blog-menu'),
         animeClass = 'animated',
-        fixedClass = 'fixed',
-        window_width = 768,
-        is_fixed = $('.aussie-casino__header').size(),
         minMarginTop;
 
     if (fixedItem.size()) {
 
         var scrollTopValue = function () {
-            return $(window).scrollTop()
+            return $(window).scrollTop();
         };
 
         var addCustomClass = function (cls) {
@@ -432,34 +429,17 @@ $('.menu-burger, .menu-items').on('click', function () {
         };
 
         var toggleAnimeFunc = function () {
-
             minMarginTop = fixedItem.height();
 
-            if (scrollTopValue() > minMarginTop) {
+            if (scrollTopValue() > 500) {
                 addCustomClass(animeClass);
-            } else if (scrollTopValue() === 0) {
+            } else if (scrollTopValue() < 550) {
                 removeCustomClass(animeClass);
             }
         };
 
         $(window).on('scroll', toggleAnimeFunc);
         $(window).on('load', toggleAnimeFunc);
-
-        if (!is_fixed) {
-            var toggleFixedFunc = function () {
-                minMarginTop = fixedItem.height();
-                if (scrollTopValue() > 0) {
-                    addCustomClass(fixedClass);
-                    $('body').css({marginTop: minMarginTop})
-                } else if (scrollTopValue() === 0) {
-                    removeCustomClass(fixedClass);
-                    $('body').css({marginTop: 0});
-                }
-            };
-
-            $(window).on('scroll', toggleFixedFunc);
-            $(window).on('load', toggleFixedFunc);
-        }
     }
 
 })(jQuery);

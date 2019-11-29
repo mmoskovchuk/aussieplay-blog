@@ -7,6 +7,6 @@
     <div class="fixed-sidebar__content_wrap">
         <p class="fixed-sidebar__content_title">Aussie Play</p>
         <p class="fixed-sidebar__content_desc">"Related posts" module at the end of the article</p>
-        <a href="#" class="fixed-sidebar__content_btn"><span>play now</span></a>
+        <a href="/" class="fixed-sidebar__content_btn"><span>play now</span></a>
     </div>
 </section>

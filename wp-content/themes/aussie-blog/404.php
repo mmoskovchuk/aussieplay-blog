@@ -52,7 +52,7 @@
                      class="aussie-casino-404__error_aussie"/>
                 <h2>Ooooops, the page moved or doesn't exist</h2>
                 <div class="aussie-casino-404__error_btn--wrap">
-                    <a href="/" class="aussie-casino-404__error_btn">
+                    <a href="/blog" class="aussie-casino-404__error_btn">
                         <span>Main page</span>
                     </a>
                     <button class="aussie-casino-404__error_btn--prev" onclick="prevPage();">Previous page</button>

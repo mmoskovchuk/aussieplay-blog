@@ -36,7 +36,7 @@
             <?php endif; ?>
             
             <div class="aussie-casino__news_btn">
-                <a href="javascript:void(0);">all news</a>
+                <a href="/blog/category/news/">all news</a>
             </div>
         </div>
 
