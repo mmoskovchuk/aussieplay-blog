@@ -9,6 +9,9 @@
     position: relative;
     z-index: 1;
     background-color: @c1;
+    @media only screen and (max-width: @tablet-xl) {
+      padding-top: 0;
+    }
     @media only screen and (max-width: @tablet-l) {
       margin-bottom: 70px;
     }
@@ -20,6 +23,14 @@
       height: 90%;
       top: 120px;
       z-index: -1;
+      @media only screen and (max-width: @desktop-xxs) {
+        height: 100%;
+        top: 40px;
+      }
+      @media only screen and (max-width: @tablet-xl) {
+        height: 100%;
+        top: 22px;
+      }
       @media only screen and (max-width: @tablet-l) {
         height: 84%;
       }

@@ -1,4 +1,4 @@
-<section class="aussie-casino__blog-menu" id="blog-menu">
+<section class="aussie-casino__blog-menu" id="blog-menu-wrap">
     <div class="aussie-casino__blog-menu_container">
         <div class="aussie-casino__blog-menu_wrap-left">
             <div class="aussie-casino__blog-menu_logo">

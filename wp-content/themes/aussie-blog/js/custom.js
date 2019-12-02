@@ -401,16 +401,17 @@ $(document).ready(function () {
 //MOBILE MENU
 //-------------------------------------------------
 
-$('.menu-burger, .menu-items').on('click', function () {
-    $('.menu-bg, .menu-items, .menu-burger, .menu-burger-icon').toggleClass('fs');
-    $('.menu-burger .menu-burger-icon').text() == "☰" ? $('.menu-burger .menu-burger-icon').text('✕') : $('.menu-burger .menu-burger-icon').text('☰');
+$('#toggle').click(function() {
+    $(this).toggleClass('active');
+    $('#overlay').toggleClass('open');
+    $('.aussie-casino__blog-menu-mobile_wrap-right').toggleClass('active');
 });
 
 
 //ANIMATED HEADER
 //-------------------------------------------------
 (function ($) {
-    var fixedItem = $('#blog-menu'),
+    var fixedItem = $('#blog-menu-wrap'),
         animeClass = 'animated',
         minMarginTop;
 
