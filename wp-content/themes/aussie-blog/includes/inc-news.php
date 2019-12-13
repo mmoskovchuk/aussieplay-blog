@@ -4,7 +4,7 @@
 
         <div class="aussie-casino__news_top--wrap">
 
-            <h2>News</h2>
+            <h2><?php echo get_cat_name(6) ?></h2>
 
             <div class="aussie-casino__news_count"><?php echo get_category(6)->category_count; ?></div>
 

@@ -114,11 +114,18 @@
       position: static;
       margin-bottom: 25px;
     }
+    @media only screen and (max-width: @mobile-xl) {
+      margin-bottom: 15px;
+    }
     p {
       font-family: @montserrat-b;
       color: @c4;
-      font-size: 73px;
+      font-size: 60px;
+      line-height: 70px;
       width: 235px;
+      @media only screen and (max-width: @desktop-l) {
+        font-size: 51px;
+      }
       @media only screen and (max-width: @desktop-xxs) {
         width: auto;
         display: flex;
@@ -126,10 +133,15 @@
         align-items: center;
       }
       @media only screen and (max-width: @tablet-l) {
-        font-size: 46px;
+        font-size: 41px;
+        line-height: 50px;
       }
       @media only screen and (max-width: @mobile-xl) {
-        font-size: 24px;
+        font-size: 20px;
+        line-height: 32px;
+      }
+      @media only screen and (max-width: @mobile-s) {
+        font-size: 15px;
       }
     }
     span {
@@ -164,18 +176,21 @@
     justify-content: center;
     align-items: center;
     margin-right: 10%;
+    @media (max-width: @mobile-m) {
+      margin-right: 2%;
+    }
   }
 
   &__main-screen_code--wrap {
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-bottom: 30px;
     @media only screen and (max-width: @desktop-xxs) {
       flex-direction: row;
-      margin-bottom: 20px;
     }
     @media only screen and (max-width: @mobile-xl) {
-      margin-bottom: 3px;
+      margin-bottom: 20px;
     }
   }
   &__main-screen_btn--wrap {
@@ -197,15 +212,18 @@
   }
   &__main-screen_code {
     margin-bottom: 12px;
+    @media only screen and (max-width: @desktop-xxs) {
+      margin-bottom: 0;
+    }
   }
   &__promocode_btn {
     outline: none;
     border: none;
     background: transparent;
     font-family: @montserrat-sb;
-    font-size: 50px;
+    font-size: 45px;
     color: #FFC100;
-    margin-bottom: 12px;
+    //margin-bottom: 30px;
     cursor: pointer;
     @media only screen and (max-width: @desktop-xxs) {
       font-size: 37px;

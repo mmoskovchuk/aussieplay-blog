@@ -3,7 +3,7 @@
     <div class="aussie-casino__games-reviews_wrap">
 
         <div class="aussie-casino__games-reviews_top--wrap">
-            <h2>Games reviews</h2>
+            <h2><?php echo get_cat_name(4) ?></h2>
 
             <form action="<?php echo site_url() ?>/wp-admin/admin-ajax.php" method="POST" id="filtergames">
 

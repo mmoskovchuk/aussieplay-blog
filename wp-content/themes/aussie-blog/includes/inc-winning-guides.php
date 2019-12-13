@@ -3,7 +3,7 @@
     <div class="aussie-casino__winning-guides_wrap">
 
         <div class="aussie-casino__winning-guides_top--wrap">
-            <h2>Winning guides</h2>
+            <h2><?php echo get_cat_name(3) ?></h2>
 
             <form action="<?php echo site_url() ?>/wp-admin/admin-ajax.php" method="POST" id="filter">
 
