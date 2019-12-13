@@ -12,7 +12,7 @@
                 </div>
                 <div class="aussie-casino__main-screen_btn--wrap">
                     <!--<p class="aussie-casino__main-screen_desc">on deposit 30$ +</p>-->
-                    <a class="aussie-casino__main-screen_btn" href="/en/games/">
+                    <a class="aussie-casino__main-screen_btn" href="/instant-play">
                         <span>PLAY NOW</span>
                     </a>
                 </div>
