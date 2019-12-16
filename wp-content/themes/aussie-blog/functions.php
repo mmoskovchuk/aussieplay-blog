@@ -217,12 +217,14 @@ function filter_function_show_category()
         //'rewrite' => array( 'hierarchical' => 'true' ),
         'orderby' => 'date',
         'order' => $_POST['date'], // ASC or DESC
-        'posts_per_page' => 3
+        'posts_per_page' => 3,
+        'post_status' => 'publish',
     );
     $args_games_reviews = array(
         'orderby' => 'date',
         'order' => $_POST['date'], // ASC or DESC
-        'posts_per_page' => 8
+        'posts_per_page' => 8,
+        'post_status' => 'publish',
     );
 
 //home page
@@ -233,6 +235,7 @@ function filter_function_show_category()
             'field' => '',
             'terms' => $_POST['categoryfilter'],
             'posts_per_page' => 3,
+            'post_status' => 'publish',
         )
     );
 
@@ -242,6 +245,7 @@ function filter_function_show_category()
             'field' => '',
             'terms' => $_POST['categoryfiltergames'],
             'posts_per_page' => 3,
+            'post_status' => 'publish',
         )
     );
 
@@ -251,7 +255,8 @@ function filter_function_show_category()
             'field' => '',
             'terms' => $_POST['incategoryfilter'],
             'post_type' => 'post',
-            'posts_per_page' => 5
+            'posts_per_page' => 5,
+            'post_status' => 'publish',
         )
     );
 

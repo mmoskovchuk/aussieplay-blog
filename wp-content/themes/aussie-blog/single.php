@@ -12,6 +12,9 @@
     <?php while (have_posts()) :
         the_post(); ?>
 
+        <!--FIXED SIDEBAR-->
+        <?php get_template_part('includes/inc', 'fixed-sidebar'); ?>
+
         <div class="aussie-casino-single">
 
             <div id="single-block-left" class="aussie-casino-single__block-left">
