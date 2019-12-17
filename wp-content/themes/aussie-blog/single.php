@@ -81,10 +81,13 @@
 
                             <!--<div class="aussie-casino-single__block-left_tag-wrap">
                                 <div class="aussie-casino-single__block-left_tag-wrap--tags">
-                                    <?php /*if (has_tag()) : */?>
+                                    <?php /*if (has_tag()) : */
+                            ?>
                                         <h5 class="aussie-casino-single__block-left_tag-title">Tag list</h5>
-                                        <?php /*the_tags('<ul><li>', '</li><li>', '</li></ul>'); */?>
-                                    <?php /*endif; */?>
+                                        <?php /*the_tags('<ul><li>', '</li><li>', '</li></ul>'); */
+                            ?>
+                                    <?php /*endif; */
+                            ?>
                                 </div>
                             </div>-->
 
@@ -112,11 +115,13 @@
                             <?php $imagesurl = get_the_post_thumbnail_url($post_id, 'large'); ?>
 
                             <div class="aussie-casino-single__block-right_rel-post">
-                                <div class="aussie-casino-single__block-right_rel-post-img"
-                                     style="background-image: url('<?php echo $imagesurl; ?>'); background-size: cover;">
-                                    <time><?php echo get_the_date('d M, Y'); ?></time>
-                                </div>
-                                <a href="<?php the_permalink() ?>"
+                                <a href="<?php the_permalink() ?>">
+                                    <div class="aussie-casino-single__block-right_rel-post-img"
+                                         style="background-image: url('<?php echo $imagesurl; ?>'); background-size: cover;">
+                                        <time><?php echo get_the_date('d M, Y'); ?></time>
+                                    </div>
+                                </a>
+                                <a class="aussie-casino-single__block-right_rel-post-link" href="<?php the_permalink() ?>"
                                    rel="bookmark"><?php the_title(); ?></a>
                             </div>
 
@@ -136,7 +141,8 @@
 
                                         <div class="swiper-slide aussie-casino-single__block-right_read-more--slide"
                                              style="background-image: url('<?php echo $imagesurl; ?>'); background-size: cover;">
-                                            <time class="aussie-casino-single__block-right_read-more--date"><b><?php echo get_the_date('d M, Y'); ?></b></time>
+                                            <time class="aussie-casino-single__block-right_read-more--date">
+                                                <b><?php echo get_the_date('d M, Y'); ?></b></time>
                                             <div class="aussie-casino-single__block-right_read-more--title-desc">
                                                 <a href="<?php the_permalink() ?>"
                                                    rel="bookmark"><?php the_title(); ?></a>

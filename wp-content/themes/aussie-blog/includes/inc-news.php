@@ -23,7 +23,9 @@
                             <?php $imagesurl = get_the_post_thumbnail_url($post_id, 'full'); ?>
 
                             <div class="aussie-casino__news_post--item">
-                                <img src="<?php echo $imagesurl ?>" alt="news">
+                                <a href="<?php the_permalink() ?>">
+                                    <img src="<?php echo $imagesurl ?>" alt="news">
+                                </a>
                                 <span class="aussie-casino__news_post_date"><b><?php the_time(); ?></b></span>
                                 <a href="<?php the_permalink() ?>" rel="bookmark"><?php the_title(); ?></a>
                             </div>
@@ -34,7 +36,7 @@
 
                 <?php endforeach; ?>
             <?php endif; ?>
-            
+
             <div class="aussie-casino__news_btn">
                 <a href="/blog/category/news/">all news</a>
             </div>
