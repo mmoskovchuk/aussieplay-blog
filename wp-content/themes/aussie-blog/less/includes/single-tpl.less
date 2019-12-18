@@ -375,6 +375,14 @@
       letter-spacing: 0;
       margin-bottom: 34px;
     }
+
+    img {
+      border-radius: 4px;
+      max-width: 100%;
+      margin-left: 0;
+      margin-right: 0;
+      object-fit: cover;
+    }
   }
 
   &__block-left_bottom-wrap-all {
@@ -596,6 +604,8 @@
     max-height: 500px;
     box-shadow: 0 3px 24px 0 #00000030;
     border: 1px solid @c1;
+    border-radius: 4px;
+
     @media only screen and (max-width: @desktop-xs) {
       height: 400px;
     }
