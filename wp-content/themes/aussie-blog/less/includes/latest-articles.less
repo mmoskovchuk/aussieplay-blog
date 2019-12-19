@@ -200,12 +200,14 @@
     }
     &_date {
       position: absolute;
-      bottom: 34px;
+      bottom: 44px;
       right: -75px;
       transform: rotate(-90deg);
       font-family: @montserrat-r;
       font-size: 12px;
       text-transform: uppercase;
+      width: 100px;
+      display: flex;
       @media only screen and (max-width: @tablet-l) {
         transform: none;
         width: max-content;
@@ -257,6 +259,8 @@
       padding-left: 23px !important;
       padding-top: 23px !important;
       padding-right: 23px !important;
+      background-position-x: 100%;
+      background-position-y: 0 !important;
       @media only screen and (max-width: @desktop-m) {
         height: 330px;
       }
