@@ -35,7 +35,6 @@ var $searchWrapper = $('.aussie-casino__blog-menu_search');
 var $searchFormWrapper = $('.aussie-casino__blog-menu_search');
 var $searchBtn = $('#blog-search');
 var val_search = $('.aussie-casino__search_result--top span').text();
-
 function displaySearch() {
     if (!$body.hasClass('search-on')) {
         $body.addClass('search-on');
@@ -60,7 +59,7 @@ function displaySearch() {
         });
         // Change search icon to x
         $searchBtn.html('<img src="/blog/wp-content/themes/aussie-blog/img/close.svg" alt="aussie-casino">');
-        $searchFormWrapper.html('<div class="aussie-casino__blog-menu_search-wrap"><form role="search" method="get" id="searchform" class="aussie-casino__blog-menu_search-form"><input class="aussie-casino__blog-menu_search-field" placeholder="Search..." type="text" value="' + val_search + '" name="s" id="s"/></form></div>');
+        $searchFormWrapper.html('<div class="aussie-casino__blog-menu_search-wrap"><form role="search" method="get" id="searchform" class="aussie-casino__blog-menu_search-form"><input class="aussie-casino__blog-menu_search-field" maxlength="80" placeholder="Search..." type="text" value="' + val_search + '" name="s" id="s"/></form></div>');
 
         if ($(document).width() > 1700) {
             $('.search-displayed .aussie-casino__blog-menu_search-field').velocity({

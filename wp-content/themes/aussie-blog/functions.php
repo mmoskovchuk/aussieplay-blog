@@ -340,3 +340,5 @@ function filter_function_show_category()
     wp_reset_postdata();
     die();
 }
+
+

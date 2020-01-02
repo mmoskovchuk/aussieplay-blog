@@ -10,6 +10,12 @@
 <?php get_template_part('includes/inc', 'blog-menu-mobile'); ?>
 
 
+<?php
+
+
+
+?>
+
     <section class="aussie-casino__search">
         <div class="aussie-casino__search_wrap--top">
 
@@ -18,7 +24,7 @@
 
                     <?php get_template_part('includes/inc', 'breadcrumbs'); ?>
                     <h2>Search results</h2>
-                    <p class="aussie-casino__search_result--top"><?php echo 'Here are results for ' . '<b>"<span>' . get_search_query() . '</span>"</b>:'; ?></p>
+                    <?php echo '<div class="aussie-casino__search_result--top"><p>' . 'Here are results for ' . '</p>' . '<p class="aussie-casino__search_result--query">"<span>' . get_search_query() . '</span>"<b>:</b></p></div>'; ?>
 
                 </div>
             </div>

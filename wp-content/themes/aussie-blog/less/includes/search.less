@@ -60,7 +60,8 @@
     margin-right: auto;
     display: flex;
     flex-direction: column;
-    align-items: flex-end;
+    align-items: flex-start;
+    width: 84%;
     h2 {
       font-family: @montserrat-b;
       font-size: 73px;
@@ -105,14 +106,27 @@
     font-size: 24px;
     color: @c2;
     font-weight: 600;
+    display: flex;
+    width: 100%;
     @media only screen and (max-width: @tablet-l) {
       font-size: 18px;
     }
     @media only screen and (max-width: @mobile-xl) {
       font-size: 14px;
     }
-    b {
+    p:nth-child(1) {
+      margin-right: 10px;
+    }
+    p:nth-child(2) {
       color: #FFC100;
+      word-wrap: break-word;
+      width: 30%;
+      span {
+        color: #FFC100;
+      }
+    }
+    b {
+      color: @c2;
     }
   }
   &__search_result--bottom {
