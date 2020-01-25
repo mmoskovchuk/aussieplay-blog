@@ -442,6 +442,38 @@ $('#toggle').click(function() {
         $(window).on('load', toggleAnimeFunc);
     }
 
+    var fixedItemMob = $('#blog-menu-wrap'),
+        animeClassMob = 'animated',
+        minMarginTopMob;
+
+    if (fixedItemMob.size()) {
+
+        var scrollTopValueMob = function () {
+            return $(window).scrollTop();
+        };
+
+        var addCustomClass = function (cls) {
+            fixedItem.addClass(cls);
+        };
+
+        var removeCustomClass = function (cls) {
+            fixedItem.removeClass(cls);
+        };
+
+        var toggleAnimeFunc = function () {
+            minMarginTop = fixedItem.height();
+
+            if (scrollTopValue() > 500) {
+                addCustomClass(animeClass);
+            } else if (scrollTopValue() < 550) {
+                removeCustomClass(animeClass);
+            }
+        };
+
+        $(window).on('scroll', toggleAnimeFunc);
+        $(window).on('load', toggleAnimeFunc);
+    }
+
 })(jQuery);
 
 //SCROLL TOP BUTTON

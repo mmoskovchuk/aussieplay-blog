@@ -71,7 +71,7 @@ function ox_adding_scripts()
             /*swiper css*/
             wp_enqueue_style('swiper', get_template_directory_uri() . '/css/libs/swiper.min.css', array(), null);
             /*custom css*/
-            wp_enqueue_style('custom', get_template_directory_uri() . '/css/style.min.css?ver=1.5', array(), null);
+            wp_enqueue_style('custom', get_template_directory_uri() . '/css/style.min.css?ver=1.6', array(), null);
 
         }
 
