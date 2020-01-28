@@ -35,6 +35,7 @@ var $searchWrapper = $('.aussie-casino__blog-menu_search');
 var $searchFormWrapper = $('.aussie-casino__blog-menu_search');
 var $searchBtn = $('#blog-search');
 var val_search = $('.aussie-casino__search_result--top span').text();
+
 function displaySearch() {
     if (!$body.hasClass('search-on')) {
         $body.addClass('search-on');
@@ -328,21 +329,21 @@ $(function ($) {
     $('#filter-category').change(function () {
 
 
-            var filter = $(this);
-            $.ajax({
-                url: my_ajax_object.ajax_url, // обработчик
-                data: filter.serialize(),
-                type: filter.attr('method'),
-                beforeSend: function (xhr) {
-                    /*filter.find('button').text('Загружаю...');*/ // изменяем текст кнопки
+        var filter = $(this);
+        $.ajax({
+            url: my_ajax_object.ajax_url, // обработчик
+            data: filter.serialize(),
+            type: filter.attr('method'),
+            beforeSend: function (xhr) {
+                /*filter.find('button').text('Загружаю...');*/ // изменяем текст кнопки
 
-                },
-                success: function (data) {
-                    filter.find('button').text('Применить фильтр'); // возвращаеи текст кнопки
-                    $('#response').html(data);
-                }
-            });
-            return false;
+            },
+            success: function (data) {
+                filter.find('button').text('Применить фильтр'); // возвращаеи текст кнопки
+                $('#response').html(data);
+            }
+        });
+        return false;
 
     });
 });
@@ -400,12 +401,15 @@ $(document).ready(function () {
 //MOBILE MENU
 //-------------------------------------------------
 
-$('#toggle').click(function() {
+$('#toggle').click(function () {
     $(this).toggleClass('active');
     $('#overlay').toggleClass('open');
     $('.aussie-casino__blog-menu-mobile_wrap-right').toggleClass('active');
 });
 
+$(function (){
+    $('.overlay-menu ul').append( $('.aussie-casino__blog-menu-mobile_search') );
+});
 
 //ANIMATED HEADER
 //-------------------------------------------------
@@ -442,37 +446,148 @@ $('#toggle').click(function() {
         $(window).on('load', toggleAnimeFunc);
     }
 
-    var fixedItemMob = $('#blog-menu-wrap'),
-        animeClassMob = 'animated',
-        minMarginTopMob;
 
-    if (fixedItemMob.size()) {
+    if ($(document).width() >= 1250) {
 
-        var scrollTopValueMob = function () {
-            return $(window).scrollTop();
-        };
+        var fixedItemMob = $('#blog-menu-mobile'),
+            animeClassMob = 'animated',
+            minMarginTopMob;
 
-        var addCustomClass = function (cls) {
-            fixedItem.addClass(cls);
-        };
+        if (fixedItemMob.size()) {
 
-        var removeCustomClass = function (cls) {
-            fixedItem.removeClass(cls);
-        };
+            var scrollTopValueMob = function () {
+                return $(window).scrollTop();
+            };
 
-        var toggleAnimeFunc = function () {
-            minMarginTop = fixedItem.height();
+            var addCustomClassMob = function (cls) {
+                fixedItemMob.addClass(cls);
+            };
 
-            if (scrollTopValue() > 500) {
-                addCustomClass(animeClass);
-            } else if (scrollTopValue() < 550) {
-                removeCustomClass(animeClass);
-            }
-        };
+            var removeCustomClassMob = function (cls) {
+                fixedItemMob.removeClass(cls);
+            };
 
-        $(window).on('scroll', toggleAnimeFunc);
-        $(window).on('load', toggleAnimeFunc);
+            var toggleAnimeFuncMob = function () {
+                minMarginTopMob = fixedItemMob.height();
+
+                if (scrollTopValueMob() > 475) {
+                    addCustomClassMob(animeClassMob);
+                } else if (scrollTopValueMob() < 485) {
+                    removeCustomClassMob(animeClassMob);
+                }
+
+            };
+
+            $(window).on('scroll', toggleAnimeFuncMob);
+            $(window).on('load', toggleAnimeFuncMob);
+        }
+    } else if ($(document).width() >= 1024) {
+
+        var fixedItemMob = $('#blog-menu-mobile'),
+            animeClassMob = 'animated',
+            minMarginTopMob;
+
+        if (fixedItemMob.size()) {
+
+            var scrollTopValueMob = function () {
+                return $(window).scrollTop();
+            };
+
+            var addCustomClassMob = function (cls) {
+                fixedItemMob.addClass(cls);
+            };
+
+            var removeCustomClassMob = function (cls) {
+                fixedItemMob.removeClass(cls);
+            };
+
+            var toggleAnimeFuncMob = function () {
+                minMarginTopMob = fixedItemMob.height();
+
+                if (scrollTopValueMob() > 485) {
+                    addCustomClassMob(animeClassMob);
+                } else if (scrollTopValueMob() < 495) {
+                    removeCustomClassMob(animeClassMob);
+                }
+
+            };
+
+            $(window).on('scroll', toggleAnimeFuncMob);
+            $(window).on('load', toggleAnimeFuncMob);
+        }
+
+    } else if ($(document).width() >= 768) {
+
+        var fixedItemMob = $('#blog-menu-mobile'),
+            animeClassMob = 'animated',
+            minMarginTopMob;
+
+        if (fixedItemMob.size()) {
+
+            var scrollTopValueMob = function () {
+                return $(window).scrollTop();
+            };
+
+            var addCustomClassMob = function (cls) {
+                fixedItemMob.addClass(cls);
+            };
+
+            var removeCustomClassMob = function (cls) {
+                fixedItemMob.removeClass(cls);
+            };
+
+            var toggleAnimeFuncMob = function () {
+                minMarginTopMob = fixedItemMob.height();
+
+                if (scrollTopValueMob() > 390) {
+                    addCustomClassMob(animeClassMob);
+                } else if (scrollTopValueMob() < 400) {
+                    removeCustomClassMob(animeClassMob);
+                }
+
+            };
+
+            $(window).on('scroll', toggleAnimeFuncMob);
+            $(window).on('load', toggleAnimeFuncMob);
+        }
+
+    } else if ($(document).width() <= 650) {
+
+        var fixedItemMob = $('#blog-menu-mobile'),
+            animeClassMob = 'animated',
+            minMarginTopMob;
+
+        if (fixedItemMob.size()) {
+
+            var scrollTopValueMob = function () {
+                return $(window).scrollTop();
+            };
+
+            var addCustomClassMob = function (cls) {
+                fixedItemMob.addClass(cls);
+            };
+
+            var removeCustomClassMob = function (cls) {
+                fixedItemMob.removeClass(cls);
+            };
+
+            var toggleAnimeFuncMob = function () {
+                minMarginTopMob = fixedItemMob.height();
+
+                if (scrollTopValueMob() > 240) {
+                    addCustomClassMob(animeClassMob);
+                } else if (scrollTopValueMob() < 250) {
+                    removeCustomClassMob(animeClassMob);
+                }
+
+            };
+
+            $(window).on('scroll', toggleAnimeFuncMob);
+            $(window).on('load', toggleAnimeFuncMob);
+        }
+
     }
+
 
 })(jQuery);
 

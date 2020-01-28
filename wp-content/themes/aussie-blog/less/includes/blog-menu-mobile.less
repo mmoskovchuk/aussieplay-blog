@@ -6,6 +6,8 @@
     max-width: 92%;
     margin: 0 auto;
     padding-top: 32px;
+    z-index: 1;
+    position: relative;
     @media only screen and (min-width: @desktop-xxs) {
       display: none;
     }
@@ -13,6 +15,31 @@
       max-width: 100%;
       z-index: 1;
       position: relative;
+    }
+    &.animated {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      height: 100px;
+      max-width: 100%;
+      z-index: 2;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      @media only screen and (min-width: @desktop-xxs) {
+        display: none;
+      }
+      .aussie-casino__blog-menu-mobile_container {
+        max-width: 85%;
+        margin-left: 3%;
+        @media only screen and (min-width: @desktop-xxs) {
+          display: none;
+        }
+        @media only screen and (max-width: @tablet-xl) {
+          max-width: 100%;
+          margin-left: auto;
+        }
+      }
     }
   }
   &__blog-menu-mobile_container {
@@ -22,13 +49,20 @@
     margin-left: 0;
     margin-right: auto;
     align-items: center;
+    width: 91%;
     @media only screen and (max-width: @tablet-xl) {
       max-width: 90%;
       margin-left: auto;
       margin-right: auto;
+      display: flex;
+      justify-content: space-between;
+      width: 90%;
     }
     @media only screen and (max-width: @tablet-l) {
       max-width: 80%;
+      display: flex;
+      justify-content: space-between;
+      width: 80%;
     }
   }
   &__blog-menu-mobile_wrap-right {
