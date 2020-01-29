@@ -57,6 +57,13 @@
         height: 399px;
         width: 199px;
       }
+      @media only screen and (max-width: @mobile-m) {
+        left: 53%;
+      }
+      @media only screen and (max-width: @mobile-s) {
+        left: 64%;
+        width: 159px;
+      }
     }
     &:after {
         content: '';
@@ -93,8 +100,9 @@
       height: 100%;
       top: 0;
       max-width: 100%;
-      //width: 100%;
+      width: 100%;
       border-radius: 0;
+      padding: 0;
     }
   }
   &__main-screen_box-left {
@@ -292,3 +300,5 @@
     }
   }
 }
+
+&__main-screen_wrapper {}

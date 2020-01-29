@@ -12,8 +12,14 @@
     <?php while (have_posts()) :
         the_post(); ?>
 
+        <!--HEADER-->
+        <?php get_template_part('includes/inc', 'header'); ?>
         <!--FIXED SIDEBAR-->
         <?php get_template_part('includes/inc', 'fixed-sidebar'); ?>
+        <!--MAIN SCREEN-->
+        <?php get_template_part('includes/inc', 'main-screen'); ?>
+        <!--BLOG MENU-MOBILE-->
+        <?php get_template_part('includes/inc', 'blog-menu-mobile'); ?>
 
         <div class="aussie-casino-single">
 
@@ -121,7 +127,8 @@
                                         <time><?php echo get_the_date('d M, Y'); ?></time>
                                     </div>
                                 </a>
-                                <a class="aussie-casino-single__block-right_rel-post-link" href="<?php the_permalink() ?>"
+                                <a class="aussie-casino-single__block-right_rel-post-link"
+                                   href="<?php the_permalink() ?>"
                                    rel="bookmark"><?php the_title(); ?></a>
                             </div>
 
