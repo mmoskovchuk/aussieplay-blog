@@ -41,8 +41,8 @@
                         <div class="aussie-casino-single__block-left_top-rating">
                             <h5>article rating</h5><?php
                             if (function_exists('the_ratings')) {
-                                the_ratings();
-                                //echo expand_ratings_template('<span class="rating">%RATINGS_IMAGES%</span>', get_the_ID());
+                                 /*echo ''.expand_ratings_template('<span class="rating-images">%RATINGS_IMAGES%</span>', get_the_ID());*/
+                                echo expand_ratings_template('<span class="post-ratings">%RATINGS_IMAGES%</span>', get_the_ID());
                             }
                             ?>
                         </div>
@@ -74,8 +74,8 @@
                                 <div class="aussie-casino-single__block-left_bottom-wrap--rating">
                                     <div class="aussie-casino-single__block-left_bottom-rating">
                                         <h5>rate this article</h5><?php if (function_exists('the_ratings')) {
-                                            echo expand_ratings_template('<span class="rating">%RATINGS_IMAGES_VOTE%</span>', get_the_ID());
-                                            //the_ratings();
+                                            /*echo expand_ratings_template('<span class="rating">%RATINGS_IMAGES_VOTE%</span>', get_the_ID());*/
+                                            the_ratings();
                                         } ?>
                                     </div>
                                     <div class="aussie-casino-single__block-left_social">

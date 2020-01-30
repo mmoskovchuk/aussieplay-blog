@@ -353,9 +353,6 @@ $(document).ready(function () {
         $('.label-btn').removeClass("active");
         $(this).addClass("active");
     });
-    $("#wg-3").click();
-    $("[for='wg-3']").click();
-
 });
 
 
@@ -385,17 +382,11 @@ $(document).ready(function () {
     $(".aussie-casino__games-reviews select[name=categoryfiltergames]").val("4").change();
 });
 
-$(document).ready(function () {
-    $("#gr-4").click();
-    $("[for='gr-4']").click();
-});
-
-//FILTER GAMES REVIEWS
+//FILTER ALL REVIEWS
 //-------------------------------------------------
 
 $(document).ready(function () {
-    $("#news-6").click();
-    $("[for='news-6']").click();
+    $(".all-reviews").click();
 });
 
 //MOBILE MENU
@@ -647,7 +638,12 @@ function prevPage() {
     window.history.back();
 }
 
+//STAR default
+//------------------------------------------------------
 
+/*window.onload = function() {
+    $('.aussie-casino-single__block-left_bottom-rating .rating img:first-child').click();
+};*/
 
 
 

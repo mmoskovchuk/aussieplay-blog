@@ -296,7 +296,7 @@ function filter_function_show_category()
 
             }
 
-            if ($i == 5) {
+            if ($i == 6) {
                 echo '</div><div class="aussie-casino__games-reviews_post--item-wrap3">';
             }
 
