@@ -296,6 +296,9 @@ $(document).ready(function () {
     })
 });
 
+//Loadmore
+//------------------------------------------------------
+
 
 //FILTER WINNING GUIDES
 //-------------------------------------------------
@@ -329,24 +332,37 @@ $(document).ready(function () {
 //category page winning guides (filter)
 $(function ($) {
     $('#filter-category').change(function () {
-
-
         var filter = $(this);
         $.ajax({
             url: my_ajax_object.ajax_url, // обработчик
             data: filter.serialize(),
             type: filter.attr('method'),
             beforeSend: function (xhr) {
-                /*filter.find('button').text('Загружаю...');*/ // изменяем текст кнопки
+                $('#response').text('Loading...'); // изменяем текст кнопки
 
             },
             success: function (data) {
                 filter.find('button').text('Применить фильтр'); // возвращаеи текст кнопки
                 $('#response').html(data);
+
+                $(document).ready(function () {
+                    var wrap_result = $('.aussie-casino__category_result--wrap').length;
+                    if (wrap_result >= 2) {
+                        $("#response>:not(:eq(0))").hide();
+                    }
+
+                    size_li = $("#response .aussie-casino__category_result--wrap").size();
+                    x = 1;
+                    $('#response .aussie-casino__category_result--wrap:lt(' + x + ')').show();
+                    $('#more_posts').click(function () {
+                        x = (x + 1 <= size_li) ? x + 1 : size_li;
+                        $('#response .aussie-casino__category_result--wrap:lt(' + x + ')').show();
+                    });
+
+                });
             }
         });
         return false;
-
     });
 });
 
@@ -355,6 +371,7 @@ $(document).ready(function () {
         $('.label-btn').removeClass("active");
         $(this).addClass("active");
     });
+
 });
 
 
@@ -369,7 +386,7 @@ $(function ($) {
             data: filter.serialize(),
             type: filter.attr('method'),
             beforeSend: function (xhr) {
-                /*filter.find('button').text('Загружаю...');*/ // изменяем текст кнопки
+                $('#response').text('Loading...'); // изменяем текст кнопки
             },
             success: function (data) {
                 filter.find('button').text('Применить фильтр'); // возвращаеи текст кнопки
@@ -378,6 +395,7 @@ $(function ($) {
         });
         return false;
     });
+
 });
 
 $(document).ready(function () {
@@ -400,8 +418,8 @@ $('#toggle').click(function () {
     $('.aussie-casino__blog-menu-mobile_wrap-right').toggleClass('active');
 });
 
-$(function (){
-    $('.overlay-menu ul').append( $('.aussie-casino__blog-menu-mobile_search') );
+$(function () {
+    $('.overlay-menu ul').append($('.aussie-casino__blog-menu-mobile_search'));
 });
 
 //ANIMATED HEADER
@@ -639,13 +657,6 @@ jQuery(function ($) {
 function prevPage() {
     window.history.back();
 }
-
-//STAR default
-//------------------------------------------------------
-
-/*window.onload = function() {
-    $('.aussie-casino-single__block-left_bottom-rating .rating img:first-child').click();
-};*/
 
 
 

@@ -61,6 +61,11 @@ function ox_adding_scripts()
         wp_localize_script('custom', 'my_ajax_object',
             array('ajax_url' => admin_url('admin-ajax.php')));
 
+        wp_localize_script( 'custom', 'ajax_posts', array(
+            'ajaxurl' => admin_url( 'admin-ajax.php' ),
+            'noposts' => __('No older posts found', ''),
+        ));
+
         $site_data = array(
             'template_url' => get_template_directory_uri()
         );
@@ -206,6 +211,7 @@ add_action('wp_ajax_nopriv_loadmore', 'true_load_posts');
 //FILTER WINNING GUIDES AND GAMES REVIEWS
 //--------------------------------------------------
 
+
 add_action('wp_ajax_myfilter', 'filter_function_show_category');
 add_action('wp_ajax_nopriv_myfilter', 'filter_function_show_category');
 
@@ -249,14 +255,22 @@ function filter_function_show_category()
         )
     );
 
+    $paged_incategory = ( get_query_var( 'paged' ) ) ? get_query_var( 'paged' ) : 1;
+
+    $args_incategory = array(
+        'posts_per_page' => -1,
+        'post_type' => 'post',
+        'orderby' => 'date',
+        'order' => 'DESC',
+        'post_status' => 'publish',
+        'paged'          => $paged_incategory,
+    );
+
     $args_incategory['tax_query'] = array(
         array(
             'taxonomy' => 'category',
-            'field' => '',
+            'field' => 'term_id',
             'terms' => $_POST['incategoryfilter'],
-            'post_type' => 'post',
-            'posts_per_page' => 5,
-            'post_status' => 'publish',
         )
     );
 
@@ -312,6 +326,7 @@ function filter_function_show_category()
 
     wp_reset_postdata();
 
+
 //in category
 
     $the_query_incategory = new WP_Query($args_incategory);
@@ -324,7 +339,7 @@ function filter_function_show_category()
         while ($the_query_incategory->have_posts()) {
 
             $the_query_incategory->the_post();
-            $default_img_url = get_template_directory_uri().'/img/default-img.jpg';
+            $default_img_url = get_template_directory_uri() . '/img/default-img.jpg';
             $thumbnail_img = (has_post_thumbnail()) ? get_the_post_thumbnail_url($the_query_incategory->ID, 'full') : $default_img_url;
 
             echo '<article class="aussie-casino__winning-guides_post--item" id="filter-games"><div class="aussie-casino__winning-guides_wrap--img"><a href="' . get_permalink() . '"><img src="' . $thumbnail_img . '" alt="' . get_the_title() . '"></a><span class="aussie-casino__winning-guides_date"><b>' . human_time_diff_enhanced() . '</b></span></div><a href=" ' . get_permalink() . ' ">' . get_the_title() . '</a></article>';
@@ -338,10 +353,15 @@ function filter_function_show_category()
             $k++;
 
         }
+    } else {
+        //echo '<h2>Not found articles</h2>';
     }
+
     wp_reset_postdata();
     die();
 }
+
+
 // fix Scheduled Posts
 add_filter('the_posts', 'show_all_future_posts');
 
@@ -349,12 +369,12 @@ function show_all_future_posts($posts)
 {
     global $wp_query, $wpdb;
 
-    if(is_single() && $wp_query->post_count == 0)
-    {
+    if (is_single() && $wp_query->post_count == 0) {
         $posts = $wpdb->get_results($wp_query->request);
     }
 
     return $posts;
-}
+};
+
 
 

@@ -56,9 +56,12 @@
         </div>
         <div class="aussie-casino__category_result--bottom">
             <div class="aussie-casino__category_result-sort--wrap">
-
                 <div id="response" class="aussie-casino__category_sort-post--wrap"></div>
             </div>
+
+            <?php $cat_id = get_query_var('cat'); ?>
+            <div id="more_posts" class="aussie-casino__category_load-more--btn" data-category="<?php echo $cat_id; ?>">Load More</div>
+
         </div>
     </section>
 
