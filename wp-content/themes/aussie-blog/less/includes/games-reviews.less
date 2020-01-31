@@ -56,6 +56,7 @@
     margin: 0 auto;
     display: flex;
     flex-direction: column;
+    min-height: 200px;
   }
 
   &__games-reviews_top--wrap {
@@ -94,6 +95,10 @@
         margin-left: 0;
         margin-right: auto;
       }
+    }
+    form {
+      display: flex;
+      align-items: center;
     }
     select[name="categoryfiltergames"] {
       border: 1px solid rgba(0,0,0,.25);
@@ -248,35 +253,47 @@
     display: flex;
     width: 100%;
     justify-content: flex-start;
-    margin-top: 248px;
-    .aussie-casino__games-reviews_post--item:last-child {
-      margin-right: 0;
-    }
-  }
-
-  &__games-reviews_post--item-wrap2 {
-    @media only screen and (max-width: @desktop-m) {
-      margin-top: 200px;
-    }
-    @media only screen and (max-width: @desktop-xxs) {
-      margin-top: 30px;
-    }
+    //margin-top: 248px;
     @media only screen and (max-width: @tablet-l) {
       flex-direction: column;
       align-items: center;
       margin-top: 0;
     }
+    .aussie-casino__games-reviews_post--item:last-child {
+      margin-right: 0;
+    }
+    .aussie-casino__games-reviews_post--item {
+      margin-top: 248px;
+    }
+  }
+
+  &__games-reviews_post--item-wrap2 {
+    .aussie-casino__games-reviews_post--item {
+      @media only screen and (max-width: @desktop-m) {
+        margin-top: 200px;
+      }
+      @media only screen and (max-width: @desktop-xxs) {
+        margin-top: 30px;
+      }
+      @media only screen and (max-width: @tablet-l) {
+        flex-direction: column;
+        align-items: center;
+        margin-top: 0;
+      }
+    }
   }
 
   &__games-reviews_post--item-wrap3 {
-    @media only screen and (max-width: @desktop-m) {
-      margin-top: 60px;
-    }
-    @media only screen and (max-width: @desktop-xxs) {
-      margin-top: 160px;
-    }
-    @media only screen and (max-width: @tablet-l) {
-      display: none;
+    .aussie-casino__games-reviews_post--item {
+      @media only screen and (max-width: @desktop-m) {
+        margin-top: 60px;
+      }
+      @media only screen and (max-width: @desktop-xxs) {
+        margin-top: 160px;
+      }
+      @media only screen and (max-width: @tablet-l) {
+        display: none;
+      }
     }
   }
 

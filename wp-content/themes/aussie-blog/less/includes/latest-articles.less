@@ -10,10 +10,11 @@
     z-index: 0;
     background-color: @c1;
     @media only screen and (max-width: @tablet-xl) {
-      padding-top: 0;
+      //display: none;
     }
-    @media only screen and (max-width: @tablet-l) {
-      margin-bottom: 70px;
+    @media only screen and (max-width: @mobile-xl) {
+      padding-top: 20px;
+      margin-bottom: 90px;
     }
     &:after {
       content: '';
@@ -232,7 +233,7 @@
     }
 
     .swiper-container {
-      width: 96%;
+      width: 98.7%;
       height: 560px;
       padding-bottom: 160px !important;
       padding-top: 18px;
@@ -321,5 +322,15 @@
       }
     }
 
+  }
+}
+
+.category {
+  .aussie-casino {
+    &__latest-articles {
+      @media only screen and (max-width: @tablet-xl) {
+        display: none;
+      }
+    }
   }
 }

@@ -296,7 +296,7 @@ function filter_function_show_category()
 
             }
 
-            if ($i == 6) {
+            if ($i == 5) {
                 echo '</div><div class="aussie-casino__games-reviews_post--item-wrap3">';
             }
 
@@ -324,8 +324,10 @@ function filter_function_show_category()
         while ($the_query_incategory->have_posts()) {
 
             $the_query_incategory->the_post();
+            $default_img_url = get_template_directory_uri().'/img/default-img.jpg';
+            $thumbnail_img = (has_post_thumbnail()) ? get_the_post_thumbnail_url($the_query_incategory->ID, 'full') : $default_img_url;
 
-            echo '<article class="aussie-casino__winning-guides_post--item" id="filter-games"><div class="aussie-casino__winning-guides_wrap--img"><a href="' . get_permalink() . '"><img src="' . get_the_post_thumbnail_url($the_query_incategory->ID, 'full') . '" alt="' . get_the_title() . '"></a><span class="aussie-casino__winning-guides_date"><b>' . human_time_diff_enhanced() . '</b></span></div><a href=" ' . get_permalink() . ' ">' . get_the_title() . '</a></article>';
+            echo '<article class="aussie-casino__winning-guides_post--item" id="filter-games"><div class="aussie-casino__winning-guides_wrap--img"><a href="' . get_permalink() . '"><img src="' . $thumbnail_img . '" alt="' . get_the_title() . '"></a><span class="aussie-casino__winning-guides_date"><b>' . human_time_diff_enhanced() . '</b></span></div><a href=" ' . get_permalink() . ' ">' . get_the_title() . '</a></article>';
 
 
             if ($k % 3 == 2 && $k != 0 && ($k + 1) != $total_posts) {

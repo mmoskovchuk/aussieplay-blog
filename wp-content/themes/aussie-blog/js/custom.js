@@ -89,7 +89,9 @@ function displaySearch() {
     } else {
         $body.removeClass('search-on');
         $searchWrapper.removeClass('search-displayed');
-        $menu.velocity('reverse');
+        $menu.velocity({
+            opacity: 1,
+        });
         $searchBtn.velocity('reverse');
         $menuItems.velocity({
             opacity: 1,

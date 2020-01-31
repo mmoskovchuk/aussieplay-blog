@@ -133,8 +133,9 @@
                             </div>
 
                         <?php endforeach; ?>
-                        <?php endif; ?>
                     </div>
+                        <?php endif; ?>
+
                     <div class="aussie-casino-single__block-right_read-more--wrap">
                         <h3 class="aussie-casino-single__block-right_read-more--title"><b>Read more</b></h3>
                         <div class="swiper-container swiper-container-read-more">

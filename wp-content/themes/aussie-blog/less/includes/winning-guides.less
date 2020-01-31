@@ -106,7 +106,7 @@
   }
 
   &__winning-guides_post--item {
-    width: 417px;
+    max-width: 417px;
     display: flex;
     flex-direction: column;
     margin-right: 171px;
@@ -182,18 +182,23 @@
 
   &__winning-guides_date {
     position: absolute;
-    right: -75px;
-    bottom: 70px;
+    right: -84px;
+    bottom: 82px;
     transform: rotate(-91deg);
     font-family: @montserrat-r;
     font-size: 12px;
     text-transform: uppercase;
+    width: 100px;
+    display: flex;
+    @media only screen and (max-width: @tablet-xl) {
+      right: -77px;
+    }
     @media only screen and (max-width: @mobile-xl) {
       font-size: 10px;
-      right: -67px;
+      right: -82px;
     }
     @media only screen and (max-width: @mobile-s) {
-      right: -50px;
+      right: -71px;
     }
   }
 
