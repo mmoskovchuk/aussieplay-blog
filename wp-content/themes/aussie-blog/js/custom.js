@@ -351,25 +351,31 @@ $(function ($) {
                     }
 
                     size_li = $("#response .aussie-casino__category_result--wrap").size();
-                    var x = 1;
+                    var x = 5;
                     $('#response .aussie-casino__category_result--wrap:lt(' + x + ')').show();
+                    if ($('#response .aussie-casino__category_result--wrap').html() !== undefined) {
                     $('#more_posts').click(function () {
-                        x = (x + 1 <= size_li) ? x + 1 : size_li;
-                        $('#response .aussie-casino__category_result--wrap:lt(' + x + ')').show();
 
+                            x = (x + 1 <= size_li) ? x + 1 : size_li;
+                            $('#response .aussie-casino__category_result--wrap:lt(' + x + ')').show();
+
+                            if ($('.aussie-casino__category_result--wrap:last-child').is(':visible')) {
+                                $('#more_posts').hide();
+                            } else {
+                                $('#more_posts').show();
+                            }
+
+                    });
+                    } else {
+                        $('#more_posts').hide();
+                        $('.aussie-casino__category_sort-post--wrap').html('Articles not found');
+                    }
+                    if ($('#response .aussie-casino__category_result--wrap').html() !== undefined) {
                         if ($('.aussie-casino__category_result--wrap:last-child').is(':visible')) {
-                            // $element виден
                             $('#more_posts').hide();
                         } else {
                             $('#more_posts').show();
                         }
-                    });
-
-                    if ($('.aussie-casino__category_result--wrap:last-child').is(':visible')) {
-                        // $element виден
-                        $('#more_posts').hide();
-                    } else {
-                        $('#more_posts').show();
                     }
                 });
             }

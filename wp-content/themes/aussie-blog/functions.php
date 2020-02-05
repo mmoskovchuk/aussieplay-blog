@@ -256,7 +256,7 @@ function filter_function_show_category() {
 
 
     $args_incategory = array(
-        'posts_per_page' => 50,
+        'posts_per_page' => 51,
         'post_type' => 'post',
         'orderby' => 'date',
         'order' => 'DESC',

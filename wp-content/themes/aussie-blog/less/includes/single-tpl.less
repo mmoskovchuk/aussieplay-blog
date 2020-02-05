@@ -27,13 +27,13 @@ body.single {
   }
   .aussie-casino__main-screen {
     display: none;
-    @media only screen and (max-width: @desktop-m) {
+    @media only screen and (max-width: @desktop-xxs) {
       display: flex;
     }
   }
   .aussie-casino__blog-menu-mobile {
     display: none;
-    @media only screen and (max-width: @desktop-m) {
+    @media only screen and (max-width: @desktop-xxs) {
       display: flex;
     }
   }
@@ -231,7 +231,9 @@ body.single {
     background-color: #fff;
     padding-bottom: 254px;
     @media only screen and (max-width: @tablet-xl) {
-      width: 100%;
+      margin-left: auto;
+      margin-right: auto;
+      width: 81%;
     }
     @media only screen and (max-width: @mobile-xl) {
       padding-bottom: 60px;
@@ -359,6 +361,7 @@ body.single {
     padding-bottom: 290px;
     @media only screen and (max-width: @tablet-xl) {
       padding-bottom: 370px;
+      width: 100%;
     }
     @media only screen and (max-width: @mobile-xl) {
       padding-bottom: 283px;
@@ -554,9 +557,12 @@ body.single {
     width: 100%;
     @media only screen and (max-width: @desktop-l) {
       font-size: 30px;
+      margin-top: 0;
+      display: flex;
     }
     @media only screen and (max-width: @tablet-xl) {
       margin-top: 0;
+      justify-content: flex-start;
     }
 
     b {
@@ -570,6 +576,12 @@ body.single {
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    @media only screen and (max-width: @tablet-xl) {
+      align-items: center;
+    }
+    @media only screen and (max-width: @mobile-xl) {
+      align-items: flex-start;
+    }
   }
 
   &__block-right_rel-post {
@@ -577,6 +589,15 @@ body.single {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    @media only screen and (max-width: @tablet-xl) {
+      width: 51%;
+    }
+    @media only screen and (max-width: @tablet-l) {
+      width: 73%;
+    }
+    @media only screen and (max-width: @mobile-xl) {
+      width: 100%;
+    }
 
     time {
       pointer-events: none;
@@ -610,6 +631,9 @@ body.single {
     @media only screen and (max-width: @desktop-l) {
       font-size: 19px;
     }
+    @media only screen and (max-width: @tablet-xl) {
+      width: 71%;
+    }
 
     &:hover {
       text-decoration-color: @c2;
@@ -636,12 +660,11 @@ body.single {
       height: 400px;
     }
     @media only screen and (max-width: @tablet-xl) {
-      width: 47.5vw;
+      width: 72.5vw;
       height: 500px;
     }
     @media only screen and (max-width: @mobile-xl) {
       min-width: 190px;
-
       height: 293px;
     }
   }
@@ -675,6 +698,9 @@ body.single {
       width: 100%;
       @media only screen and (max-width: @desktop-l) {
         font-size: 30px;
+      }
+      @media only screen and (max-width: @tablet-xl) {
+        justify-content: flex-start;
       }
       @media only screen and (max-width: @mobile-xl) {
         margin-top: 40px;
@@ -734,8 +760,8 @@ body.single {
       @media only screen and (max-width: @desktop-l) {
         padding-left: 62px;
       }
-      @media only screen and (max-width: @mobile-xl) {
-        padding-left: 58px;
+      @media only screen and (max-width: @tablet-xl) {
+        padding-left: 36%;
       }
     }
 
@@ -792,10 +818,8 @@ body.single {
         left: 241px;
       }
       @media only screen and (max-width: @tablet-xl) {
-        left: 215px;
-      }
-      @media only screen and (max-width: @mobile-xl) {
-        left: 158px;
+        right: 0;
+        left: auto;
       }
     }
 
@@ -806,6 +830,9 @@ body.single {
       background-position-x: -34px !important;
       @media only screen and (max-width: @desktop-l) {
         left: 31px;
+      }
+      @media only screen and (max-width: @tablet-xl) {
+        left: 0;
       }
     }
 
@@ -843,11 +870,18 @@ body.single {
     padding-top: 22px;
     @media only screen and (max-width: @tablet-xl) {
       padding-left: 0;
-      width: 30%;
+      width: 50%;
       min-width: 200px;
-      //margin-left: auto;
+      margin-left: auto;
       margin-right: auto;
       padding-bottom: 60px;
+    }
+    @media only screen and (max-width: @tablet-s) {
+      width: 67%;
+    }
+    @media only screen and (max-width: @mobile-xl) {
+      margin-left: 0;
+      width: 100%;
     }
   }
 
@@ -857,7 +891,7 @@ body.single {
     max-width: 287px;
     height: 44vh;
     min-height: 240px;
-    max-height: 293px;
+    max-height: 350px;
     text-align: center;
     font-size: 18px;
     background: #fff;
@@ -871,20 +905,30 @@ body.single {
     }
     @media only screen and (max-width: @tablet-xl) {
       margin-left: 20px;
+      max-width: 93%;
+      max-height: 500px;
+      height: 512px;
     }
     @media only screen and (max-width: @mobile-xl) {
-      width: 100%;
-      height: 100%;
+      margin-left: 20px;
+      max-width: 85%;
+      max-height: 293px;
+      width: 100% !important;
+      height: 293px;
       min-width: 180px;
-      //margin-left: auto;
-      //margin-right: auto !important;
-      //max-width: 250px;
     }
   }
   .swiper-slide-active {
     @media only screen and (max-width: @tablet-xl) {
-      width: 20vw;
+      width: 40vw;
       margin: 0 10px;
+      margin-right: 40px !important;
+    }
+    @media only screen and (max-width: @tablet-s) {
+      width: 50vw;
+    }
+    @media only screen and (max-width: @mobile-xl) {
+      width: 20vw;
     }
   }
 }
