@@ -60,7 +60,9 @@
             </div>
 
             <?php $cat_id = get_query_var('cat'); ?>
-            <div id="more_posts" class="aussie-casino__category_load-more--btn" data-category="<?php echo $cat_id; ?>">Load More</div>
+            <div id="more_posts" class="aussie-casino__category_load-more--btn" data-category="<?php echo $cat_id; ?>">
+                <a href="javascript:void(0);">Show more</a>
+            </div>
 
         </div>
     </section>

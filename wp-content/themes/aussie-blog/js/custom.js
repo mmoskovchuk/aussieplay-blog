@@ -300,10 +300,9 @@ $(document).ready(function () {
 //------------------------------------------------------
 
 
-//FILTER WINNING GUIDES
+//FILTER Aussie Explores (home page)
 //-------------------------------------------------
 
-//home page winning guides
 $(function ($) {
     $('#filter').change(function () {
         var filter = $(this);
@@ -312,7 +311,7 @@ $(function ($) {
             data: filter.serialize(),
             type: filter.attr('method'),
             beforeSend: function (xhr) {
-                /*filter.find('button').text('Загружаю...');*/ // изменяем текст кнопки
+                $('#response').text('Loading...'); // изменяем текст кнопки
 
             },
             success: function (data) {
@@ -329,7 +328,7 @@ $(document).ready(function () {
 
 });
 
-//category page winning guides (filter)
+//category page winning guides (category page)
 $(function ($) {
     $('#filter-category').change(function () {
         var filter = $(this);
@@ -352,13 +351,26 @@ $(function ($) {
                     }
 
                     size_li = $("#response .aussie-casino__category_result--wrap").size();
-                    x = 1;
+                    var x = 1;
                     $('#response .aussie-casino__category_result--wrap:lt(' + x + ')').show();
                     $('#more_posts').click(function () {
                         x = (x + 1 <= size_li) ? x + 1 : size_li;
                         $('#response .aussie-casino__category_result--wrap:lt(' + x + ')').show();
+
+                        if ($('.aussie-casino__category_result--wrap:last-child').is(':visible')) {
+                            // $element виден
+                            $('#more_posts').hide();
+                        } else {
+                            $('#more_posts').show();
+                        }
                     });
 
+                    if ($('.aussie-casino__category_result--wrap:last-child').is(':visible')) {
+                        // $element виден
+                        $('#more_posts').hide();
+                    } else {
+                        $('#more_posts').show();
+                    }
                 });
             }
         });
@@ -375,7 +387,7 @@ $(document).ready(function () {
 });
 
 
-//FILTER GAMES REVIEWS
+//FILTER Games and Promotions (home page)
 //-------------------------------------------------
 
 $(function ($) {
@@ -386,7 +398,7 @@ $(function ($) {
             data: filter.serialize(),
             type: filter.attr('method'),
             beforeSend: function (xhr) {
-                $('#response').text('Loading...'); // изменяем текст кнопки
+                $('#responsegames').text('Loading...'); // изменяем текст кнопки
             },
             success: function (data) {
                 filter.find('button').text('Применить фильтр'); // возвращаеи текст кнопки

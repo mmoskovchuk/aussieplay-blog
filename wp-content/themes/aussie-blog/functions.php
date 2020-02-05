@@ -216,8 +216,7 @@ add_action('wp_ajax_myfilter', 'filter_function_show_category');
 add_action('wp_ajax_nopriv_myfilter', 'filter_function_show_category');
 
 
-function filter_function_show_category()
-{
+function filter_function_show_category() {
 //home page
     $args_winning_guides = array(
         //'rewrite' => array( 'hierarchical' => 'true' ),
@@ -255,15 +254,13 @@ function filter_function_show_category()
         )
     );
 
-    $paged_incategory = ( get_query_var( 'paged' ) ) ? get_query_var( 'paged' ) : 1;
 
     $args_incategory = array(
-        'posts_per_page' => -1,
+        'posts_per_page' => 50,
         'post_type' => 'post',
         'orderby' => 'date',
         'order' => 'DESC',
         'post_status' => 'publish',
-        'paged'          => $paged_incategory,
     );
 
     $args_incategory['tax_query'] = array(
@@ -326,7 +323,6 @@ function filter_function_show_category()
 
     wp_reset_postdata();
 
-
 //in category
 
     $the_query_incategory = new WP_Query($args_incategory);
@@ -346,17 +342,13 @@ function filter_function_show_category()
 
 
             if ($k % 3 == 2 && $k != 0 && ($k + 1) != $total_posts) {
-                echo '</div></div>' . $wrap_div;
-
+                echo '</div></div></div>' . $wrap_div;
             }
 
             $k++;
 
         }
-    } else {
-        //echo '<h2>Not found articles</h2>';
     }
-
     wp_reset_postdata();
     die();
 }
