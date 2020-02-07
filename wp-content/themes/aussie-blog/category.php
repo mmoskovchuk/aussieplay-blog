@@ -49,6 +49,10 @@
 
                             <input type="hidden" name="action" value="myfilter">
                         </form>
+                        <div>
+                            <input class="date" type="checkbox" name="date" value="date" id="date">
+                            <label class="date" name="date" for="date" value="date">Date</label>
+                        </div>
                     </div>
                 </div>
             </div>
