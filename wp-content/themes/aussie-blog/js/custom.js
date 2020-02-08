@@ -338,18 +338,23 @@ $(function ($) {
             },
             success: function (data) {
                 $('#response').html(data);
+
                 $('.date').change(function () {
-
-
                     //sort by date
-                    $(".aussie-casino__category_result--wrap").sort(function (a, b) {
+                    $(".aussie-casino__winning-guides_post--item").sort(function (a, b) {
                         return new Date($(a).attr("data-filter-date")) - new Date($(b).attr("data-filter-date"));
-                    }).each(function (index) {
-
+                    }).each(function () {
                         $('#response').prepend(this);
-
-                    })
-
+                    }).each(function (i) {
+                        if (i % 3 === 0) {
+                            $(".aussie-casino__winning-guides_post--item").slice(i, i + 3).wrapAll('<div class="aussie-casino__category_result--wrap"/>');
+                        }
+                    });
+                    $(".aussie-casino__category_result--wrap").each(function () {
+                        if ($.trim($(this).text()) == "") {
+                            $(this).remove();
+                        }
+                    });
                 });
 
                 $(document).ready(function () {
