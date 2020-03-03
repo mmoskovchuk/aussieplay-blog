@@ -49,9 +49,22 @@
 
                             <input type="hidden" name="action" value="myfilter">
                         </form>
-                        <div>
-                            <input class="date" type="checkbox" name="date" value="date" id="date">
-                            <label class="date" name="date" for="date" value="date">Date</label>
+                        <div class="aussie-casino__category_sortby--wrap">
+                            <span class="aussie-casino__category_top--desc">Sort by </span>
+                            <div class="aussie-casino__category_sortby">
+                                <div class="aussie-casino__category_form-item">
+                                    <input class="date incategorysort-input" type="radio" name="incategorysort" value="date" id="date">
+                                    <label class="date incategorysort-label" name="incategorysort" for="date" value="date">Date</label>
+                                </div>
+                                <div class="aussie-casino__category_form-item">
+                                    <input class="popularity incategorysort-input" type="radio" name="incategorysort" value="popularity" id="popularity">
+                                    <label class="popularity incategorysort-label" name="incategorysort" for="popularity" value="popularity">Popularity</label>
+                                </div>
+                                <div class="aussie-casino__category_form-item">
+                                    <input class="most-rated incategorysort-input" type="radio" name="incategorysort" value="most-rated" id="most-rated">
+                                    <label class="most-rated incategorysort-label" name="incategorysort" for="most-rated" value="most-rated">Most rated</label>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>

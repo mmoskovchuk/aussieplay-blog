@@ -339,7 +339,11 @@ $(function ($) {
             success: function (data) {
                 $('#response').html(data);
 
-                $('.date').change(function () {
+                $('input[name=incategorysort]').attr('checked',false).removeClass('active');
+                $('.incategorysort-label').removeClass('active');
+                $('.aussie-casino__category_sortby .aussie-casino__category_form-item').removeClass('active');
+
+                $('#date').change(function () {
                     //sort by date
                     $(".aussie-casino__winning-guides_post--item").sort(function (a, b) {
                         return new Date($(a).attr("data-filter-date")) - new Date($(b).attr("data-filter-date"));
@@ -355,16 +359,61 @@ $(function ($) {
                             $(this).remove();
                         }
                     });
+                    loadMore();
                 });
 
-                $(document).ready(function () {
+                $('#popularity').change(function () {
+                    //sort by popularity
+                    $(".aussie-casino__winning-guides_post--item").sort(function (a, b) {
+                        return ($(a).attr("data-popularity")) > ($(b).attr("data-popularity")) ? 1 : -1;
+                    }).each(function () {
+                        $('#response').prepend(this);
+                    }).each(function (i) {
+                        if (i % 3 === 0) {
+                            $(".aussie-casino__winning-guides_post--item").slice(i, i + 3).wrapAll('<div class="aussie-casino__category_result--wrap"/>');
+                        }
+                    });
+
+                    $(".aussie-casino__category_result--wrap").each(function () {
+                        if ($.trim($(this).text()) == "") {
+                            $(this).remove();
+                        }
+                    });
+
+                    loadMore();
+
+                });
+
+                $('#most-rated').change(function () {
+                    //sort by most rated
+                    $(".aussie-casino__winning-guides_post--item").sort(function (a, b) {
+                        return ($(a).attr("data-rating")) > ($(b).attr("data-rating")) ? 1 : -1;
+                    }).each(function () {
+                        $('#response').prepend(this);
+                    }).each(function (i) {
+                        if (i % 3 === 0) {
+                            $(".aussie-casino__winning-guides_post--item").slice(i, i + 3).wrapAll('<div class="aussie-casino__category_result--wrap"/>');
+                        }
+                    });
+
+                    $(".aussie-casino__category_result--wrap").each(function () {
+                        if ($.trim($(this).text()) == "") {
+                            $(this).remove();
+                        }
+                    });
+
+                    loadMore();
+
+                });
+
+                function loadMore() {
                     var wrap_result = $('.aussie-casino__category_result--wrap').length;
                     if (wrap_result >= 2) {
                         $("#response>:not(:eq(0))").hide();
                     }
 
                     size_li = $("#response .aussie-casino__category_result--wrap").size();
-                    var x = 5;
+                    var x = 3;
                     $('#response .aussie-casino__category_result--wrap:lt(' + x + ')').show();
                     if ($('#response .aussie-casino__category_result--wrap').html() !== undefined) {
                         $('#more_posts').click(function () {
@@ -390,8 +439,11 @@ $(function ($) {
                             $('#more_posts').show();
                         }
                     }
+                }
 
-                });
+                loadMore();
+
+
             }
         });
         return false;
@@ -401,6 +453,21 @@ $(function ($) {
 $(document).ready(function () {
     $('.label-btn').on('click', function () {
         $('.label-btn').removeClass("active");
+        $(this).addClass("active");
+    });
+
+    $('.incategorysort-label').on('click', function () {
+        $('.incategorysort-label, .aussie-casino__category_sortby .aussie-casino__category_form-item').removeClass("active");
+        $(this,'.aussie-casino__category_sortby .aussie-casino__category_form-item').addClass("active");
+    });
+
+    $('.aussie-casino__category_sortby .aussie-casino__category_form-item').on('click', function () {
+        $('.aussie-casino__category_sortby .aussie-casino__category_form-item').removeClass("active");
+        $(this).addClass("active");
+    });
+
+    $('.aussie-casino__category_form-item--wrap .aussie-casino__category_form-item').on('click', function () {
+        $('.aussie-casino__category_form-item--wrap .aussie-casino__category_form-item').removeClass("active");
         $(this).addClass("active");
     });
 

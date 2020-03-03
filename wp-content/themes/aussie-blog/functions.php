@@ -179,6 +179,50 @@ function SearchFilter($query)
 add_filter('pre_get_posts', 'SearchFilter');
 
 
+// POSTVIEWS
+//--------------------------------------------------
+add_action('wp_head', 'kama_postviews');
+function kama_postviews() {
+
+    /* ------------ Настройки -------------- */
+    $meta_key       = 'views';  // Ключ мета поля, куда будет записываться количество просмотров.
+    $who_count      = 1;            // Чьи посещения считать? 0 - Всех. 1 - Только гостей. 2 - Только зарегистрированных пользователей.
+    $exclude_bots   = 1;            // Исключить ботов, роботов, пауков и прочую нечесть :)? 0 - нет, пусть тоже считаются. 1 - да, исключить из подсчета.
+
+    global $user_ID, $post;
+    if(is_singular()) {
+        $id = (int)$post->ID;
+        static $post_views = false;
+        if($post_views) return true; // чтобы 1 раз за поток
+        $post_views = (int)get_post_meta($id,$meta_key, true);
+        $should_count = false;
+        switch( (int)$who_count ) {
+            case 0: $should_count = true;
+                break;
+            case 1:
+                if( (int)$user_ID == 0 )
+                    $should_count = true;
+                break;
+            case 2:
+                if( (int)$user_ID > 0 )
+                    $should_count = true;
+                break;
+        }
+        if( (int)$exclude_bots==1 && $should_count ){
+            $useragent = $_SERVER['HTTP_USER_AGENT'];
+            $notbot = "Mozilla|Opera"; //Chrome|Safari|Firefox|Netscape - все равны Mozilla
+            $bot = "Bot/|robot|Slurp/|yahoo"; //Яндекс иногда как Mozilla представляется
+            if ( !preg_match("/$notbot/i", $useragent) || preg_match("!$bot!i", $useragent) )
+                $should_count = false;
+        }
+
+        if($should_count)
+            if( !update_post_meta($id, $meta_key, ($post_views+1)) ) add_post_meta($id, $meta_key, 1, true);
+    }
+    return true;
+}
+
+
 //FILTER Aussie Explores AND Games and Promotions
 //--------------------------------------------------
 
@@ -227,7 +271,7 @@ function filter_function_show_category() {
 
 //category
     $args_incategory = array(
-        'posts_per_page' => 51,
+        'posts_per_page' => 50,
         'post_type' => 'post',
         'orderby' => 'rand',
         'order' => 'rand',
@@ -297,19 +341,23 @@ function filter_function_show_category() {
 //in category
 
     $the_query_incategory = new WP_Query($args_incategory);
-
+    global $user_ID, $post;
     if ($the_query_incategory->have_posts()) {
         $k = 0;
         $wrap_div = "<div class='aussie-casino__category_result--wrap'>";
         echo $wrap_div;
         $total_posts = $the_query_incategory->post_count;
         while ($the_query_incategory->have_posts()) {
+            $views_post = 0;
+            if(empty(get_post_meta($post->ID, 'views', true) ) === false) {
+                $views_post = get_post_meta($post->ID, 'views', true);
+            }
 
             $the_query_incategory->the_post();
             $default_img_url = get_template_directory_uri() . '/img/default-img.jpg';
             $thumbnail_img = (has_post_thumbnail()) ? get_the_post_thumbnail_url($the_query_incategory->ID, 'full') : $default_img_url;
 
-            echo '<article class="aussie-casino__winning-guides_post--item" id="filter-games-' . $k . '" data-filter-date="'. get_the_date('r') .'"><div class="aussie-casino__winning-guides_wrap--img"><a href="' . get_permalink() . '"><img src="' . $thumbnail_img . '" alt="' . get_the_title() . '"></a><span class="aussie-casino__winning-guides_date"><b>' . human_time_diff_enhanced() . '</b></span></div><a href=" ' . get_permalink() . ' ">' . get_the_title() . '</a></article>';
+            echo '<article class="aussie-casino__winning-guides_post--item" id="filter-games-' . $k . '" data-filter-date="'. get_the_date('r') .'" data-rating="'. expand_ratings_template('%RATINGS_AVERAGE%', get_the_ID()) .'" data-popularity="'.  $views_post  .'"><div class="aussie-casino__winning-guides_wrap--img"><a href="' . get_permalink() . '"><img src="' . $thumbnail_img . '" alt="' . get_the_title() . '"></a><span class="aussie-casino__winning-guides_date"><b>' . human_time_diff_enhanced() . '</b></span></div><a href=" ' . get_permalink() . ' ">' . get_the_title() . '</a></article>';
 
 
             if ($k % 3 == 2 && $k != 0 && ($k + 1) != $total_posts) {
